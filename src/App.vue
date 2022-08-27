@@ -8,7 +8,7 @@ import Nav from './components/Nav.vue'
         <component :is="Component" />
       </transition>
     </router-view>
-    <Nav/>
+    <!-- <Nav/> -->
 </template>
 
 <style scoped>
