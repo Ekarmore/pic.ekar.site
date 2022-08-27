@@ -3,8 +3,12 @@ import Nav from './components/Nav.vue'
 </script>
 
 <template>
-<Nav/>
-<router-view/>
+<router-view v-slot="{ Component }">
+      <transition name="route">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+    <Nav/>
 </template>
 
 <style scoped>
