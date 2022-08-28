@@ -1,15 +1,36 @@
 .route-enter-from {
-    opacity: 0;
-    transform: translateY(-50px);
+    @apply transform -translate-y-20 opacity-10
   }
-  .route-enter-active {
-    transition: all 1s ease-in-out;
-  }
-  
+  .route-enter-active,
   .route-leave-active {
-    transition: all .5s ease-in-out;
+    @apply transition-all duration-1000 ease-in-out
   }
-  .route-leave-to {
+
+  .route-leave-to{
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
+    @apply transform -translate-y-20 opacity-0
   }
+
+
+  body{
+    @apply select-none
+   }
+   .catalog{ 
+   @apply mt-10 w-11/12 mx-auto flex flex-wrap justify-center md:w-3/5 md:mt-10 
+   }
+   .title{
+   @apply w-11/12 md:w-2/5  mt-10 mx-auto text-xl font-serif 
+   }
+   .title-two{
+   @apply text-base opacity-80
+   }
+   .img-card{
+   @apply mb-5 md:w-72 md:m-1 bg-green-200
+   }
+   .img-a{
+   @apply relative
+   }
+   .link{
+   @apply absolute text-white w-full h-full text-center text-3xl font-thin font-serif flex justify-center items-center  md:opacity-0 md:hover:opacity-100 transition-all ease-in-out 
+   }
