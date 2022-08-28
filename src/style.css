@@ -67,5 +67,5 @@
     2xl:w-2/5   
    }
    .footer-link{
-    @apply  border-b-2 border-red-600 hover:border-b-black transition-all duration-500 ease-in-out
+    @apply  border-b border-gray-600 hover:border-b-black transition-all duration-500 ease-in-out
    }
