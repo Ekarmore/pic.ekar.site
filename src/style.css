@@ -1,5 +1,5 @@
 .route-enter-from {
-    @apply transform -translate-y-20 opacity-10
+    @apply opacity-0
   }
   .route-enter-active,
   .route-leave-active {
@@ -7,9 +7,7 @@
   }
 
   .route-leave-to{
-    opacity: 0;
-    transform: translateY(30px);
-    @apply transform -translate-y-20 opacity-0
+    @apply opacity-0
   }
 
 
