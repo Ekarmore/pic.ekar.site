@@ -7,27 +7,52 @@
   }
 
   .route-leave-to{
-    @apply opacity-0
-  }
-
-
+    @apply opacity-0 
+  } 
   body{
     @apply select-none
    }
    .catalog{ 
-   @apply mt-10 w-11/12 mx-auto flex flex-wrap justify-center md:w-3/5 md:mt-10 
+   @apply 
+
+    flex flex-wrap mx-auto justify-center 
+    w-11/12 mt-10
+    md:w-4/5 md:mt-10 
+    lg:w-4/5 
+    xl:w-3/5 
+    2xl:w-auto 2xl:mt-20
+
    }
+   .catalog-2{ 
+    @apply 
+ 
+     flex flex-wrap mx-auto justify-center 
+     w-11/12
+     md:w-4/5 
+     lg:w-4/5 
+     xl:w-3/5 
+     2xl:w-auto
+ 
+    }
    .title{
-   @apply w-11/12 md:w-2/5  mt-10 mx-auto text-xl font-serif 
+   @apply  
+
+   mt-10 mx-auto text-xl font-serif
+   w-11/12 
+   md:w-4/5  
+   lg:w-4/5  
+   xl:w-3/5
+   2xl:w-2/5   
+
    }
    .title-two{
    @apply text-base opacity-80
    }
    .img-card{
-   @apply mb-5 md:w-72 md:m-1 bg-green-200
+   @apply  md:w-64 lg:w-72 xl:w-72 2xl:w-80
    }
    .img-a{
-   @apply relative
+   @apply relative bg-yellow-400 m-1
    }
    .link{
    @apply absolute text-white w-full h-full text-center text-3xl font-thin font-serif flex justify-center items-center  md:opacity-0 md:hover:opacity-100 transition-all ease-in-out 

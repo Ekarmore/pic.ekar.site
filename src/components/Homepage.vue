@@ -5,8 +5,10 @@
     <div class="catalog">
     <div class="img-a"><router-link class="link" to="page">Unnoticed</router-link><img class="img-card" src="../assets/01.png" alt=""></div>
     <div class="img-a"><router-link class="link" to="page">a</router-link><img class="img-card" src="../assets/01.png" alt=""></div>
-    <div class="img-a"><a class="link" href="">a</a><img class="img-card" src="../assets/01.png" alt=""></div>
-    <div class="img-a"><a class="link" href="">Coming Soon</a><img class="img-card" src="../assets/01.png" alt=""></div>
+    </div>
+    <div class="catalog-2">
+    <div class="img-a"><router-link class="link" to="page">Unnoticed</router-link><img class="img-card" src="../assets/01.png" alt=""></div>
+    <div class="img-a"><router-link class="link" to="page">a</router-link><img class="img-card" src="../assets/01.png" alt=""></div>
     </div>
    </div>
 </template> 
