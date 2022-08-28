@@ -2,9 +2,9 @@
 
   <div>
   <section>
-    <header class="title"><router-link to="/">Ekar</router-link><p class="title-two">Photographer</p></header> 
+    <header class="title"><router-link to="Work">Ekar</router-link><p class="title-two">Photographer</p></header> 
     <div class="catalog">
-    <div class="img-a"><router-link class="link" to="page">Unnoticed</router-link><img class="img-card" src="../assets/01.png" alt=""></div>
+    <div class="img-a"><router-link class="link" to="Work">Unnoticed</router-link><img class="img-card" src="../assets/01.png" alt=""></div>
     <div class="img-a"><router-link class="link" to="page">a</router-link><img class="img-card" src="../assets/01.png" alt=""></div>
     </div>
     <div class="catalog-2">

@@ -40,9 +40,9 @@
    mt-5 mx-auto text-xl font-serif
    w-11/12 
    md:w-4/5  
-   lg:w-4/5  
+   lg:w-4/5  lg:mt-10
    xl:w-3/5
-   2xl:w-2/5   
+   2xl:w-2/5  2xl:mt-20
 
    }
    .title-two{
@@ -67,5 +67,9 @@
     2xl:w-2/5   
    }
    .footer-link{
-    @apply  border-b border-gray-600 hover:border-b-black transition-all duration-500 ease-in-out
+    @apply  border-b border-black lg:border-gray-200 hover:border-b-black transition-all duration-500 ease-in-out
    }
+
+   .worktitle{
+    @apply bg-red-300
+    }
