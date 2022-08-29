@@ -77,11 +77,11 @@ body {
 }
 
 .title-text {
-  @apply text-2xl italic opacity-70;
+  @apply text-xl font-bold italic  opacity-70;
 }
 
 .title-text2 {
-  @apply text-2xl mb-5 italic  opacity-70;
+  @apply text-xl font-bold mb-5 italic  opacity-70;
 }
 .about-text{
   @apply text-base leading-7  opacity-80
@@ -90,10 +90,10 @@ body {
   @apply mx-auto mt-5;
 }
 .pic-box {
-  @apply mt-20  xl:w-2/5 mx-auto;
+  @apply mt-10  xl:w-2/5 mx-auto;
 }
 .pic {
-  @apply w-full mx-auto;
+  @apply w-11/12 mx-auto;
 }
 .footer-work {
   @apply mt-10;
