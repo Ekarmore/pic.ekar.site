@@ -15,7 +15,7 @@
    .catalog{ 
    @apply 
 
-    flex flex-wrap mx-auto justify-center 
+    flex flex-wrap mx-auto justify-center
     w-11/12 mt-5
     md:w-4/5 md:mt-5
     lg:w-4/5 
@@ -34,10 +34,10 @@
      2xl:w-auto
  
     }
-   .title{
+   .header{
    @apply  
 
-   mt-5 mx-auto text-xl font-serif
+   mt-5 pl-2  mx-auto text-xl font-serif
    w-11/12 
    md:w-4/5  
    lg:w-4/5  lg:mt-10
@@ -49,10 +49,10 @@
    @apply text-base opacity-80
    }
    .img-card{
-   @apply  md:w-72 lg:w-72 xl:w-64 2xl:w-80
+   @apply w-full bg-white md:w-72 lg:w-72 xl:w-64 2xl:w-80
    }
    .img-a{
-   @apply relative bg-yellow-400 m-1
+   @apply relative  m-1
    }
    .link{
    @apply absolute text-white w-full h-full text-center text-3xl font-thin font-serif flex justify-center items-center  md:opacity-0 md:hover:opacity-100 transition-all ease-in-out 
@@ -60,7 +60,7 @@
    .footer{
     @apply
     mt-10 mb-10 mx-auto text-base font-serif 
-    w-11/12 
+    w-11/12 pl-2
     md:w-4/5  
     lg:w-4/5  
     xl:w-3/5
