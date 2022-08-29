@@ -62,7 +62,7 @@ export default {
             </section>
         </div>
         <footer class="footer-work">
-            <div class="wow fadeInLeft" data-wow-duration="1s">
+            <div class="wow fadeInLeft" data-wow-duration="2s">
                 <Nav />
             </div>
         </footer>
