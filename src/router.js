@@ -1,6 +1,6 @@
 import{createRouter,createWebHashHistory}from 'vue-router'
 import Homepage from './components/Homepage.vue'
-import Work from './components/Work.vue'
+import Unnoticed from './components/Unnoticed.vue'
 const router = createRouter({
 history:createWebHashHistory(),
 scrollBehavior(to, from, savedPosition) {
@@ -9,7 +9,7 @@ scrollBehavior(to, from, savedPosition) {
   },
 routes:[
     {path:'/',component : Homepage },
-    {path:'/Work',component : Work},
+    {path:'/Unnoticed',component : Unnoticed},
     // {path:'/store',component : store},
     // {path:'/Explore',component : Explore},
     // {path:'/turpan',component : turpan},
