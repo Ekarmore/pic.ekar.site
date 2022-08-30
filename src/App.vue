@@ -2,11 +2,8 @@
 </script>
 
 <template>
-<router-view v-slot="{ Component }">
-      <transition name="route">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+
+    <router-view/>
     <!-- <Nav/> -->
 </template>
 

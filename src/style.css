@@ -84,7 +84,7 @@ body {
   @apply text-xl font-bold mb-5 italic  opacity-70;
 }
 .about-text{
-  @apply text-sm md:text-base leading-7  opacity-80
+  @apply text-sm md:text-base md:leading-8 opacity-80
 }
 .pic-container {
   @apply mx-auto mt-5;
