@@ -41,7 +41,7 @@ export default {
             </div>
             <div class="wow fadeIn" data-wow-duration="1s">
                 <div class="pic-container">
-                    <img class="pic" src="../assets/002.jpg" alt="">
+                    <img class="pic" src="../assets/05.jpg" alt="">
                 </div>
             </div>
             <div class="wow fadeIn" data-wow-duration="1s">

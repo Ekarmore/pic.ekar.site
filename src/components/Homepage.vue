@@ -12,7 +12,7 @@
             alt="">
         </div>
         <div class="img-a">
-          <router-link class="link" to="page">a</router-link><img class="img-card" src="../assets/002.jpg" alt="">
+          <router-link class="link" to="page">a</router-link><img class="img-card" src="../assets/05.jpg" alt="">
         </div>
       </div>
       <div class="catalog-2">
