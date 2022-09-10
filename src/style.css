@@ -77,7 +77,7 @@ body {
 }
 
 .title-text {
-  @apply text-xl font-bold italic  font-serif text-center opacity-70;
+  @apply text-xl font-bold italic mb-10 font-serif opacity-70;
 }
 
 .title-text2 {
