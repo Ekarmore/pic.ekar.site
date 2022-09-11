@@ -77,11 +77,11 @@ body {
 }
 
 .title-text {
-  @apply text-xl font-bold italic mb-10 font-serif opacity-70;
+  @apply text-xl font-semibold  mb-10 font-serif opacity-70;
 }
 
 .title-text2 {
-@apply text-xl font-bold font-serif mb-5 italic text-center  opacity-70;
+@apply text-xl font-bold font-serif mb-5  text-center  opacity-70;
 }
 .title-text3{
   @apply text-end text-sm font-serif mt-5 italic opacity-70
