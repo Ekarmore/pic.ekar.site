@@ -10,7 +10,7 @@
   @apply opacity-0;
 }
 body {
-  @apply select-none ;
+  @apply select-none;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -81,13 +81,13 @@ body {
 }
 
 .title-text2 {
-@apply text-xl font-bold font-serif mb-5  text-center  opacity-70;
+  @apply text-xl font-bold font-serif mb-5  text-center  opacity-70;
 }
-.title-text3{
-  @apply text-end text-sm font-serif mt-5 italic opacity-70
+.title-text3 {
+  @apply text-end text-sm font-serif mt-5 italic opacity-70;
 }
-.about-text{
-  @apply text-sm md:text-base leading-7 md:leading-8 opacity-80
+.about-text {
+  @apply text-sm md:text-base leading-7 md:leading-8 opacity-80;
 }
 .pic-container {
   @apply mx-auto md:w-4/5  mt-5;

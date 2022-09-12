@@ -2,9 +2,7 @@
 </script>
 
 <template>
-
     <router-view/>
-    <!-- <Nav/> -->
 </template>
 
 <style scoped>

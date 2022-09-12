@@ -1,7 +1,7 @@
 <template>
   <div>
     <main>
-        <header class="header">
+      <header class="header">
         <router-link to="Work">Ekar</router-link>
         <p class="title-two">Photographer</p>
       </header>
