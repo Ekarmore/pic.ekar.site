@@ -49,7 +49,7 @@ body {
   @apply relative  m-1;
 }
 .link {
-  @apply absolute text-white w-full h-full text-center text-3xl font-thin font-serif flex justify-center items-center  md:opacity-0 md:hover:opacity-100 transition-all ease-in-out;
+  @apply absolute text-white w-full h-full text-center text-3xl font-thin font-serif flex justify-center items-center  md:opacity-0  md:hover:opacity-100 transition-all ease-in-out;
 }
 .footer {
   @apply mt-10 mb-10 mx-auto text-base font-serif 
