@@ -39,36 +39,36 @@ export default {
             </div>
             <section class="pic-box">
                 <div class="pic-container">
-                    <img class="pic" src="../assets/002.jpg" alt="">
+                    <img class="pic" src="../assets/B1.jpg" alt="">
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/003.jpg" alt="">
+                        <img class="pic" src="../assets/B2.jpg" alt="">
                     </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/A-1.jpg" alt="">
+                        <img class="pic" src="../assets/B3.jpg" alt="">
                     </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/A-2.jpg" alt="">
+                        <img class="pic" src="../assets/B4.jpg" alt="">
                     </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/A-3.jpg" alt="">
+                        <img class="pic" src="../assets/B5.jpg" alt="">
                     </div>   
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/A-4.jpg" alt="">
+                        <img class="pic" src="../assets/B6.jpg" alt="">
                     </div>   
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/A-5.jpg" alt="">
+                        <img class="pic" src="../assets/B7.jpg" alt="">
                     </div>   
                 </div>
             </section>
