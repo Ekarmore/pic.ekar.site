@@ -1,22 +1,22 @@
 <template>
   <div>
-    `<main>
+    <main>
       <header class="header">
         <router-link to="Work">Ekar</router-link>
         <p class="title-two">Photographer</p>
       </header>
       <section class="catalog">
         <div class="img-a">
-          <router-link class="link" to="Unnoticed">Unnoticed</router-link><img class="img-card" src="../assets/002.jpg"
+          <router-link class="link" to="Unnoticed">Unnoticed</router-link><img class="img-card" src="../assets/Pic1.jpg"
             alt="">
         </div>
         <div class="img-a">
-          <router-link class="link" to="page">Coming Soon</router-link><img class="img-card" src="../assets/Zw.jpg" alt="">
+          <router-link class="link" to="page">Turpan</router-link><img class="img-card" src="../assets/002.jpg" alt="">
         </div>
       </section>
       <div class="catalog-2">
         <div class="img-a">
-          <router-link class="link" to="page">Coming Soon</router-link><img class="img-card" src="../assets/Zw.jpg"
+          <router-link class="link" to="AnotherLandscape">Another Landscape</router-link><img class="img-card" src="../assets/Pic2.jpg"
             alt="">
         </div>
         <div class="img-a">

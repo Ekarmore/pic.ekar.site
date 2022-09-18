@@ -11,7 +11,7 @@
             <router-link active-class="active" to="Unnoticed">Unnoticed</router-link>
         </span>
         <span class="nav-text">
-            <router-link active-class="active" to="/">Coming Soon</router-link>
+            <router-link active-class="active" to="AnotherLandscape">Another Landscape</router-link>
         </span>
         <span class="nav-text">
             <router-link active-class="active" to="/">Coming Soon</router-link>
