@@ -1,16 +1,6 @@
 <script setup >
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 const isShow = ref(false)
-
-
-// window.onload =()=>{
-//   isShow.value=true
-//   console.log('1',isShow.value);
-// }
-
-setTimeout(() => {
- isShow.value=true
-}, 3000);
 
 
 </script>

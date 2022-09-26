@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isShow">
+  <div v-show="true">
     <main>
       <header class="header">
         <router-link to="Work">Ekar</router-link>
@@ -27,7 +27,6 @@
       </footer>
     </main>
   </div>
-  <Load/>
 </template> 
 
 <script setup>
@@ -35,15 +34,13 @@ import { ref, onMounted, computed } from 'vue';
 import Load from '../components/Load.vue'
 const isShow = ref(false)
 
-
+// onMounted(()=>{
+// isShow.value=true
+// })
 // window.onload =()=>{
 //   isShow.value=true
 //   console.log('1',isShow.value);
 // }
-
-setTimeout(() => {
- isShow.value=true
-}, 3000);
 
 
 
