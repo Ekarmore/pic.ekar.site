@@ -27,7 +27,7 @@
       </footer>
     </main>
   </div>
-  <div class="loading" v-show="!isShow">Wait Please ...</div>
+  <div class="loading" v-show="!isShow">Wait a moment please ...</div>
 </template> 
 
 <script setup>
