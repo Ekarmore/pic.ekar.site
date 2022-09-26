@@ -11,6 +11,9 @@
             <router-link active-class="active" to="Unnoticed">Unnoticed</router-link>
         </span>
         <span class="nav-text">
+            <router-link active-class="active" to="Turpan">Turpan</router-link>
+        </span>
+        <span class="nav-text">
             <router-link active-class="active" to="AnotherLandscape">Another Landscape</router-link>
         </span>
         <span class="nav-text">
@@ -21,7 +24,7 @@
 
 <style >
 .nav-bar {
-        @apply w-4/5 md:w-4/5 xl:w-2/5 mx-auto text-center m-10 flex flex-col justify-center lg:flex-row
+        @apply w-4/5 md:w-4/5 xl:w-3/5 mx-auto text-center m-10 flex flex-col justify-center lg:flex-row
     }
 
     .nav-text {

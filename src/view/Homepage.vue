@@ -11,7 +11,7 @@
             alt="">
         </div>
         <div class="img-a">
-          <router-link class="link" to="page">Turpan</router-link><img class="img-card" src="../assets/002.jpg" alt="">
+          <router-link class="link" to="Turpan">Turpan</router-link><img class="img-card" src="../assets/002.jpg" alt="">
         </div>
       </section>
       <div class="catalog-2">
