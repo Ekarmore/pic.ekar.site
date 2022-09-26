@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-show="isShow">
     <main>
       <header class="header">
         <router-link to="Work">Ekar</router-link>
@@ -25,10 +25,24 @@
       </div>
       <footer class="footer">Design and create by <a class="footer-link" href="https://ekar.site">Ekar</a> in 2022
       </footer>
-    </main>`
+    </main>
   </div>
+  <div class="loading" v-show="!isShow">Wait Please ...</div>
 </template> 
 
-<script>
-export default {};
+<script setup>
+import { ref, onMounted, computed } from 'vue';
+const isShow = ref(false)
+
+// onMounted(() => {
+//   isShow.value=true
+// });
+
+window.onload = ()=>{
+  isShow.value=true
+  return isShow.value
+}
+console.log(isShow.value);
+
+
 </script>
