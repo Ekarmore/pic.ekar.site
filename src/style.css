@@ -102,15 +102,5 @@ body {
   @apply mt-10;
 }
 .hp-loading{
-@apply w-full h-screen flex flex-col text-center justify-center align-middle text-2xl font-serif animate-pulse 
-}
-
-.fadeIn-enter-active,
-.fadeIn-leave-active {
-  transition: opacity 2s ease;
-}
-
-.fadeIn-enter-from,
-.fadeIn-leave-to {
-  opacity: 0;
+@apply w-full h-screen flex flex-col items-center justify-center align-middle text-2xl font-serif animate-pulse 
 }

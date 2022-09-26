@@ -33,17 +33,13 @@
 <script setup>
 import Load from '../components/Load.vue'
 import {ref} from 'vue'
-const isShow = ref(false)
-const a =ref(false)
-const a1 =ref(false)
-const a2 =ref(false)
-const a3 =ref(false)
+
+const [a,a1,a2,a3] = [ref(false),ref(false),ref(false),ref(false)]
 
 const imgLoad =()=>{
 a.value = true
 }
 const imgLoad2 =()=>{
-console.log(a.value);
 a1.value =true
 }
 const imgLoad3 =()=>{

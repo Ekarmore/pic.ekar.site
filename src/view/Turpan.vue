@@ -2,7 +2,6 @@
     import Nav from '../components/Nav.vue'
     import WOW from "wow.js";
     
-    
     export default {
         mounted() {
             var wow = new WOW({

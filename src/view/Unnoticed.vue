@@ -1,31 +1,37 @@
 <script setup>
 import Nav from '../components/Nav.vue'
 import WOW from "wow.js";
-import {ref} from 'vue'
+import { onMounted, ref } from 'vue'
+
+const [a,a1,a2,a3] = [ref(false),ref(false),ref(false),ref(false)]
 
 
-const a =ref(false)
-const a1 =ref(false)
-const a2 =ref(false)
-const a3 =ref(false)
-
-const imgLoad =()=>{
-a.value = true
+const imgLoad = () => {
+    a.value = true
 }
-const imgLoad2 =()=>{
-a1.value =true
+const imgLoad2 = () => {
+    a1.value = true
 }
-const imgLoad3 =()=>{
-a2.value = true
+const imgLoad3 = () => {
+    a2.value = true
 }
-const imgLoad4 =()=>{
-a3.value = true
-new WOW().init()
+const imgLoad4 = () => {
+    a3.value = true
 }
 
-
-
-
+    new WOW({
+        boxClass: "wow",
+        animateClass: "animated",
+        offset: 0,
+        mobile: true,
+        live: true,
+        callback: function (box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,
+        resetAnimation: true, // reset animation on end (default is true)
+    }).init()
 
 
 </script>
@@ -84,7 +90,7 @@ new WOW().init()
         </footer>
     </div>
     <div class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
-        <p>Ekar Photograph</p>
+        <p>Wait a moment please ...</p>
     </div>
 </template>
 
