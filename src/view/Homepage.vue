@@ -27,9 +27,7 @@
       </footer>
     </main>
   </div>
-  <Transition name="fadeIn">
     <div class="hp-loading" v-show="!(a&&a1&&a2&&a3)"><p>Ekar Photograph</p></div>
-</Transition>
 </template> 
 
 <script setup>

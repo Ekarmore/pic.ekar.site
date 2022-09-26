@@ -1,32 +1,36 @@
-<script >
+<script setup>
 import Nav from '../components/Nav.vue'
 import WOW from "wow.js";
+import {ref} from 'vue'
 
 
-export default {
-    mounted() {
-        var wow = new WOW({
-            boxClass: "wow",
-            animateClass: "animated",
-            offset: 0,
-            mobile: true,
-            live: true,
-            callback: function (box) {
-                // the callback is fired every time an animation is started
-                // the argument that is passed in is the DOM node being animated
-            },
-            scrollContainer: null,
-            resetAnimation: true, // reset animation on end (default is true)
-        });
-        wow.init();
-    },
-    components: { Nav }
-};
+const a =ref(false)
+const a1 =ref(false)
+const a2 =ref(false)
+const a3 =ref(false)
+
+const imgLoad =()=>{
+a.value = true
+}
+const imgLoad2 =()=>{
+a1.value =true
+}
+const imgLoad3 =()=>{
+a2.value = true
+}
+const imgLoad4 =()=>{
+a3.value = true
+new WOW().init()
+}
+
+
+
+
 
 
 </script>
 <template>
-    <div>
+    <div v-show="a&&a1&&a2&&a3">
         <main class="Work-container">
             <div class="title-container">
                 <h1 class="title-text"><span>
@@ -39,37 +43,37 @@ export default {
             </div>
             <section class="pic-box">
                 <div class="pic-container">
-                    <img class="pic" src="../assets/B1.jpg" alt="">
+                    <img @load="imgLoad" class="pic" src="../assets/B1.jpg" alt="">
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/B2.jpg" alt="">
+                        <img @load="imgLoad2" class="pic" src="../assets/B2.jpg" alt="">
                     </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/B3.jpg" alt="">
+                        <img @load="imgLoad3" class="pic" src="../assets/B3.jpg" alt="">
                     </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
-                        <img class="pic" src="../assets/B10.jpg" alt="">
+                        <img @load="imgLoad4" class="pic" src="../assets/B10.jpg" alt="">
                     </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
                         <img class="pic" src="../assets/B5.jpg" alt="">
-                    </div>   
+                    </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
                         <img class="pic" src="../assets/B6.jpg" alt="">
-                    </div>   
+                    </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="pic-container">
                         <img class="pic" src="../assets/B7.jpg" alt="">
-                    </div>   
+                    </div>
                 </div>
             </section>
         </main>
@@ -78,6 +82,9 @@ export default {
                 <Nav />
             </div>
         </footer>
+    </div>
+    <div class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
+        <p>Ekar Photograph</p>
     </div>
 </template>
 
