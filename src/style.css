@@ -102,5 +102,5 @@ body {
   @apply mt-10;
 }
 .loading{
-@apply text-2xl text-center
+@apply text-2xl text-center mt-96 animate-pulse font-serif
 }

@@ -27,22 +27,24 @@
       </footer>
     </main>
   </div>
-  <div class="loading" v-show="!isShow">Wait a moment please ...</div>
+  <Load/>
 </template> 
 
 <script setup>
 import { ref, onMounted, computed } from 'vue';
+import Load from '../components/Load.vue'
 const isShow = ref(false)
 
-// onMounted(() => {
-//   isShow.value=true
-// });
 
-window.onload = ()=>{
-  isShow.value=true
-  return isShow.value
-}
-console.log(isShow.value);
+// window.onload =()=>{
+//   isShow.value=true
+//   console.log('1',isShow.value);
+// }
+
+setTimeout(() => {
+ isShow.value=true
+}, 3000);
+
 
 
 </script>
