@@ -27,10 +27,13 @@
       </footer>
     </main>
   </div>
-  <div v-show="!(a&&a1&&a2&&a3)">Loading</div>
+  <Transition name="fadeIn">
+    <div class="hp-loading" v-show="!(a&&a1&&a2&&a3)"><p>Ekar Photograph</p></div>
+</Transition>
 </template> 
 
 <script setup>
+import Load from '../components/Load.vue'
 import {ref} from 'vue'
 const isShow = ref(false)
 const a =ref(false)

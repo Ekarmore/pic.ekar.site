@@ -5,7 +5,8 @@ const isShow = ref(false)
 
 </script>
 <template>
-<div v-show="!isShow" class="loading">Wait a moment please ...</div>
+<div class="loading">Ekar Photograph</div>
+<div class="loading">Wait a moment please ...</div>
 </template>
     
 <style >

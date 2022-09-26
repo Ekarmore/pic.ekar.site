@@ -101,6 +101,16 @@ body {
 .footer-work {
   @apply mt-10;
 }
-.loading{
-@apply text-2xl text-center mt-96 animate-pulse font-serif
+.hp-loading{
+@apply w-full h-screen flex flex-col text-center justify-center align-middle text-2xl font-serif animate-pulse 
+}
+
+.fadeIn-enter-active,
+.fadeIn-leave-active {
+  transition: opacity 2s ease;
+}
+
+.fadeIn-enter-from,
+.fadeIn-leave-to {
+  opacity: 0;
 }
