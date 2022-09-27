@@ -1,42 +1,30 @@
 <script setup>
 import Nav from '../components/Nav.vue'
 import WOW from "wow.js";
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
-const [a,a1,a2,a3] = [ref(false),ref(false),ref(false),ref(false)]
+const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)]
 
+const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [() => { a.value = true }, () => { a1.value = true }, () => { a2.value = true }, () => { a3.value = true }]
 
-const imgLoad = () => {
-    a.value = true
-}
-const imgLoad2 = () => {
-    a1.value = true
-}
-const imgLoad3 = () => {
-    a2.value = true
-}
-const imgLoad4 = () => {
-    a3.value = true
-}
-
-    new WOW({
-        boxClass: "wow",
-        animateClass: "animated",
-        offset: 0,
-        mobile: true,
-        live: true,
-        callback: function (box) {
-            // the callback is fired every time an animation is started
-            // the argument that is passed in is the DOM node being animated
-        },
-        scrollContainer: null,
-        resetAnimation: true, // reset animation on end (default is true)
-    }).init()
+new WOW({
+    boxClass: "wow",
+    animateClass: "animated",
+    offset: 0,
+    mobile: true,
+    live: true,
+    callback: function (box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null,
+    resetAnimation: true, // reset animation on end (default is true)
+}).init()
 
 
 </script>
 <template>
-    <div v-show="a&&a1&&a2&&a3">
+    <section v-show="a&&a1&&a2&&a3">
         <main class="Work-container">
             <div class="title-container">
                 <h1 class="title-text"><span>
@@ -88,10 +76,13 @@ const imgLoad4 = () => {
                 <Nav />
             </div>
         </footer>
-    </div>
-    <div class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
-        <p>Wait a moment please ...</p>
-    </div>
+    </section>
+    <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
+        <!-- <p class="loading-text">Ekar</p> -->
+        <div class="loading">
+            <div></div>
+        </div>
+    </section>
 </template>
 
 <style >
