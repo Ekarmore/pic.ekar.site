@@ -106,7 +106,8 @@ body {
 }
 
 
-/* --- */
+
+/* -loading animate- */
 .loading,
 .loading > div {
   position: relative;
