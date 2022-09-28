@@ -8,11 +8,11 @@
       </header>
       <section class="catalog">
         <div class="img-a">
-          <router-link class="link" to="Unnoticed">Unnoticed</router-link><img @load="imgLoad" class="img-card" src="../assets/Unnoticed/Pic1.jpg"
+          <router-link class="link" to="Unnoticed">Unnoticed</router-link><img @load="imgLoad" class="img-card" src="../assets/Pic1.jpg"
             alt="">
         </div>
         <div class="img-a">
-          <router-link class="link" to="Turpan">Turpan</router-link><img @load="imgLoad2" class="img-card" src="../assets/Turpan/001.jpg" alt="">
+          <router-link class="link" to="Turpan">Turpan</router-link><img @load="imgLoad2" class="img-card" src="../assets/001.jpg" alt="">
         </div>
       </section>
       <section class="catalog-2">

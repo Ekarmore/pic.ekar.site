@@ -37,11 +37,11 @@
                 </div>
                 <section class="pic-box">
                     <div class="pic-container">
-                        <img @load="imgLoad" class="pic" src="../assets/Turpan/turpan_01.jpg" alt="">
+                        <img @load="imgLoad" class="pic" src="../assets/turpan_01.jpg" alt="">
                     </div>
                     <div class="wow fadeIn" data-wow-duration="1s">
                         <div class="pic-container">
-                            <img @load="imgLoad2" class="pic" src="../assets/Turpan/turpan_02.jpg" alt="">
+                            <img @load="imgLoad2" class="pic" src="../assets/turpan_02.jpg" alt="">
                         </div>
                     </div>
                 </section>
