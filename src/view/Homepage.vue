@@ -1,17 +1,18 @@
 <template>
-  <div v-show='a&&a1&&a2&&a3'>
-    <main>
+
+    <!-- <main  v-show='!a&&!a1&&a2&&a3'> -->
+      <main  v-show='true'>
       <header class="header">
         <router-link to="/">Ekar</router-link>
         <p class="title-two">Photographer</p>
       </header>
       <section class="catalog">
         <div class="img-a">
-          <router-link class="link" to="Unnoticed">Unnoticed</router-link><img @load="imgLoad" class="img-card" src="../assets/Pic1.jpg"
+          <router-link class="link" to="Unnoticed">Unnoticed</router-link><img @load="imgLoad" class="img-card" src="../assets/Unnoticed/Pic1.jpg"
             alt="">
         </div>
         <div class="img-a">
-          <router-link class="link" to="Turpan">Turpan</router-link><img @load="imgLoad2" class="img-card" src="../assets/002.jpg" alt="">
+          <router-link class="link" to="Turpan">Turpan</router-link><img @load="imgLoad2" class="img-card" src="../assets/Turpan/001.jpg" alt="">
         </div>
       </section>
       <section class="catalog-2">
@@ -26,13 +27,12 @@
       <footer class="footer">Design and create by <a class="footer-link" href="">Ekar</a> in 2022
       </footer>
     </main>
-  </div>
-    <div class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
+    <section class="hp-loading" v-show="(a&&a1&&a2&&a3)">
       <!-- <p>Ekar Photograph</p> -->
       <div class="loading">
             <div></div>
         </div>
-    </div>
+    </section>
 </template> 
 
 <script setup>
