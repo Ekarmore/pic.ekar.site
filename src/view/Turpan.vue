@@ -38,7 +38,7 @@
                 <section class="pic-box">
                     <div class="wow fadeIn" data-wow-duration="1s">
                         <div class="pic-container">
-                            <img @load="imgLoad2" class="pic" src="../assets/turpan_02.jpg" alt="">
+                            <img @load="imgLoad2" class="pic" src="../assets/003.jpg" alt="">
                         </div>
                     </div>
                 </section>
