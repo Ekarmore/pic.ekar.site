@@ -3,7 +3,7 @@
     <main>
       <header class="header">
         <router-link to="/">Ekar</router-link>
-        <!-- <p class="title-two">Photographer</p> -->
+        <p class="title-two">Photographer</p>
       </header>
       <section class="catalog">
         <div class="img-a">
@@ -23,7 +23,7 @@
           <router-link class="link" to="page">Coming Soon</router-link><img @load="imgLoad4" class="img-card" src="../assets/Zw.jpg" alt="">
         </div>
       </section>
-      <footer class="footer">Design and create by <a class="footer-link" href="https://ekar.site">Ekar</a> in 2022
+      <footer class="footer">Design and create by <a class="footer-link" href="">Ekar</a> in 2022
       </footer>
     </main>
   </div>
