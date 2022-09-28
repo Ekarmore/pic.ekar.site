@@ -36,9 +36,6 @@
                     <h1 class="title-text3">2021/5</h1>
                 </div>
                 <section class="pic-box">
-                    <div class="pic-container">
-                        <img @load="imgLoad" class="pic" src="../assets/turpan_01.jpg" alt="">
-                    </div>
                     <div class="wow fadeIn" data-wow-duration="1s">
                         <div class="pic-container">
                             <img @load="imgLoad2" class="pic" src="../assets/turpan_02.jpg" alt="">
