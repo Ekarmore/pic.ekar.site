@@ -39,12 +39,12 @@
     }
 
 .active {
-        @apply text-black
+@apply text-black
     }
 .nav-hr{
-    @apply mb-5 border-black
+@apply mb-5 border-black
       }
 .nav-footer{
-@apply text-sm opacity-70 m-5 absolute bottom-5
+@apply text-sm xl:opacity-70 m-5 xl:absolute xl:bottom-5 opacity-0 
 }
 </style>
