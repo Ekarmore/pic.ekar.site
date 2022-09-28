@@ -1,7 +1,6 @@
 <template>
 
-    <!-- <main  v-show='!a&&!a1&&a2&&a3'> -->
-      <main  v-show='true'>
+    <main  v-show='a&&a1&&a2&&a3'>
       <header class="header">
         <router-link to="/">Ekar</router-link>
         <p class="title-two">Photographer</p>
@@ -27,7 +26,7 @@
       <footer class="footer">Design and create by <a class="footer-link" href="">Ekar</a> in 2022
       </footer>
     </main>
-    <section class="hp-loading" v-show="(a&&a1&&a2&&a3)">
+    <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
       <!-- <p>Ekar Photograph</p> -->
       <div class="loading">
             <div></div>

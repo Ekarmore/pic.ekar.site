@@ -12,9 +12,9 @@
 body {
   @apply select-none;
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 .catalog {
   @apply flex flex-wrap mx-auto justify-center
     w-11/12 mt-5
@@ -182,4 +182,21 @@ body {
 
 .loading-text{
 @apply text-xl pb-5
+}
+
+
+.xbox2{
+@apply flex  overflow-x-scroll
+}
+.item{
+width:500px;
+
+@apply h-full
+}
+.menu{
+@apply md:float-left md:h-full md:w-64
+}
+
+.main-box{
+@apply flex flex-col justify-center h-screen
 }
