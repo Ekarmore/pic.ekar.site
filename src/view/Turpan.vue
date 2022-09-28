@@ -84,16 +84,16 @@ const wheel = (event) => {
         </footer>
     </section>
     <section class="menu">
-        MENU
+        <Nav  class="Nav-bar"/>
     </section>
     <section class="main-box">
         <div ref="xbox" class="xbox2" @wheel="wheel">
                 <div class="pic-container">
-                    <img @load="imgLoad" class="pic" src="../assets/turpan_020.jpg" alt="">
+                    <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="">
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="item">
-                        <img @load="imgLoad3" class="pic" src="../assets/turpan_03.jpg" alt="">
+                        <img @load="imgLoad3" class="pic" src="../assets/Turpan_03.jpg" alt="">
                     </div>
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
@@ -118,7 +118,7 @@ const wheel = (event) => {
                 </div>
     </div>
     </section>
-
+    
     <section class="hp-loading" v-show="false">
         <!-- <p class="loading-text">Ekar</p> -->
         <div class="loading">

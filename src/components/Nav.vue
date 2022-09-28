@@ -4,6 +4,8 @@
 
 <template>
     <nav class="nav-bar">
+        <h1 class="nav-text2">Ekar</h1>
+        <hr class="nav-hr" />
         <span class="nav-text">
             <router-link active-class="active" to="/">Catalog</router-link>
         </span>
@@ -20,18 +22,29 @@
             <router-link active-class="active" to="/">Coming Soon</router-link>
         </span>
     </nav>
+    <footer class="nav-footer">Design and create by <a class="footer-link" href="">Ekar</a> in 2022</footer>
 </template>
 
 <style >
 .nav-bar {
-        @apply w-4/5 md:w-4/5 xl:w-3/5 mx-auto text-center m-10 flex flex-col justify-center lg:flex-row
+ @apply flex flex-col justify-center  h-96 p-5 
+}
+
+.nav-text {
+@apply text-lg m-2 font-serif font-light text-gray-400 hover:text-black transition-all ease-in-out duration-500
     }
 
-    .nav-text {
-        @apply text-xl m-2 font-serif font-light text-gray-400 hover:text-black transition-all ease-in-out duration-500
+.nav-text2 {
+@apply text-2xl m-2 font-serif 
     }
 
-    .active {
+.active {
         @apply text-black
     }
+.nav-hr{
+    @apply mb-5 border-black
+      }
+.nav-footer{
+@apply text-sm opacity-70 m-5 absolute bottom-5
+}
 </style>

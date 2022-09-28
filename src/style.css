@@ -186,15 +186,15 @@ body {
 
 
 .xbox2{
-@apply flex  overflow-x-scroll
+@apply flex overflow-x-scroll  
 }
-.item{
-width:500px;
 
-@apply h-full
+.item{
+width:600px; 
 }
+
 .menu{
-@apply md:float-left md:h-full md:w-64
+@apply md:float-left md:h-full md:w-72 duration-500 ease-out flex flex-col
 }
 
 .main-box{
