@@ -93,11 +93,6 @@ const wheel = (event) => {
                 </div>
                 <div class="wow fadeIn" data-wow-duration="1s">
                     <div class="item">
-                        <img @load="imgLoad2" class="pic" src="../assets/turpan_01.jpg" alt="">
-                    </div>
-                </div>
-                <div class="wow fadeIn" data-wow-duration="1s">
-                    <div class="item">
                         <img @load="imgLoad3" class="pic" src="../assets/turpan_03.jpg" alt="">
                     </div>
                 </div>
