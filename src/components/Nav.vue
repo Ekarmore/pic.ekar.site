@@ -4,14 +4,15 @@
 
 <template>
     <section class="nav-pc">
-        <nav class="nav-bar">
+        <nav class="nav-pc">
         <h1 class="nav-text2">Ekar</h1>
         <hr class="nav-hr" />
+        <div class="nav-pc-textbox">
         <span class="nav-text">
             <router-link active-class="active" to="/"></router-link>
         </span>
         <span class="nav-text">
-            <router-link active-class="active" to="Unnoticed">Unnoticed</router-link>
+            <router-link active-class="active" to="Turpan">Unnoticed</router-link>
         </span>
         <span class="nav-text">
             <router-link active-class="active" to="Turpan">Turpan</router-link>
@@ -22,6 +23,7 @@
         <span class="nav-text">
             <router-link active-class="active" to="About">About</router-link>
         </span>
+    </div>
     </nav>
     <footer class="nav-footer">Design and create by <a class="footer-link" href="">Ekar</a> in 2022</footer>
     </section>
