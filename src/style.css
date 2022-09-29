@@ -182,16 +182,38 @@ body {
   @apply text-xl pb-5;
 }
 
+
+/* 
 .main-box {
-  @apply flex flex-col justify-center h-screen p-1;
+@apply  flex items-center  flex-nowrap  h-screen ;
 }
 .xbox2 {
-  @apply flex overflow-x-scroll p-1;
+@apply  flex overflow-x-scroll flex-nowrap ;
 }
-.pic {
-  height: 100%;
-  @apply mr-2 min-w-min;
+.pic{
+height:600px;
+@apply  m-1  flex-shrink-0 min-w-max
 }
 .menu {
-  @apply md:float-left md:h-full md:w-72 flex md:flex-col;
-}
+width:320px;
+@apply float-left h-screen ;
+} */
+
+.main-box {
+  @apply  flex items-center  flex-nowrap  h-screen ;
+  }
+
+  .xbox2 {
+  @apply  whitespace-nowrap overflow-x-scroll inline;
+  }
+
+.pic{
+  height:700px;
+  @apply  m-1  w-auto flex-shrink-0 inline overflow-hidden min-w-max
+  }
+
+.menu {
+  width:320px;
+  @apply float-left h-screen hidden;
+  }
+  

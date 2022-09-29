@@ -27,11 +27,11 @@
 
 <style >
 .nav-bar {
- @apply flex flex-col justify-center  h-96 p-5 
+ @apply flex flex-col justify-center p-5 
 }
 
 .nav-text {
-@apply text-lg m-2 font-serif font-light text-gray-400 hover:text-black transition-all ease-in-out duration-500
+@apply text-base  m-2 font-serif font-thin text-gray-400 hover:text-black 
     }
 
 .nav-text2 {
@@ -45,6 +45,6 @@
 @apply mb-5 border-black
       }
 .nav-footer{
-@apply text-sm xl:opacity-70 m-5 xl:absolute xl:bottom-5 opacity-0 
+@apply text-sm xl:opacity-70 absolute bottom-5 left-5 
 }
 </style>
