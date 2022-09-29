@@ -200,19 +200,18 @@ width:320px;
 } */
 
 .main-box {
-  @apply  flex items-center  flex-nowrap  h-screen ;
+  @apply  flex items-center  flex-nowrap h-screen ;
   }
 
-  .xbox2 {
-  @apply  whitespace-nowrap overflow-x-scroll inline;
+.col-box {
+  @apply  whitespace-nowrap overflow-x-scroll inline h-full;
   }
 
 .pic{
-  height:700px;
-  @apply  m-1   flex-shrink-0 inline overflow-hidden min-w-max
+  @apply   p-10 inline h-full w-auto min-w-min
   }
 
-.menu {
+.navBar {
   width:320px;
   @apply float-left h-screen hidden;
   }
