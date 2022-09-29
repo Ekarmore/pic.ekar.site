@@ -3,7 +3,8 @@
 </script>
 
 <template>
-    <nav class="nav-bar">
+    <section class="nav-pc">
+        <nav class="nav-bar">
         <h1 class="nav-text2">Ekar</h1>
         <hr class="nav-hr" />
         <span class="nav-text">
@@ -23,6 +24,11 @@
         </span>
     </nav>
     <footer class="nav-footer">Design and create by <a class="footer-link" href="">Ekar</a> in 2022</footer>
+    </section>
+    <section class="nav-mobile">
+    <span class="nav-mobile-title">Ekar</span>
+    <span class="nav-mobile-menu">menu</span>
+    </section>
 </template>
 
 <style >

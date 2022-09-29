@@ -49,7 +49,7 @@ const wheel = (event) => {
 <template>
   <section v-show="a&&a1&&a2&&a3">
   <section class="navBar">
-    <Nav class="Nav-bar" />
+    <Nav class="nav-pc" />
   </section>
   <section class="picture_container">
     <div ref="colBox" class="col-box" @wheel="wheel">
@@ -82,8 +82,8 @@ const wheel = (event) => {
     </div>
   </section>
   </section>
+
 <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
-        <!-- <p class="loading-text">Ekar</p> -->
         <div class="loading">
             <div></div>
         </div>

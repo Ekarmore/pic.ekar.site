@@ -199,29 +199,34 @@ width:320px;
 } */
 
 .picture_container {
-  @apply flex items-center  flex-nowrap h-screen;
+  @apply flex items-center flex-nowrap h-screen;
 }
 
 .col-box {
-  @apply whitespace-nowrap overflow-x-scroll inline h-full;
+  @apply whitespace-nowrap overflow-x-scroll inline h-full pt-10  md:p-5 md:h-full;
 }
 
 .pic {
   height:600px;
-  @apply p-5 inline h-full  w-auto max-w-7xl;
+  @apply  inline h-full pr-5  w-auto max-w-7xl;
 }
 /* Navbar */
-.navBar {
-  width: 320px;
-  @apply  md:float-left md:h-screen hidden md:block;
+.nav-mobile{
+@apply bg-gray-200 absolute w-full h-10 flex justify-between items-center
 }
-
-.nav-bar {
-  @apply flex md:flex-col justify-center p-5 
- }
+.nav-mobile-title{
+@apply text-xl ml-2
+}
+.nav-mobile-menu{
+@apply text-xl mr-2
+}
+.nav-pc {
+  width: 320px;
+  @apply hidden md:float-left md:h-screen bg-red-200 md:block  md:flex-col justify-center  ;
+}
  
  .nav-text {
- @apply text-base  m-2 font-serif font-thin text-gray-400 hover:text-black transition-all duration-500 ease-out
+ @apply  m-2 font-serif font-thin text-gray-400 hover:text-black transition-all duration-500 ease-out
      }
  
  .nav-text2 {
@@ -229,14 +234,17 @@ width:320px;
      }
  
  .active {
- @apply text-black
+ @apply text-black 
      }
  .nav-hr{
- @apply mb-5 border-black
+ @apply mb-5 border-black 
        }
  .nav-footer{
  @apply text-sm xl:opacity-70 absolute bottom-8 left-5 
  }
+
+
+
 
  #pic-about-text{
 @apply text-lg ml-10 text-center md:text-5xl border border-black italic mr-5
