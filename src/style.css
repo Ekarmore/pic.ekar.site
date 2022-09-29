@@ -209,7 +209,7 @@ width:320px;
 
 .pic{
   height:700px;
-  @apply  m-1  w-auto flex-shrink-0 inline overflow-hidden min-w-max
+  @apply  m-1   flex-shrink-0 inline overflow-hidden min-w-max
   }
 
 .menu {
