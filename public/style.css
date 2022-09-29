@@ -199,7 +199,7 @@ width:320px;
 } */
 
 .picture_container {
-  @apply flex items-center flex-nowrap h-screen;
+  @apply flex items-center flex-nowrap h-screen ;
 }
 
 .col-box {

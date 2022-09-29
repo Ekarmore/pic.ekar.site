@@ -21,7 +21,7 @@
             <router-link active-class="active" to="AnotherLandscape">Another Landscape</router-link>
         </span>
         <span class="nav-text">
-            <router-link active-class="active" to="About">About</router-link>
+            <router-link active-class="active" to="about">About</router-link>
         </span>
     </div>
     </nav>
