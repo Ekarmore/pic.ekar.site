@@ -12,9 +12,9 @@
 body {
   @apply select-none;
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 .catalog {
   @apply flex flex-wrap mx-auto justify-center
     w-11/12 mt-5
@@ -221,7 +221,7 @@ width:320px;
  }
  
  .nav-text {
- @apply text-base  m-2 font-serif font-thin text-gray-400 hover:text-black 
+ @apply text-base  m-2 font-serif font-thin text-gray-400 hover:text-black transition-all duration-500 ease-out
      }
  
  .nav-text2 {
@@ -236,4 +236,8 @@ width:320px;
        }
  .nav-footer{
  @apply text-sm xl:opacity-70 absolute bottom-8 left-5 
+ }
+
+ #pic-about-text{
+@apply text-lg ml-10 text-center md:text-5xl border border-black italic mr-5
  }

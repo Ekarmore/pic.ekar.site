@@ -52,6 +52,8 @@ const wheel = (event) => {
   </section>
   <section class="picture_container">
     <div ref="colBox" class="col-box" @wheel="wheel">
+      <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮  -></div>
+
       <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
 
       <img @load="imgLoad" class="pic" src="../assets/Turpan_02.jpg" alt="" />
@@ -67,6 +69,8 @@ const wheel = (event) => {
       <img @load="imgLoad" class="pic" src="../assets/Turpan_06.jpg" alt="" />
 
       <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
+
+      <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮 -></div>
     </div>
   </section>
 
