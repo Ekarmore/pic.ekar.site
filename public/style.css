@@ -207,7 +207,8 @@ width:320px;
 }
 
 .pic {
-  @apply p-10 inline h-full w-auto min-w-min max-w-max;
+  height:600px;
+  @apply p-10 inline h-full  w-auto max-w-7xl;
 }
 
 .navBar {
