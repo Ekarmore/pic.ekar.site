@@ -8,6 +8,7 @@ const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)]
 const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [() => { a.value = true }, () => { a1.value = true }, () => { a2.value = true }, () => { a3.value = true }]
 
 // new WOW({
+
 //     boxClass: "wow",
 //     animateClass: "animated",
 //     offset: 0,
@@ -20,11 +21,19 @@ const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [() => { a.value = true }, () =>
 //     scrollContainer: null,
 //     resetAnimation: true, // reset animation on end (default is true)
 // }).init()
+// 获取 colBox
 
-
+const colBox = ref(null);
+// 滚轮事件
+const wheel = (event) => {
+  //阻止默认事件触发
+  //   event.preventDefault();
+  // 滚动
+  colBox.value.scrollLeft += event.deltaY;
+};
 </script>
 <template>
-    <section v-show="a&&a1&&a2&&a3">
+    <section v-show="!a&&a1&&a2&&a3">
         <main class="Work-container">
             <div class="title-container">
                 <h1 class="title-text"><span>
@@ -77,6 +86,28 @@ const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [() => { a.value = true }, () =>
             </div>
         </footer>
     </section>
+    <section class="navBar">
+    <Nav class="Nav-bar" />
+  </section>
+  <section class="picture_container">
+    <div ref="colBox" class="col-box" @wheel="wheel">
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_02.jpg" alt="" />
+
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_01.jpg" alt="" />
+
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_03.jpg" alt="" />
+
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_04.jpg" alt="" />
+
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_05.jpg" alt="" />
+
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_06.jpg" alt="" />
+
+      <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
+    </div>
+  </section>
     <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
         <!-- <p class="loading-text">Ekar</p> -->
         <div class="loading">

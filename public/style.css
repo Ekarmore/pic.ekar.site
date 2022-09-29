@@ -208,10 +208,32 @@ width:320px;
 
 .pic {
   height:600px;
-  @apply p-10 inline h-full  w-auto max-w-7xl;
+  @apply p-5 inline h-full  w-auto max-w-7xl;
 }
-
+/* Navbar */
 .navBar {
   width: 320px;
-  @apply float-left h-screen hidden md:block;
+  @apply  md:float-left md:h-screen hidden md:block;
 }
+
+.nav-bar {
+  @apply flex md:flex-col justify-center p-5 
+ }
+ 
+ .nav-text {
+ @apply text-base  m-2 font-serif font-thin text-gray-400 hover:text-black 
+     }
+ 
+ .nav-text2 {
+ @apply text-2xl m-2 font-serif 
+     }
+ 
+ .active {
+ @apply text-black
+     }
+ .nav-hr{
+ @apply mb-5 border-black
+       }
+ .nav-footer{
+ @apply text-sm xl:opacity-70 absolute bottom-8 left-5 
+ }
