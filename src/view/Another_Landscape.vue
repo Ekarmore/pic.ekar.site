@@ -2,7 +2,6 @@
 import Nav from '../components/Nav.vue'
 import WOW from "wow.js";
 
-
 export default {
     mounted() {
         var wow = new WOW({
@@ -24,6 +23,7 @@ export default {
 };
 
 
+
 </script>
 <template>
     <div>
@@ -42,45 +42,9 @@ export default {
                 <h1 class="title-text3">2021-Now</h1>
                 </div>
             </div>
-            <!-- <section class="pic-box">
-                <div class="pic-container">
-                    <img class="pic" src="../assets/B1.jpg" alt="">
-                </div>
-                <div class="wow fadeIn" data-wow-duration="1s">
-                    <div class="pic-container">
-                        <img class="pic" src="../assets/B2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="wow fadeIn" data-wow-duration="1s">
-                    <div class="pic-container">
-                        <img class="pic" src="../assets/B3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="wow fadeIn" data-wow-duration="1s">
-                    <div class="pic-container">
-                        <img class="pic" src="../assets/B10.jpg" alt="">
-                    </div>
-                </div>
-                <div class="wow fadeIn" data-wow-duration="1s">
-                    <div class="pic-container">
-                        <img class="pic" src="../assets/B5.jpg" alt="">
-                    </div>   
-                </div>
-                <div class="wow fadeIn" data-wow-duration="1s">
-                    <div class="pic-container">
-                        <img class="pic" src="../assets/B6.jpg" alt="">
-                    </div>   
-                </div>
-                <div class="wow fadeIn" data-wow-duration="1s">
-                    <div class="pic-container">
-                        <img class="pic" src="../assets/B7.jpg" alt="">
-                    </div>   
-                </div>
-            </section> -->
         </main>
         <footer class="footer-work">
             <div class="wow fadeInLeft" data-wow-duration="2s">
-                <Nav />
             </div>
         </footer>
     </div>

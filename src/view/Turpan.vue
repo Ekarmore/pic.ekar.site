@@ -46,23 +46,23 @@ const wheel = (event) => {
     <section class="navBar">
         <Nav class="Nav-bar" />
     </section>
-    <section class="main-box">
+    <section class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
             <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
 
-            <img height="600px" @load="imgLoad" class="pic" src="../assets/Turpan_02.jpg" alt="" />
+            <img @load="imgLoad" class="pic" src="../assets/Turpan_02.jpg" alt="" />
 
             <img @load="imgLoad" class="pic" src="../assets/Turpan_01.jpg" alt="" />
 
-            <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+            <img @load="imgLoad" class="pic" src="../assets/Turpan_03.jpg" alt="" />
 
-            <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+            <img @load="imgLoad" class="pic" src="../assets/Turpan_04.jpg" alt="" />
 
-            <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+            <img @load="imgLoad" class="pic" src="../assets/Turpan_05.jpg" alt="" />
 
-            <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+            <img @load="imgLoad" class="pic" src="../assets/Turpan_06.jpg" alt="" />
 
-            <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+            <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
         </div>
     </section>
 

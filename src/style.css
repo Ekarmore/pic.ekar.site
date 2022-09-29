@@ -199,7 +199,9 @@ width:320px;
 @apply float-left h-screen ;
 } */
 
-.main-box {
+
+
+.picture_container {
   @apply  flex items-center  flex-nowrap h-screen ;
   }
 
@@ -208,11 +210,11 @@ width:320px;
   }
 
 .pic{
-  @apply   p-10 inline h-full w-auto min-w-min
+  @apply  p-10 inline h-full w-auto min-w-min
   }
 
 .navBar {
   width:320px;
-  @apply float-left h-screen hidden;
+  @apply float-left h-screen hidden md:block ;
   }
   
