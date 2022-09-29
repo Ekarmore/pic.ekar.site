@@ -1,26 +1,26 @@
 <script >
 import Nav from '../components/Nav.vue'
-import WOW from "wow.js";
+// import WOW from "wow.js";
 
-export default {
-    mounted() {
-        var wow = new WOW({
-            boxClass: "wow",
-            animateClass: "animated",
-            offset: 0,
-            mobile: true,
-            live: true,
-            callback: function (box) {
-                // the callback is fired every time an animation is started
-                // the argument that is passed in is the DOM node being animated
-            },
-            scrollContainer: null,
-            resetAnimation: true, // reset animation on end (default is true)
-        });
-        wow.init();
-    },
-    components: { Nav }
-};
+// export default {
+//     mounted() {
+//         var wow = new WOW({
+//             boxClass: "wow",
+//             animateClass: "animated",
+//             offset: 0,
+//             mobile: true,
+//             live: true,
+//             callback: function (box) {
+//                 // the callback is fired every time an animation is started
+//                 // the argument that is passed in is the DOM node being animated
+//             },
+//             scrollContainer: null,
+//             resetAnimation: true, // reset animation on end (default is true)
+//         });
+//         wow.init();
+//     },
+//     components: { Nav }
+// };
 
 
 

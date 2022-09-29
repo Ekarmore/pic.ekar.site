@@ -1,6 +1,6 @@
 <script setup>
 import Nav from "../components/Nav.vue";
-import WOW from "wow.js";
+// import WOW from "wow.js";
 import { onMounted, ref } from "vue";
 
 const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)];
@@ -24,19 +24,19 @@ const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [
 const colBox = ref(null);
 
 //wow init
-new WOW({
-  boxClass: "wow",
-  animateClass: "animated",
-  offset: 0,
-  mobile: true,
-  live: true,
-  callback: function (box) {
-    // the callback is fired every time an animation is started
-    // the argument that is passed in is the DOM node being animated
-  },
-  scrollContainer: null,
-  resetAnimation: true, // reset animation on end (default is true)
-}).init();
+// new WOW({
+//   boxClass: "wow",
+//   animateClass: "animated",
+//   offset: 0,
+//   mobile: true,
+//   live: true,
+//   callback: function (box) {
+//     // the callback is fired every time an animation is started
+//     // the argument that is passed in is the DOM node being animated
+//   },
+//   scrollContainer: null,
+//   resetAnimation: true, // reset animation on end (default is true)
+// }).init();
 
 // 滚轮事件
 const wheel = (event) => {
