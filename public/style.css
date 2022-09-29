@@ -182,7 +182,6 @@ body {
   @apply text-xl pb-5;
 }
 
-
 /* 
 .main-box {
 @apply  flex items-center  flex-nowrap  h-screen ;
@@ -199,22 +198,19 @@ width:320px;
 @apply float-left h-screen ;
 } */
 
-
-
 .picture_container {
-  @apply  flex items-center  flex-nowrap h-screen ;
-  }
+  @apply flex items-center  flex-nowrap h-screen;
+}
 
 .col-box {
-  @apply  whitespace-nowrap overflow-x-scroll inline h-full;
-  }
+  @apply whitespace-nowrap overflow-x-scroll inline h-full;
+}
 
-.pic{
-  @apply  p-10 inline h-full w-auto min-w-min
-  }
+.pic {
+  @apply p-10 inline h-full w-auto min-w-min max-w-max;
+}
 
 .navBar {
-  width:320px;
-  @apply float-left h-screen hidden md:block ;
-  }
-  
+  width: 320px;
+  @apply float-left h-screen hidden md:block;
+}
