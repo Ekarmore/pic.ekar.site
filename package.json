@@ -11,7 +11,8 @@
   "dependencies": {
     "animate.css": "3.7.2",
     "vue": "^3.2.37",
-    "vue-router": "4"
+    "vue-router": "4",
+    "wowjs": "^1.1.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
