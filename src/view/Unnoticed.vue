@@ -33,7 +33,7 @@ const wheel = (event) => {
 };
 </script>
 <template>
-    <section v-show="!a&&a1&&a2&&a3">
+    <section v-show="a&&a1&&a2&&a3">
         <main class="Work-container">
             <div class="title-container">
                 <h1 class="title-text"><span>

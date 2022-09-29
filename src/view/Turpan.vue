@@ -47,6 +47,7 @@ const wheel = (event) => {
 };
 </script>
 <template>
+  <section v-show="a&&a1&&a2&&a3">
   <section class="navBar">
     <Nav class="Nav-bar" />
   </section>
@@ -56,13 +57,13 @@ const wheel = (event) => {
 
       <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_02.jpg" alt="" />
+      <img @load="imgLoad1" class="pic" src="../assets/Turpan_02.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_01.jpg" alt="" />
+      <img @load="imgLoad2" class="pic" src="../assets/Turpan_01.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_03.jpg" alt="" />
+      <img @load="imgLoad3" class="pic" src="../assets/Turpan_03.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_04.jpg" alt="" />
+      <img @load="imgLoad4" class="pic" src="../assets/Turpan_04.jpg" alt="" />
 
       <img @load="imgLoad" class="pic" src="../assets/Turpan_05.jpg" alt="" />
 
@@ -80,6 +81,13 @@ const wheel = (event) => {
       <div></div>
     </div>
   </section>
+  </section>
+<section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
+        <!-- <p class="loading-text">Ekar</p> -->
+        <div class="loading">
+            <div></div>
+        </div>
+    </section>
 </template>
 
 <style></style>
