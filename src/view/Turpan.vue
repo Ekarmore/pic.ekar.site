@@ -43,7 +43,8 @@ const wheel = (event) => {
   //阻止默认事件触发
   //   event.preventDefault();
   // 滚动
-  colBox.value.scrollLeft += event.deltaY;
+  console.log(event.deltaX);
+  colBox.value.scrollLeft += (event.deltaY)*2;
 };
 </script>
 <template>
