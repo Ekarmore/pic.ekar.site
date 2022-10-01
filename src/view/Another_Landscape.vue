@@ -1,33 +1,8 @@
 <script >
-import Nav from '../components/Nav.vue'
-// import WOW from "wow.js";
-
-// export default {
-//     mounted() {
-//         var wow = new WOW({
-//             boxClass: "wow",
-//             animateClass: "animated",
-//             offset: 0,
-//             mobile: true,
-//             live: true,
-//             callback: function (box) {
-//                 // the callback is fired every time an animation is started
-//                 // the argument that is passed in is the DOM node being animated
-//             },
-//             scrollContainer: null,
-//             resetAnimation: true, // reset animation on end (default is true)
-//         });
-//         wow.init();
-//     },
-//     components: { Nav }
-// };
-
-
-
 </script>
 <template>
     <div>
-        <main class="Work-container">
+        <main >
             <div class="title-container">
                 <div class="wow fadeInLeft" data-wow-duration="2s">
                 <h1 class="title-text"><span>

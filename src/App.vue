@@ -1,4 +1,7 @@
-
+<script setup>
+import Nav from './components/Nav.vue'
+</script>
 <template>
-    <router-view/>
+    <Nav />
+    <router-view />
 </template>

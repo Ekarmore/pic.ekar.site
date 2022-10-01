@@ -56,8 +56,6 @@ const wheel = (event) => {
 </script>
 <template>
   <section v-show="a&&a1&&a2&&a3">
- 
-      <Nav />
 
     <section class="picture_container">
       <div ref="colBox" class="col-box" @wheel="wheel">
