@@ -74,6 +74,7 @@ const closeModal = () => {
 </template>
 
 <style>
+
 .nav-mobile {
   @apply bg-white absolute w-full  md:hidden;
 }
