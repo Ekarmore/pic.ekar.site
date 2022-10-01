@@ -211,7 +211,7 @@ width:320px;
   @apply  inline h-full pr-5  w-auto max-w-7xl;
 }
 /* Navbar */
-.nav-mobile{
+/* .nav-mobile{
 @apply bg-white absolute w-full h-16 flex justify-between items-center lg:hidden
 }
 .nav-mobile-title{
@@ -219,7 +219,7 @@ width:320px;
 }
 .nav-mobile-menu{
 @apply text-xl mr-2
-}
+} */
 .nav-pc {
   width: 320px;
   @apply  hidden md:float-left lg:h-screen lg:flex lg:flex-col ;

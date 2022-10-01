@@ -44,18 +44,13 @@ const wheel = (event) => {
   //阻止默认事件触发
   // event.preventDefault();
   //滚动
-  let xGap = ref(event.deltaY)
-  let addX = setInterval(() => {
-    colBox.value.scrollLeft += (xGap.value)/2;
+  let disX = ref(event.deltaY)
+  let scrollX = setInterval(() => {
+    colBox.value.scrollLeft += (disX.value)/2;
   }, 10);
-
   setTimeout(() => {
-    window.clearInterval(addX)
+    window.clearInterval(scrollX)
   }, 50);
-
-  // colBox.value.scrollLeft += (yGap.value)/2;
-  // colBox.value.scrollLeft += (yGap.value)/4;
-  // colBox.value.scrollLeft += (yGap.value)/8;
 };
 
 </script>
