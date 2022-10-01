@@ -44,7 +44,7 @@ const wheel = (event) => {
   //   event.preventDefault();
   // 滚动
   console.log(event.deltaX);
-  colBox.value.scrollLeft += (event.deltaY)*2;
+  colBox.value.scrollLeft += (event.deltaY)*1.5;
 };
 </script>
 <template>
