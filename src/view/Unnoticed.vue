@@ -26,14 +26,15 @@ const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [() => { a.value = true }, () =>
 const colBox = ref(null);
 // 滚轮事件
 const wheel = (event) => {
-  //阻止默认事件触发
-  //   event.preventDefault();
-  // 滚动
-  colBox.value.scrollLeft += event.deltaY;
+    //阻止默认事件触发
+    //   event.preventDefault();
+    // 滚动
+    colBox.value.scrollLeft += event.deltaY;
 };
 </script>
 <template>
-    <section v-show="a&&a1&&a2&&a3">
+    <div>
+        <!-- <section v-show="a&&a1&&a2&&a3">
         <main class="Work-container">
             <div class="title-container">
                 <h1 class="title-text"><span>
@@ -85,35 +86,48 @@ const wheel = (event) => {
                 <Nav />
             </div>
         </footer>
-    </section>
-    <section class="navBar">
-    <Nav class="Nav-bar" />
-  </section>
-  <section class="picture_container">
-    <div ref="colBox" class="col-box" @wheel="wheel">
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+    </section> -->
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_02.jpg" alt="" />
+        <section v-show="a&&a1&&a2&&a3">
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_01.jpg" alt="" />
+            <section class="picture_container">
+                <div ref="colBox" class="col-box" @wheel="wheel">
+                    <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮 -></div>
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_03.jpg" alt="" />
+                    <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_04.jpg" alt="" />
+                    <img @load="imgLoad1" class="pic" src="../assets/Turpan_02.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_05.jpg" alt="" />
+                    <img @load="imgLoad2" class="pic" src="../assets/Turpan_01.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_06.jpg" alt="" />
+                    <img @load="imgLoad3" class="pic" src="../assets/Turpan_03.jpg" alt="" />
 
-      <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
+                    <img @load="imgLoad4" class="pic" src="../assets/Turpan_04.jpg" alt="" />
+
+                    <img @load="imgLoad" class="pic" src="../assets/Turpan_05.jpg" alt="" />
+
+                    <img @load="imgLoad" class="pic" src="../assets/Turpan_06.jpg" alt="" />
+
+                    <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
+
+                </div>
+            </section>
+
+            <section class="hp-loading" v-show="false">
+                <!-- <p class="loading-text">Ekar</p> -->
+                <div class="loading">
+                    <div></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
+            <!-- <p class="loading-text">Ekar</p> -->
+            <div class="loading">
+                <div></div>
+            </div>
+        </section>
     </div>
-  </section>
-    <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
-        <!-- <p class="loading-text">Ekar</p> -->
-        <div class="loading">
-            <div></div>
-        </div>
-    </section>
 </template>
 
 <style >

@@ -16,7 +16,7 @@
     
 <style >
 .about-container{
-@apply pt-40 w-4/5 mx-auto 
+@apply md:pt-20 pt-40 w-2/5 mx-auto 
 }
 </style>
     

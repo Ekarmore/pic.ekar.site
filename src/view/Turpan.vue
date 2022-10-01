@@ -1,5 +1,4 @@
 <script setup>
-import Nav from "../components/Nav.vue";
 // import WOW from "wow.js";
 import { ref } from "vue";
 
@@ -55,8 +54,8 @@ const wheel = (event) => {
 
 </script>
 <template>
+  <div>
   <section v-show="a&&a1&&a2&&a3">
-
     <section class="picture_container">
       <div ref="colBox" class="col-box" @wheel="wheel">
         <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮 -></div>
@@ -77,7 +76,6 @@ const wheel = (event) => {
 
         <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
 
-        <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮 -></div>
       </div>
     </section>
 
@@ -94,8 +92,8 @@ const wheel = (event) => {
       <div></div>
     </div>
   </section>
+</div>
 </template>
 
 <style>
-
 </style>
