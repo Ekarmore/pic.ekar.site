@@ -1,9 +1,12 @@
 <script setup>
-import {ref} from 'vue'
+import {reactive, ref} from 'vue'
 const showModal = ref(false)
+const changeMenu = ref(false)
+
 
 const handleModal = ()=>{
 showModal.value =! showModal.value
+changeMenu.value = !changeMenu.value
 }
 </script>
 
@@ -34,7 +37,8 @@ showModal.value =! showModal.value
     </section>
 
     <section class="nav-mobile">
-           <div v-show="showModal" class="nav-mobile-modal">
+    <transition name="fade">
+    <div v-show="showModal" class="nav-mobile-modal">
         <div class="modal-text-container">
         <span class="modal-nav-text">
             <router-link active-class="active" to="/"></router-link>
@@ -53,9 +57,10 @@ showModal.value =! showModal.value
         </span>
     </div>
     </div> 
+    </transition>
     <div class="nav-mobile-bar">
     <span class="nav-mobile-title">Ekar</span>
-    <span @click="handleModal" class="nav-mobile-menu">Menu</span>
+    <span @click="handleModal" class="nav-mobile-menu">{{changeMenu? 'Menu' : 'Close'}}</span>
     </div>
 
     </section>
@@ -82,5 +87,15 @@ showModal.value =! showModal.value
 }
 .nav-mobile-menu{
 @apply  mr-5 font-serif
+}
+
+.fade-enter-active,
+.fade-leave-active {
+@apply opacity-100 duration-200 ease-in-out
+}
+
+.fade-enter-from,
+.fade-leave-to {
+@apply opacity-0 duration-200 ease-in-out
 }
 </style>
