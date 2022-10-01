@@ -60,7 +60,9 @@ changeMenu.value = !changeMenu.value
     </transition>
     <div class="nav-mobile-bar">
     <span class="nav-mobile-title">Ekar</span>
-    <span @click="handleModal" class="nav-mobile-menu">{{changeMenu? 'Menu' : 'Close'}}</span>
+    <transition name="menu">
+    <span @click="handleModal" class="nav-mobile-menu">{{changeMenu? 'Close' : 'Menu'}}</span>
+    </transition>   
     </div>
 
     </section>
@@ -97,5 +99,15 @@ changeMenu.value = !changeMenu.value
 .fade-enter-from,
 .fade-leave-to {
 @apply opacity-0 duration-200 ease-in-out
+}
+
+.menu-enter-active,
+.menu-leave-active {
+@apply opacity-100 duration-500 ease-in-out
+}
+
+.menu-enter-from,
+.menu-leave-to {
+@apply opacity-0 duration-500 ease-in-out
 }
 </style>
