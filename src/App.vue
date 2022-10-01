@@ -15,11 +15,11 @@ import Nav from './components/Nav.vue'
 .globalAnimate-enter-active,
 .globalAnimate-leave-active
 {
-@apply opacity-100 md:translate-y-0 duration-700  ease-in-out;
+@apply md:opacity-100 md:translate-y-0 md:duration-700  md:ease-in-out;
 }
 
 .globalAnimate-enter-from,
 .globalAnimate-leave-from {
-  @apply opacity-0 md:translate-y-10 duration-700 ease-in-out ;
+  @apply md:opacity-0 md:translate-y-10 md:duration-700 md:ease-in-out ;
 }
 </style>

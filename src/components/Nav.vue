@@ -105,7 +105,7 @@ const closeModal = () => {
 
 .fade-enter-from,
 .fade-leave-to {
-  @apply opacity-0 duration-100 ease-in-out ;
+  @apply opacity-0 duration-500 ease-in-out ;
 }
 
 </style>
