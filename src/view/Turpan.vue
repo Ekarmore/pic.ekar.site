@@ -40,7 +40,7 @@ const colBox = ref(null);
 
 // 滚轮事件
 const wheel = (event) => {
-
+  
   //阻止默认事件触发
   // event.preventDefault();
   //滚动
