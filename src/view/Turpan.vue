@@ -1,7 +1,7 @@
 <script setup>
 import Nav from "../components/Nav.vue";
 // import WOW from "wow.js";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 
 const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)];
 
@@ -56,9 +56,9 @@ const wheel = (event) => {
 </script>
 <template>
   <section v-show="a&&a1&&a2&&a3">
-    <section class="navBar">
-      <Nav class="nav-pc" />
-    </section>
+ 
+      <Nav />
+
     <section class="picture_container">
       <div ref="colBox" class="col-box" @wheel="wheel">
         <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮 -></div>

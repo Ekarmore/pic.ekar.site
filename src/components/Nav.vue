@@ -3,7 +3,7 @@ import {ref} from 'vue'
 const showModal = ref(false)
 
 const handleModal = ()=>{
-showModal.value = !showModal.value
+showModal.value =! showModal.value
 }
 </script>
 
@@ -20,7 +20,7 @@ showModal.value = !showModal.value
             <router-link active-class="active" to="Turpan">Unnoticed</router-link>
         </span>
         <span class="nav-text">
-            <router-link active-class="active" to="Turpan">Turpan</router-link>
+            <router-link active-class="active" to="">Turpan</router-link>
         </span>
         <span class="nav-text">
             <router-link active-class="active" to="AnotherLandscape">Another Landscape</router-link>
@@ -55,7 +55,7 @@ showModal.value = !showModal.value
     </div> 
     <div class="nav-mobile-bar">
     <span class="nav-mobile-title">Ekar</span>
-    <span @click="handleModal" class="nav-mobile-menu">MENU</span>
+    <span @click="handleModal" class="nav-mobile-menu">Menu</span>
     </div>
 
     </section>
@@ -72,15 +72,15 @@ showModal.value = !showModal.value
 @apply absolute bg-white w-full  h-screen
 }
 .modal-text-container{
-@apply flex flex-col items-center mt-20
+@apply flex flex-col items-center mt-28 
 }
 .modal-text{
-@apply text-xl text-black font-serif m-1 
+@apply text-xl text-black font-serif m-1
 }
 .nav-mobile-title{
-@apply text-xl ml-2 font-serif
+@apply  ml-5 font-serif
 }
 .nav-mobile-menu{
-@apply text-xl mr-2
+@apply  mr-5 font-serif
 }
 </style>

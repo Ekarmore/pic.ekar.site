@@ -14,9 +14,9 @@ routes:[
     {path:'/',component : Turpan },
     {path:'/Unnoticed',component : Unnoticed},
     {path:'/AnotherLandscape',component : AnotherLandscape},
-    {path:'/Turpan',component : Turpan},
+    {path:'/Turpan',component : Turpan },
     {path:'/about',component : About},
-    // {path:'/turpan',component : turpan},
+
     // {path:'/unnoticed',component : unnoticed},
     // {path:'/project',component : project},
   
