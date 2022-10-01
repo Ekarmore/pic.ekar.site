@@ -1,7 +1,7 @@
 <script >
 </script>
 <template>
-    <div>
+    <!-- <div>
         <main >
             <div class="title-container">
                 <div class="wow fadeInLeft" data-wow-duration="2s">
@@ -22,7 +22,9 @@
             <div class="wow fadeInLeft" data-wow-duration="2s">
             </div>
         </footer>
-    </div>
+    </div> -->
+
+
 </template>
 
 <style >

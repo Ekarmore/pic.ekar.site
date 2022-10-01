@@ -15,6 +15,8 @@
 </template>
     
 <style >
-
+.about-container{
+@apply pt-40 w-4/5 mx-auto 
+}
 </style>
     
