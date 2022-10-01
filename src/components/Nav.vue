@@ -34,11 +34,7 @@ showModal.value = !showModal.value
     </section>
 
     <section class="nav-mobile">
-    <div class="nav-mobile-bar">
-    <span class="nav-mobile-title">Ekar</span>
-    <span @click="handleModal" class="nav-mobile-menu">menu</span>
-    </div>
-    <div v-show="showModal" class="nav-mobile-modal">
+           <div v-show="showModal" class="nav-mobile-modal">
         <div class="modal-text-container">
         <span class="modal-nav-text">
             <router-link active-class="active" to="/"></router-link>
@@ -56,7 +52,12 @@ showModal.value = !showModal.value
             <router-link active-class="active" to="about">About</router-link>
         </span>
     </div>
+    </div> 
+    <div class="nav-mobile-bar">
+    <span class="nav-mobile-title">Ekar</span>
+    <span @click="handleModal" class="nav-mobile-menu">MENU</span>
     </div>
+
     </section>
 </template>
 
@@ -65,14 +66,13 @@ showModal.value = !showModal.value
 @apply bg-white absolute w-full  lg:hidden 
 }
 .nav-mobile-bar{
-@apply flex justify-between  items-center h-16
+@apply flex justify-between absolute items-center h-16 w-full
 }
 .nav-mobile-modal{
-height:80vh;
-@apply absolute bg-white  w-full 
+@apply absolute bg-white w-full  h-screen
 }
 .modal-text-container{
-@apply flex flex-col items-center mt-10
+@apply flex flex-col items-center mt-20
 }
 .modal-text{
 @apply text-xl text-black font-serif m-1 
