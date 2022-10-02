@@ -1,4 +1,17 @@
 <script setup>
+import { ref,defineEmits,watch } from 'vue'
+
+const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)]
+
+const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [() => { a.value = true }, () => { a1.value = true }, () => { a2.value = true }, () => { a3.value = true }]
+
+const emit = defineEmits(['isShowNav'])
+
+watch([a,a1,a2,a3],()=>{
+if(a.value&&a1.value&&a2.value&&a3.value){
+  emit("isShowNav")
+}
+})
 </script>
 <template>
 <main>

@@ -1,10 +1,18 @@
 <script setup>
 import Nav from '../components/Nav.vue'
-import { ref } from 'vue'
+import { ref,defineEmits,watch } from 'vue'
 
 const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)]
 
 const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [() => { a.value = true }, () => { a1.value = true }, () => { a2.value = true }, () => { a3.value = true }]
+
+const emit = defineEmits(['isShowNav'])
+
+watch([a,a1,a2,a3],()=>{
+if(a.value&&a1.value&&a2.value&&a3.value){
+  emit("isShowNav")
+}
+})
 
 const colBox = ref(null);
 // 滚轮事件
