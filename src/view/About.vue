@@ -1,6 +1,7 @@
 <script setup>
 </script>
 <template>
+<main>
 <section class="about-container">
 <p>Hey,我是YEKMAT,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,网页设计师,自由摄影师。</p><br/>
 
@@ -12,8 +13,10 @@
 当然,你可以通过邮件与我取得更直接的联系 Earthb0y@outlook.com<br/>
 最后,祝你度过快乐的一天,再见。
 </section>
+</main>
 </template>
-    
+
+
 <style >
 .about-container{
 @apply md:pt-20 pt-40 w-2/5 mx-auto 

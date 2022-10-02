@@ -102,7 +102,7 @@ body {
   @apply mt-10;
 }
 .hp-loading {
-  @apply w-full h-screen flex flex-col items-center justify-center align-middle font-serif;
+  @apply w-full h-screen flex flex-col items-center justify-center absolute align-middle font-serif;
 }
 
 /* -loading animate- */

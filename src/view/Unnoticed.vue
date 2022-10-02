@@ -1,5 +1,5 @@
 <script setup>
-
+import Nav from '../components/Nav.vue'
 import { ref } from 'vue'
 
 const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)]
@@ -16,9 +16,8 @@ const wheel = (event) => {
 };
 </script>
 <template>
-    <div>
+    <main>
         <section v-show="a&&a1&&a2&&a3">
-
             <section class="picture_container">
                 <div ref="colBox" class="col-box" @wheel="wheel">
                     <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮 -></div>
@@ -41,22 +40,14 @@ const wheel = (event) => {
 
                 </div>
             </section>
-
-            <section class="hp-loading" v-show="false">
-                <!-- <p class="loading-text">Ekar</p> -->
-                <div class="loading">
-                    <div></div>
-                </div>
-            </section>
         </section>
-
         <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
             <!-- <p class="loading-text">Ekar</p> -->
             <div class="loading">
                 <div></div>
             </div>
         </section>
-    </div>
+    </main>
 </template>
 
 <style >

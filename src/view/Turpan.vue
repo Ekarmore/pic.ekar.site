@@ -1,8 +1,6 @@
 <script setup>
-import { ref } from "vue";
-
-const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)];
-
+import { ref,defineEmits, reactive,watch, watchEffect} from "vue";
+const [a,a1,a2,a3] = [ref(false), ref(false), ref(false), ref(false)];
 const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [
   () => {
     a.value = true;
@@ -17,6 +15,14 @@ const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [
     a3.value = true;
   },
 ];
+
+const emit = defineEmits(['isShowNav'])
+
+watch([a,a1,a2,a3],()=>{
+if(a.value&&a1.value&&a2.value&&a3.value){
+  emit("isShowNav")
+}
+})
 
 // 获取 colBox
 const colBox = ref(null);
@@ -46,27 +52,20 @@ const wheel = (event) => {
 
           <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
 
-          <img @load="imgLoad1" class="pic" src="../assets/Turpan_02.jpg" alt="" />
+          <img @load="imgLoad2" class="pic" src="../assets/Turpan_02.jpg" alt="" />
 
-          <img @load="imgLoad2" class="pic" src="../assets/Turpan_01.jpg" alt="" />
+          <img @load="imgLoad3" class="pic" src="../assets/Turpan_01.jpg" alt="" />
 
-          <img @load="imgLoad3" class="pic" src="../assets/Turpan_03.jpg" alt="" />
+          <img @load="imgLoad4" class="pic" src="../assets/Turpan_03.jpg" alt="" />
 
-          <img @load="imgLoad4" class="pic" src="../assets/Turpan_04.jpg" alt="" />
+          <img class="pic" src="../assets/Turpan_04.jpg" alt="" />
 
-          <img @load="imgLoad" class="pic" src="../assets/Turpan_05.jpg" alt="" />
+          <img  class="pic" src="../assets/Turpan_05.jpg" alt="" />
 
-          <img @load="imgLoad" class="pic" src="../assets/Turpan_06.jpg" alt="" />
+          <img  class="pic" src="../assets/Turpan_06.jpg" alt="" />
 
-          <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
+          <img  class="pic" src="../assets/Turpan_07.jpg" alt="" />
 
-        </div>
-      </section>
-
-      <section class="hp-loading" v-show="false">
-        <!-- <p class="loading-text">Ekar</p> -->
-        <div class="loading">
-          <div></div>
         </div>
       </section>
     </section>

@@ -1,9 +1,16 @@
 <script setup>
 import Nav from "./components/Nav.vue";
+import {ref} from 'vue'
+const ShowNav = ref(false)
+const isShowNav = ()=>{
+ShowNav.value = 'true'
+}
 </script>
 <template>
-  <Nav />
-  <router-view v-slot="{ Component }">
+  <div v-show="ShowNav" class="nav">
+    <Nav />
+  </div>
+  <router-view @isShowNav="isShowNav" v-slot="{ Component }">
     <transition name="globalAnimate">
       <component :is="Component" />
     </transition>
@@ -19,4 +26,5 @@ import Nav from "./components/Nav.vue";
 .globalAnimate-leave-from {
   @apply md:opacity-0 md:translate-y-5 md:duration-700 md:ease-in-out;
 }
+
 </style>
