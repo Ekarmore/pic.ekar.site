@@ -2,12 +2,12 @@
 import Nav from "./components/Nav.vue";
 import {ref} from 'vue'
 const ShowNav = ref(false)
-const isShowNav = ()=>{
+const isShowNav = () =>{
 ShowNav.value = 'true'
 }
 </script>
 <template>
-  <div v-show="ShowNav" class="nav">
+  <div :is="activeComponent" v-show="ShowNav" class="nav">
     <Nav />
   </div>
   <router-view @isShowNav="isShowNav" v-slot="{ Component }">
