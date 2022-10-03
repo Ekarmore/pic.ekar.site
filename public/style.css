@@ -240,7 +240,7 @@ width:320px;
  @apply mb-5 w-4/5 mx-auto border-black 
        }
  .nav-footer{
- @apply text-sm xl:opacity-70 absolute bottom-8 left-8 
+ @apply text-sm font-serif xl:opacity-70 absolute bottom-8 left-8 
  }
  .active {
   @apply text-black 

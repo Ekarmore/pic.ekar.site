@@ -7,8 +7,8 @@ ShowNav.value = 'true'
 }
 </script>
 <template>
-  <div :is="activeComponent" v-show="ShowNav" class="nav">
-    <Nav />
+  <div v-show="ShowNav" class="nav">
+    <Nav  />
   </div>
   <router-view @isShowNav="isShowNav" v-slot="{ Component }">
     <transition name="globalAnimate">
