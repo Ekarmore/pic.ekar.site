@@ -91,7 +91,7 @@ const closeModal = () => {
   @apply  font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 font-mono;
+  @apply ml-5 text-sm font-mono;
 }
 .nav-mobile-menu {
   @apply mr-5 text-sm font-mono;

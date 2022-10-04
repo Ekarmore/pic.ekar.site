@@ -230,10 +230,10 @@ width:320px;
  }
 
  .nav-text {
- @apply p-1  font-mono  text-gray-400 hover:text-black transition-all duration-500 ease-out
+ @apply p-1 text-sm font-mono  text-gray-400 hover:text-black transition-all duration-500 ease-out
      }
  .nav-text2 {
- @apply pl-10 pt-10 text-2xl mb-5 mt-5 font-mono 
+ @apply pl-10 pt-10 text-xl mb-5 mt-5 font-mono 
      }
  
  .nav-hr{
