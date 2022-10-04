@@ -2,7 +2,7 @@
 import { reactive, ref } from "vue";
 const showModal = ref(false);
 const changeMenu = ref(false);
-
+console.log(changeMenu.value);
 const handleModal = () => {
   showModal.value = !showModal.value;
   changeMenu.value = !changeMenu.value;
@@ -65,7 +65,7 @@ const closeModal = () => {
       </div>
     </transition>
     <div class="nav-mobile-bar">
-      <span class="nav-mobile-title">Ekar</span>
+      <span class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
         <span @click="handleModal" class="nav-mobile-menu">{{
           changeMenu ? "Close" : "Menu"
         }}</span>
@@ -88,16 +88,16 @@ const closeModal = () => {
   @apply flex flex-col items-center mt-28;
 }
 .modal-text {
-  @apply text-lg font-thin text-gray-500 font-serif m-1;
+  @apply text-lg font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 font-serif;
+  @apply ml-5 font-mono;
 }
 .nav-mobile-menu {
-  @apply mr-5 font-serif;
+  @apply mr-5 font-mono;
 }
 .nav-mobile-footer{
-@apply text-center absolute bottom-5 font-serif
+@apply text-center absolute bottom-5 font-mono
 }
 .fade-enter-active,
 .fade-leave-active {

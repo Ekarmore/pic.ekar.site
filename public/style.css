@@ -32,7 +32,7 @@ body {
      2xl:w-auto;
 }
 .header {
-  @apply mt-5 pl-2  mx-auto text-xl font-serif
+  @apply mt-5 pl-2  mx-auto text-xl font-mono
    w-11/12 
    md:w-4/5  
    lg:w-4/5  lg:mt-10
@@ -49,10 +49,10 @@ body {
   @apply relative  m-1;
 }
 .link {
-  @apply absolute text-white w-full h-full text-center text-3xl font-thin font-serif flex justify-center items-center  md:opacity-0  md:hover:opacity-100 transition-all ease-in-out;
+  @apply absolute text-white w-full h-full text-center text-3xl font-thin font-mono flex justify-center items-center  md:opacity-0  md:hover:opacity-100 transition-all ease-in-out;
 }
 .footer {
-  @apply mt-10 mb-10 mx-auto text-base font-serif 
+  @apply mt-10 mb-10 mx-auto text-base font-mono 
     w-11/12 pl-2
     md:w-4/5  
     lg:w-4/5  
@@ -77,14 +77,14 @@ body {
 }
 
 .title-text {
-  @apply text-xl mb-10 font-serif opacity-80;
+  @apply text-xl mb-10 font-mono opacity-80;
 }
 
 .title-text2 {
-  @apply text-xl font-bold font-serif mb-5  text-center  opacity-70;
+  @apply text-xl font-bold font-mono mb-5  text-center  opacity-70;
 }
 .title-text3 {
-  @apply text-end text-sm font-serif mt-5 italic opacity-70;
+  @apply text-end text-sm font-mono mt-5 italic opacity-70;
 }
 .about-text {
   @apply text-sm md:text-base leading-7 md:leading-8 opacity-80;
@@ -102,7 +102,7 @@ body {
   @apply mt-10;
 }
 .hp-loading {
-  @apply w-full h-screen flex flex-col items-center justify-center absolute align-middle font-serif;
+  @apply w-full h-screen flex flex-col items-center justify-center absolute align-middle font-mono;
 }
 
 /* -loading animate- */
@@ -215,7 +215,7 @@ width:320px;
 @apply bg-white absolute w-full h-16 flex justify-between items-center lg:hidden
 }
 .nav-mobile-title{
-@apply text-xl ml-2 font-serif
+@apply text-xl ml-2 font-mono
 }
 .nav-mobile-menu{
 @apply text-xl mr-2
@@ -230,17 +230,17 @@ width:320px;
  }
 
  .nav-text {
- @apply p-1  font-serif font-thin text-gray-400 hover:text-black transition-all duration-500 ease-out
+ @apply p-1  font-mono  text-gray-400 hover:text-black transition-all duration-500 ease-out
      }
  .nav-text2 {
- @apply pl-10 pt-10 text-2xl mb-5 mt-5 font-serif 
+ @apply pl-10 pt-10 text-2xl mb-5 mt-5 font-mono 
      }
  
  .nav-hr{
  @apply mb-5 w-4/5 mx-auto border-black 
        }
  .nav-footer{
- @apply text-sm font-serif xl:opacity-70 absolute bottom-8 left-8 
+ @apply text-xs font-mono xl:opacity-70 absolute bottom-8 left-8 
  }
  .active {
   @apply text-black 
