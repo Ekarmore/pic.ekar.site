@@ -9,6 +9,7 @@ const handleModal = () => {
 };
 const closeModal = () => {
   showModal.value = !showModal.value;
+  changeMenu.value = !changeMenu.value;
 };
 </script>
 
