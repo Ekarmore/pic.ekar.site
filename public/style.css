@@ -232,7 +232,7 @@ width:320px;
  .nav-text {
  @apply p-1 text-sm font-mono  text-gray-400 hover:text-black transition-all duration-500 ease-out
      }
- .nav-text2 {
+ .nav-pc-title {
  @apply pl-10 pt-10 text-xl mb-5 mt-5 font-mono 
      }
  

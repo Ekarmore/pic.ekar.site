@@ -48,7 +48,7 @@ const wheel = (event) => {
     <section v-show="a&&a1&&a2&&a3">
       <section class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
-          <div id="pic-about-text" class="pic"><span>Turpan</span></div>
+          <!-- <div id="pic-about-text" class="pic"><span>Turpan</span></div> -->
 
           <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
 
@@ -65,6 +65,16 @@ const wheel = (event) => {
           <img  class="pic" src="../assets/Turpan_06.jpg" alt="" />
 
           <img  class="pic" src="../assets/Turpan_07.jpg" alt="" />
+
+          <img  class="pic" src="../assets/Turpan_08.jpg" alt="" />
+
+          <img  class="pic" src="../assets/Turpan_010.jpg" alt="" />
+
+          <img  class="pic" src="../assets/Turpan_011.jpg" alt="" />
+
+          <img  class="pic" src="../assets/Turpan_013.jpg" alt="" />
+
+          <img  class="pic" src="../assets/Turpan_014.jpg" alt="" />
 
         </div>
       </section>

@@ -8,7 +8,7 @@ ShowNav.value = 'true'
 </script>
 <template>
   <div v-show="ShowNav" class="nav">
-    <Nav  />
+    <Nav />
   </div>
   <router-view @isShowNav="isShowNav" v-slot="{ Component }">
     <transition name="globalAnimate">

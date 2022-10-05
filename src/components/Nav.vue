@@ -16,7 +16,7 @@ const closeModal = () => {
 <template>
 <!-- nav-pc -->
   <section class="nav-pc">
-      <h1 class="nav-text2"><router-link to="/">Ekar</router-link></h1>
+      <h1 class="nav-pc-title"><router-link to="/">Ekar</router-link></h1>
       <hr class="nav-hr" />
       <div class="nav-pc-textbox">
         <span class="nav-text">
