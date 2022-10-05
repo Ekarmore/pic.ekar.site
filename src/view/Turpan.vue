@@ -50,31 +50,31 @@ const wheel = (event) => {
         <div ref="colBox" class="col-box" @wheel="wheel">
           <!-- <div id="pic-about-text" class="pic"><span>Turpan</span></div> -->
 
-          <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+          <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
 
-          <img @load="imgLoad2" class="pic" src="../assets/Turpan_02.jpg" alt="" />
+          <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
 
-          <img @load="imgLoad3" class="pic" src="../assets/Turpan_01.jpg" alt="" />
+          <img @load="imgLoad3" class="pic" src="../assets/T_3.webp" alt="" />
 
-          <img @load="imgLoad4" class="pic" src="../assets/Turpan_03.jpg" alt="" />
+          <img @load="imgLoad4" class="pic" src="../assets/T_4.webp" alt="" />
 
-          <img class="pic" src="../assets/Turpan_04.jpg" alt="" />
+          <img class="pic" src="../assets/T_5.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_05.jpg" alt="" />
+          <img  class="pic" src="../assets/T_6.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_06.jpg" alt="" />
+          <img  class="pic" src="../assets/T_7.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_07.jpg" alt="" />
+          <img  class="pic" src="../assets/T_8.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_08.jpg" alt="" />
+          <img  class="pic" src="../assets/T_9.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_010.jpg" alt="" />
+          <img  class="pic" src="../assets/T_10.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_011.jpg" alt="" />
+          <img  class="pic" src="../assets/TT_11.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_013.jpg" alt="" />
+          <img  class="pic" src="../assets/T_12.webp" alt="" />
 
-          <img  class="pic" src="../assets/Turpan_014.jpg" alt="" />
+          <img  class="pic" src="../assets/T_13.webp" alt="" />
 
         </div>
       </section>

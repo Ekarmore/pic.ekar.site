@@ -27,27 +27,37 @@ const wheel = (event) => {
     <main>
         <section v-show="a&&a1&&a2&&a3">
             <section class="picture_container">
-                <div ref="colBox" class="col-box" @wheel="wheel">
-                    <div id="pic-about-text" class="pic">向右滑动或滚动鼠标滚轮 -></div>
+        <div ref="colBox" class="col-box" @wheel="wheel">
+          <!-- <div id="pic-about-text" class="pic"><span>Turpan</span></div> -->
 
-                    <img @load="imgLoad" class="pic" src="../assets/Turpan_020.jpg" alt="" />
+          <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
 
-                    <img @load="imgLoad1" class="pic" src="../assets/Turpan_02.jpg" alt="" />
+          <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
 
-                    <img @load="imgLoad2" class="pic" src="../assets/Turpan_01.jpg" alt="" />
+          <img @load="imgLoad3" class="pic" src="../assets/T_3.webp" alt="" />
 
-                    <img @load="imgLoad3" class="pic" src="../assets/Turpan_03.jpg" alt="" />
+          <img @load="imgLoad4" class="pic" src="../assets/T_4.webp" alt="" />
 
-                    <img @load="imgLoad4" class="pic" src="../assets/Turpan_04.jpg" alt="" />
+          <img class="pic" src="../assets/T_5.webp" alt="" />
 
-                    <img @load="imgLoad" class="pic" src="../assets/Turpan_05.jpg" alt="" />
+          <img  class="pic" src="../assets/T_6.webp" alt="" />
 
-                    <img @load="imgLoad" class="pic" src="../assets/Turpan_06.jpg" alt="" />
+          <img  class="pic" src="../assets/T_7.webp" alt="" />
 
-                    <img @load="imgLoad" class="pic" src="../assets/Turpan_07.jpg" alt="" />
+          <img  class="pic" src="../assets/T_8.webp" alt="" />
 
-                </div>
-            </section>
+          <img  class="pic" src="../assets/T_9.webp" alt="" />
+
+          <img  class="pic" src="../assets/T_10.webp" alt="" />
+
+          <img  class="pic" src="../assets/TT_11.webp" alt="" />
+
+          <img  class="pic" src="../assets/T_12.webp" alt="" />
+
+          <img  class="pic" src="../assets/T_13.webp" alt="" />
+
+        </div>
+      </section>
         </section>
         <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
             <!-- <p class="loading-text">Ekar</p> -->
