@@ -70,7 +70,7 @@ const wheel = (event) => {
 
           <img  class="pic" src="../assets/T_10.webp" alt="" />
 
-          <img  class="pic" src="../assets/TT_11.webp" alt="" />
+          <img  class="pic" src="../assets/T_11.webp" alt="" />
 
           <img  class="pic" src="../assets/T_12.webp" alt="" />
 
