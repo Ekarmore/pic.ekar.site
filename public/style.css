@@ -89,15 +89,6 @@ body {
 .about-text {
   @apply text-sm md:text-base leading-7 md:leading-8 opacity-80;
 }
-.pic-container {
-  @apply mx-auto md:w-4/5  mt-5;
-}
-.pic-box {
-  @apply mt-10  xl:w-3/5 mx-auto;
-}
-.pic {
-  @apply w-11/12 mx-auto;
-}
 .footer-work {
   @apply mt-10;
 }
@@ -199,7 +190,7 @@ width:320px;
 } */
 
 .picture_container {
-  @apply flex items-center flex-nowrap h-screen ;
+  @apply flex items-center flex-nowrap h-screen  ;
 }
 
 .col-box {
@@ -207,8 +198,7 @@ width:320px;
 }
 
 .pic {
-  height:600px;
-  @apply  inline h-full pr-5  w-auto max-w-7xl;
+  @apply inline h-full w-auto pr-5 max-w-max;
 }
 /* Navbar */
 /* .nav-mobile{

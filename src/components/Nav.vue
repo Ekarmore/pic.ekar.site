@@ -8,10 +8,12 @@ const handleModal = () => {
   showModal.value = !showModal.value;
   changeMenu.value = !changeMenu.value;
 };
+//唤起或关闭Modal
 const closeModal = () => {
   showModal.value = !showModal.value;
   changeMenu.value = !changeMenu.value;
 };
+//Modal框不可以拖动
 const touchMove = (event)=>{
   event.preventDefault()
 }

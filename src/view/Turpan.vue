@@ -1,5 +1,6 @@
 <script setup>
-import { ref,defineEmits, reactive,watch, watchEffect} from "vue";
+
+import { ref,defineEmits,watch} from "vue";
 const [a,a1,a2,a3] = [ref(false), ref(false), ref(false), ref(false)];
 const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [
   () => {
@@ -48,33 +49,13 @@ const wheel = (event) => {
     <section v-show="a&&a1&&a2&&a3">
       <section class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
-          <!-- <div id="pic-about-text" class="pic"><span>Turpan</span></div> -->
 
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
-
           <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
-
           <img @load="imgLoad3" class="pic" src="../assets/T_3.webp" alt="" />
-
           <img @load="imgLoad4" class="pic" src="../assets/T_4.webp" alt="" />
-
-          <img class="pic" src="../assets/T_5.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_6.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_7.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_8.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_9.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_10.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_11.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_12.webp" alt="" />
-
-          <img  class="pic" src="../assets/T_13.webp" alt="" />
+          <img @load="imgLoad4" class="pic" src="../assets/T_5.webp" alt="" />
+          <img @load="imgLoad4" class="pic" src="../assets/T_6.webp" alt="" />
 
         </div>
       </section>

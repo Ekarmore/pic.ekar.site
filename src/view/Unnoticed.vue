@@ -1,5 +1,4 @@
 <script setup>
-import Nav from '../components/Nav.vue'
 import { ref,defineEmits,watch } from 'vue'
 
 const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)]
