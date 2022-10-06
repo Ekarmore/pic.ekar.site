@@ -2,7 +2,8 @@
 import { reactive, ref } from "vue";
 const showModal = ref(false);
 const changeMenu = ref(false);
-console.log(changeMenu.value);
+
+
 const handleModal = () => {
   showModal.value = !showModal.value;
   changeMenu.value = !changeMenu.value;
@@ -11,6 +12,9 @@ const closeModal = () => {
   showModal.value = !showModal.value;
   changeMenu.value = !changeMenu.value;
 };
+const touchMove = (event)=>{
+  event.preventDefault()
+}
 </script>
 
 <template>
@@ -41,7 +45,7 @@ const closeModal = () => {
 <!-- nav-mobile -->
   <section class="nav-mobile">
     <transition name="fade">
-      <div v-show="showModal" class="nav-mobile-modal">
+      <div ref="mobileModal" @touchmove="touchMove" v-show="showModal" class="nav-mobile-modal">
             <div @click="closeModal" class="modal-text-container">
               <span class="modal-text">
                 <router-link active-class="active" to="Unnoticed"
