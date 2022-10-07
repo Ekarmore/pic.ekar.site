@@ -200,6 +200,9 @@ width:320px;
 .pic {
   @apply inline h-full w-auto pr-5 max-w-max;
 }
+.pic-end {
+  @apply inline h-full w-auto max-w-max;
+}
 /* Navbar */
 /* .nav-mobile{
 @apply bg-white absolute w-full h-16 flex justify-between items-center lg:hidden

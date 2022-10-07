@@ -31,22 +31,17 @@ const wheel = (event) => {
 </script>
 <template>
     <main>
-        <section v-show="a&&a1&&a2&&a3">
+        <section v-show="a&&a1">
             <section class="picture_container">
                 <div ref="colBox" class="col-box" @wheel="wheel">
                     <!-- <div id="pic-about-text" class="pic"><span>Turpan</span></div> -->
 
-                    <img @load="imgLoad" class="pic" src="../assets/Un_4.webp" alt="" />
-                    <img @load="imgLoad2" class="pic" src="../assets/Un_4.webp" alt="" />
-                    <img @load="imgLoad3" class="pic" src="../assets/Un_4.webp" alt="" />
-                    <img @load="imgLoad4" class="pic" src="../assets/Un_4.webp" alt="" />
-                    <img class="pic" src="../assets/Un_5.webp" alt="" />
-                    <img class="pic" src="../assets/Un_6.webp" alt="" />
-
+                    <img @load="imgLoad" class="pic" src="../assets/AL_2.webp" alt="" />
+                    <img @load="imgLoad2" class="pic-end" src="../assets/AL_1.webp" alt="" />
                 </div>
             </section>
         </section>
-        <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
+        <section class="hp-loading" v-show="!(a&&a1)">
             <!-- <p class="loading-text">Ekar</p> -->
             <div class="loading">
                 <div></div>

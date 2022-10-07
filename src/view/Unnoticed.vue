@@ -46,7 +46,7 @@ const wheel = (event) => {
           <img class="pic" src="../assets/Un_9.webp" alt="" />
           <img class="pic" src="../assets/Un_14.webp" alt="" />
           <img class="pic" src="../assets/Un_13.webp" alt="" />
-          <img class="pic" src="../assets/Un_11.webp" alt="" />
+          <img class="pic-end" src="../assets/Un_11.webp" alt="" />
 
         </div>
       </section>
