@@ -11,12 +11,10 @@ watchEffect(()=>{
 
 <main class="me-container">
 <article class="me-box">
-<p  class="me-text">Hey,我是YEKMAT,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,网页设计师,自由摄影师。</p><br/>
+<p  class="me-text">Hey,我是YEKMAT,来自这颗蓝色星球某一处的氧气呼吸者,一名自由摄影师。</p><br/>
 <p class="me-text"> 同时我热爱拍照,如果你也视一些独特的光景为珍宝或仅仅是喜欢拍照,也可以来我的摄影个站看看我在做的一些摄影项目,谈谈你的感受亦或是由于志同道合成为好友,一起聊聊拍照和参与一些摄影社群活动。</p><br/>
 <hr class="me-hr" />
-<p class="me-text"> 除了这里,你也可以在 Github 或 BiliBili 以及 Ins 找到我
-当然,你可以通过邮件与我取得更直接的联系 Earthb0y@outlook.com
-最后,祝你度过快乐的一天,再见。</p>
+
 </article>
 </main>
 
@@ -25,7 +23,7 @@ watchEffect(()=>{
 
 <style >
 .me-box{
-@apply mx-auto w-11/12
+@apply mx-auto w-full md:w-10/12 xl:w-9/12
 }
 .me-container{
 @apply md:pt-14 pt-24 md:overflow-y-scroll mx-auto md:ml-96 w-4/5 lg:w-3/5 md:w-1/2 h-screen 
