@@ -1,7 +1,7 @@
 <script setup>
 
-import { ref,defineEmits,watch} from "vue";
-const [a,a1,a2,a3] = [ref(false), ref(false), ref(false), ref(false)];
+import { ref, defineEmits, watch } from "vue";
+const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)];
 const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [
   () => {
     a.value = true;
@@ -19,10 +19,10 @@ const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [
 
 const emit = defineEmits(['isShowNav'])
 
-watch([a,a1,a2,a3],()=>{
-if(a.value&&a1.value&&a2.value&&a3.value){
-  emit("isShowNav")
-}
+watch([a, a1, a2, a3], () => {
+  if (a.value && a1.value && a2.value && a3.value) {
+    emit("isShowNav")
+  }
 })
 
 // 获取 colBox
@@ -52,10 +52,16 @@ const wheel = (event) => {
 
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
           <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
-          <img @load="imgLoad3" class="pic" src="../assets/T_3.webp" alt="" />
-          <img @load="imgLoad4" class="pic" src="../assets/T_4.webp" alt="" />
-          <img @load="imgLoad4" class="pic" src="../assets/T_5.webp" alt="" />
-          <img @load="imgLoad4" class="pic" src="../assets/T_6.webp" alt="" />
+          <img @load="imgLoad3" class="pic" src="../assets/T_19.webp" alt="" />    
+          <img class="pic" src="../assets/T_4.webp" alt="" />
+          <img class="pic" src="../assets/T_0000.webp" alt="" />
+          <img class="pic" src="../assets/T_28.webp" alt="" />
+          <img class="pic" src="../assets/T_27.webp" alt="" />
+          <img class="pic" src="../assets/T_25.webp" alt="" />
+          <img class="pic" src="../assets/T_11.webp" alt="" />
+          <img class="pic" src="../assets/T_29.webp" alt="" />
+          <img class="pic" src="../assets/T_15.webp" alt="" />
+          <img class="pic" src="../assets/T_8.webp" alt="" />
 
         </div>
       </section>
