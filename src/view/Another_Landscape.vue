@@ -3,17 +3,19 @@ import { ref, defineEmits, watch } from 'vue'
 import {useImgLoad} from '../utils/Loading'
 import {useModalControl} from '../utils/modalControl'
 import {useXScroll} from '../utils/scrollControl'
+import {useTitle} from '../utils/title'
+
+useTitle()
 
 const { imgLoad,imgLoad2,a, a1, a2, a3} = useImgLoad()
 
 //让页面横向滚动
 const {colBox,wheel} = useXScroll()
-
-
+;
 const emit = defineEmits(['isShowNav'])
 
 watch([a, a1, a2, a3], () => {
-  if (a.value && a1.value && a2.value && a3.value) {
+  if (a.value && a1.value) {
     emit("isShowNav")
   }
 })

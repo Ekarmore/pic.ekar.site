@@ -4,6 +4,9 @@ import { ref, defineEmits, watch, onMounted } from "vue";
 import {useImgLoad} from '../utils/Loading'
 import {useModalControl} from '../utils/modalControl'
 import {useXScroll} from '../utils/scrollControl'
+import {useTitle} from '../utils/title'
+
+useTitle()
 
 const { imgLoad,imgLoad2,imgLoad3,imgLoad4,a, a1, a2, a3} = useImgLoad()
 
@@ -23,7 +26,6 @@ const {colBox,wheel} = useXScroll()
     <section v-show="a&&a1&&a2&&a3">
       <section class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
-
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
           <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
           <img @load="imgLoad3" class="pic" src="../assets/T_19.webp" alt="" /> 
@@ -39,11 +41,9 @@ const {colBox,wheel} = useXScroll()
           <img class="pic" src="../assets/T_00000.webp" alt="" />
           <img class="pic" src="../assets/T_6.webp" alt="" />
           <img class="pic-end" src="../assets/T_8.webp" alt="" />
-
         </div>
       </section>
     </section>
-
     <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
       <div class="loading">
         <div></div>

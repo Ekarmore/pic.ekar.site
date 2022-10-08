@@ -10,11 +10,11 @@ const router = createRouter({
     return { top: 0 };
   },
   routes: [
-    { path: "/", component: Unnoticed },
-    { path: "/Unnoticed", component: Unnoticed },
-    { path: "/AnotherLandscape", component: AnotherLandscape },
-    { path: "/Turpan", component: Turpan },
-    { path: "/about", component: About },
+    { path: "/", component: Unnoticed,meta:{title:'Unnoticed'} },
+    { path: "/Unnoticed", component: Unnoticed,meta:{title:'Unnoticed | Ekar'}},
+    { path: "/AnotherLandscape", component: AnotherLandscape,meta:{title:'AnotherLandscape | Ekar'} },
+    { path: "/Turpan", component: Turpan,meta:{title:'Turpan | Ekar'} },
+    { path: "/about", component: About,meta:{title:'About | Ekar'} },
   ],
 });
 export default router;

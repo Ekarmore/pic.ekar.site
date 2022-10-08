@@ -1,8 +1,12 @@
 <script setup>
-import { ref, defineEmits, watch } from 'vue'
+import { ref, defineEmits, watch, onMounted } from 'vue'
 import { useImgLoad } from '../utils/Loading'
 import {useXScroll} from '../utils/scrollControl'
+import {useTitle} from '../utils/title'
 
+onMounted(()=>{
+useTitle()
+})
 const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
 const {colBox,wheel} = useXScroll()
 
@@ -38,7 +42,6 @@ watch([a, a1, a2, a3], () => {
       </section>
     </section>
     <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
-      <!-- <p class="loading-text">Ekar</p> -->
       <div class="loading">
         <div></div>
       </div>
