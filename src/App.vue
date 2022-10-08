@@ -19,12 +19,12 @@ ShowNav.value = 'true'
 <style>
 .globalAnimate-enter-active,
 .globalAnimate-leave-active {
-  @apply md:opacity-100 md:translate-y-0 md:duration-700  md:ease-in-out;
+  @apply opacity-100 md:translate-y-0 duration-700 ease-in-out;
 }
 
 .globalAnimate-enter-from,
 .globalAnimate-leave-from {
-  @apply md:opacity-0 md:translate-y-5 md:duration-700 md:ease-in-out;
+  @apply opacity-0 md:translate-y-5 duration-700 ease-in-out;
 }
 
 </style>
