@@ -1,21 +1,11 @@
 <script setup>
 
 import { ref, defineEmits, watch } from "vue";
-const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)];
-const [imgLoad, imgLoad2, imgLoad3, imgLoad4] = [
-  () => {
-    a.value = true;
-  },
-  () => {
-    a1.value = true;
-  },
-  () => {
-    a2.value = true;
-  },
-  () => {
-    a3.value = true;
-  },
-];
+import {useImgLoad} from '../utils/Loading'
+
+
+const { imgLoad,imgLoad2,imgLoad3,imgLoad4,a, a1, a2, a3} = useImgLoad()
+
 
 const emit = defineEmits(['isShowNav'])
 
