@@ -4,9 +4,7 @@ import { ref, defineEmits, watch, onMounted } from "vue";
 import {useImgLoad} from '../utils/Loading'
 import {useModalControl} from '../utils/modalControl'
 import {useXScroll} from '../utils/scrollControl'
-import {useTitle} from '../utils/title'
 
-useTitle()
 
 const { imgLoad,imgLoad2,imgLoad3,imgLoad4,a, a1, a2, a3} = useImgLoad()
 

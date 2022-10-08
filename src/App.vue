@@ -1,6 +1,10 @@
 <script setup>
 import Nav from "./components/Nav.vue";
 import {ref} from 'vue'
+import {useTitle} from './utils/title'
+
+useTitle()
+
 const ShowNav = ref(false)
 const isShowNav = () =>{
 ShowNav.value = 'true'

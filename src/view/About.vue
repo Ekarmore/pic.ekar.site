@@ -1,6 +1,8 @@
 <script setup>
 import { ref,defineEmits,watch, watchEffect } from 'vue'
 
+
+
 const emit = defineEmits(['isShowNav'])
 
 watchEffect(()=>{
