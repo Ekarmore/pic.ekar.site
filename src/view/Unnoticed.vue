@@ -1,8 +1,10 @@
 <script setup>
 import { ref, defineEmits, watch } from 'vue'
 import { useImgLoad } from '../utils/Loading'
+import {useXScroll} from '../utils/scrollControl'
 
 const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
+const {colBox,wheel} = useXScroll()
 
 const emit = defineEmits(['isShowNav'])
 
@@ -12,21 +14,6 @@ watch([a, a1, a2, a3], () => {
   }
 })
 
-const colBox = ref(null);
-// 滚轮事件
-const wheel = (event) => {
-
-  //阻止默认事件触发
-  // event.preventDefault();
-  //滚动
-  let disX = ref(event.deltaY)
-  let scrollX = setInterval(() => {
-    colBox.value.scrollLeft += (disX.value) / 2;
-  }, 10);
-  setTimeout(() => {
-    window.clearInterval(scrollX)
-  }, 50);
-};
 </script>
 <template>
   <main>

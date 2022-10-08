@@ -1,34 +1,23 @@
 <script setup>
 import { ref, defineEmits, watch } from 'vue'
-
 import {useImgLoad} from '../utils/Loading'
+import {useModalControl} from '../utils/modalControl'
+import {useXScroll} from '../utils/scrollControl'
 
 const { imgLoad,imgLoad2,a, a1, a2, a3} = useImgLoad()
+
+//让页面横向滚动
+const {colBox,wheel} = useXScroll()
 
 
 const emit = defineEmits(['isShowNav'])
 
 watch([a, a1, a2, a3], () => {
-    if (a.value && a1.value && a2.value && a3.value) {
-        emit("isShowNav")
-    }
+  if (a.value && a1.value && a2.value && a3.value) {
+    emit("isShowNav")
+  }
 })
 
-const colBox = ref(null);
-// 滚轮事件
-const wheel = (event) => {
-
-    //阻止默认事件触发
-    // event.preventDefault();
-    //滚动
-    let disX = ref(event.deltaY)
-    let scrollX = setInterval(() => {
-        colBox.value.scrollLeft += (disX.value) / 2;
-    }, 10);
-    setTimeout(() => {
-        window.clearInterval(scrollX)
-    }, 50);
-};
 </script>
 <template>
     <main>
