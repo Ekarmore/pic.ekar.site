@@ -1,23 +1,22 @@
 <script setup>
-import { ref, defineEmits, watch, onMounted } from 'vue'
-import { useImgLoad } from '../utils/Loading'
-import {useXScroll} from '../utils/scrollControl'
+import { defineEmits, watch } from "vue";
+import { useImgLoad } from "../utils/Loading";
+import { useXScroll } from "../utils/scrollControl";
 
-const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
-const {colBox,wheel} = useXScroll()
+const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad();
+const { colBox, wheel } = useXScroll();
 
-const emit = defineEmits(['isShowNav'])
 
+const emit = defineEmits(["isShowNav"]);
 watch([a, a1, a2, a3], () => {
   if (a.value && a1.value && a2.value && a3.value) {
-    emit("isShowNav")
+    emit("isShowNav",true);
   }
-})
-
+});
 </script>
 <template>
   <main>
-    <section v-show="a&&a1&&a2&&a3">
+    <section v-show="a && a1 && a2 && a3">
       <section class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
           <!-- <div id="pic-about-text" class="pic"><span>Turpan</span></div> -->
@@ -33,11 +32,10 @@ watch([a, a1, a2, a3], () => {
           <img class="pic" src="../assets/Un_14.webp" alt="" />
           <img class="pic" src="../assets/Un_13.webp" alt="" />
           <img class="pic-end" src="../assets/Un_11.webp" alt="" />
-
         </div>
       </section>
     </section>
-    <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
+    <section class="hp-loading" v-show="!(a && a1 && a2 && a3)">
       <div class="loading">
         <div></div>
       </div>
@@ -45,6 +43,4 @@ watch([a, a1, a2, a3], () => {
   </main>
 </template>
 
-<style >
-
-</style>
+<style></style>

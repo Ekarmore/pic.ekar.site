@@ -1,12 +1,10 @@
 <script setup>
-import { ref,defineEmits,watch, watchEffect } from 'vue'
-
-
+import {defineEmits,watchEffect } from 'vue'
 
 const emit = defineEmits(['isShowNav'])
 
 watchEffect(()=>{
-  emit("isShowNav")
+  emit("isShowNav",true)
 })
 </script>
 <template>

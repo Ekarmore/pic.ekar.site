@@ -1,7 +1,7 @@
 import { ref } from "vue";
 
 export function useImgLoad() {
-  const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)];
+ const [a, a1, a2, a3] = [ref(false), ref(false), ref(false), ref(false)];
 
   function imgLoad() {
     a.value = true;

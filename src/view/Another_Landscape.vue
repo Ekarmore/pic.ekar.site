@@ -1,7 +1,6 @@
 <script setup>
-import { ref, defineEmits, watch } from 'vue'
+import { defineEmits, watch } from 'vue'
 import {useImgLoad} from '../utils/Loading'
-import {useModalControl} from '../utils/modalControl'
 import {useXScroll} from '../utils/scrollControl'
 
 
@@ -14,7 +13,7 @@ const emit = defineEmits(['isShowNav'])
 
 watch([a, a1, a2, a3], () => {
   if (a.value && a1.value) {
-    emit("isShowNav")
+    emit("isShowNav",true)
   }
 })
 

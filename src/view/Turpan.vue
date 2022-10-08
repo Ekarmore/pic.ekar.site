@@ -1,8 +1,7 @@
 <script setup>
 
-import { ref, defineEmits, watch, onMounted } from "vue";
+import { defineEmits, watch } from "vue";
 import {useImgLoad} from '../utils/Loading'
-import {useModalControl} from '../utils/modalControl'
 import {useXScroll} from '../utils/scrollControl'
 
 
@@ -10,14 +9,13 @@ const { imgLoad,imgLoad2,imgLoad3,imgLoad4,a, a1, a2, a3} = useImgLoad()
 
 const emit = defineEmits(['isShowNav'])
 
-watch([a, a1, a2, a3], () => {
-  if (a.value && a1.value && a2.value && a3.value) {
-    emit("isShowNav")
-  }
-})
 const {colBox,wheel} = useXScroll()
 
-
+watch([a, a1, a2, a3], () => {
+  if (a.value && a1.value && a2.value && a3.value) {
+    emit("isShowNav",true)
+  }
+})
 </script>
 <template>
   <div>

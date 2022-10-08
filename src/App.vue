@@ -6,8 +6,8 @@ import {useTitle} from './utils/title'
 useTitle()
 
 const ShowNav = ref(false)
-const isShowNav = () =>{
-ShowNav.value = 'true'
+const isShowNav = (isTrue) =>{
+ShowNav.value = isTrue
 }
 </script>
 <template>
