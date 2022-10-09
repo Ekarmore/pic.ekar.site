@@ -1,18 +1,11 @@
-// import { getCurrentInstance } from "vue";
+import { getCurrentInstance, ref, watch } from "vue";
 
+export function useModal(a, a1, a2, a3) {
+  const emit = getCurrentInstance().emit;
 
-// export function useModal(){
-
-// const emit = getCurrentInstance().emit
-
-//  emit('isShowNav',true)
-
-// }
-
-import { defineEmits, onMounted  } from "vue";
-export function useModal () {
-onMounted(()=>{
-    console.log('1');
-})
-
+  watch([a, a1, a2, a3], () => {
+    if ((a.value&&a1.value&&a2.value&&a3.value)) {
+      emit("isShowNav", true);
+    }
+  });
 }
