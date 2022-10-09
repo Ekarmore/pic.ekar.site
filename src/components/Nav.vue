@@ -74,7 +74,7 @@ const touchMove = (event)=>{
     <div class="nav-mobile-bar">
       <span class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
         <span @click="handleModal" class="nav-mobile-menu">{{
-          changeMenu ? "Close" : "Catalog"
+          changeMenu ? "Close" : "Menu"
         }}</span>
     </div>
   </section>
