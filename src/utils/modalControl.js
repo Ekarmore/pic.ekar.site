@@ -1,8 +1,11 @@
-export default {
-    emits: ['isShowNav'],
-    setup(props, ctx) {
-    setTimeout(() => {
-    ctx.emit('isShowNav')
-    }, 1000);
-    }
+import { getCurrentInstance } from "vue";
+
+
+export function useModal(){
+
+const emit = getCurrentInstance().emit
+
+ emit('isShowNav',true)
+
 }
+

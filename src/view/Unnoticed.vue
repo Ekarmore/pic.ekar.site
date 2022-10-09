@@ -1,11 +1,15 @@
 <script setup>
-import { defineEmits, watch } from "vue";
+import { defineEmits, getCurrentInstance, onMounted, watch } from "vue";
 import { useImgLoad } from "../utils/Loading";
 import { useXScroll } from "../utils/scrollControl";
+// import {useModal} from '../utils/modalControl'
+
 
 const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad();
 const { colBox, wheel } = useXScroll();
 
+// useModal()
+// console.log(getCurrentInstance().emit);
 
 const emit = defineEmits(["isShowNav"]);
 watch([a, a1, a2, a3], () => {

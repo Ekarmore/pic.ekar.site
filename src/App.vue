@@ -3,12 +3,15 @@ import Nav from "./components/Nav.vue";
 import {ref} from 'vue'
 import {useTitle} from './utils/title'
 
-useTitle()
+const title =  useTitle
+
+title()
 
 const ShowNav = ref(false)
 const isShowNav = (isTrue) =>{
 ShowNav.value = isTrue
 }
+
 </script>
 <template>
   <div v-show="ShowNav" class="nav">

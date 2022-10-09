@@ -2,11 +2,11 @@ import { watch,ref } from "vue";
 import { useImgLoad } from "./Loading";
 
 export function useWatchA(){
-    const num = ref(10)
 
-    setInterval(() => {
-        num.value += 1
-    }, 500);
+    const {imgLoad,imgLoad2,imgLoad3,imgLoad4,a,a1,a2,a3} = useImgLoad()
 
-    return {num}
+    console.log(a.value,a1.value,a2.value,a3.value);
+    setTimeout(() => {
+        console.log(a1.value,a2.value,a3.value);
+      }, 2000);
 }
