@@ -11,10 +11,17 @@ watchEffect(()=>{
 
 <main class="me-container">
 <article class="me-box">
-<p  class="me-text">Hey,我是YEKMAT,来自这颗蓝色星球某一处的氧气呼吸者,一名自由摄影师。</p><br/>
-<p class="me-text"> 同时我热爱拍照,如果你也视一些独特的光景为珍宝或仅仅是喜欢拍照,也可以来我的摄影个站看看我在做的一些摄影项目,谈谈你的感受亦或是由于志同道合成为好友,一起聊聊拍照和参与一些摄影社群活动。</p><br/>
-<hr class="me-hr" />
+<p class="me-text">Hello,yo!</p>
+<p class=" me-text">我是YEKMAT,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。</p>
+<p class="me-text">我创建了这个网站并在这里放了一些自己拍的照片供于访问与分享,你可以在这里看到我在做的一些摄影项目,希望当中会有能够与你产生共鸣的照片</p>
+<p class="me-text">多说无益,或许你更应该从照片里了解我</p>
 
+<p class="startBox">所以,<router-link class="getStart" to="/">点击我开始观看作品></router-link></p>
+<!-- <hr class="me-hr" /> -->
+<p class="me-text">除此之外,你也可以通过以下方式找到我:</p>
+<a class="about-link" href="">instagram:ekarmore</a>
+<p class="me-text">e-mail:<a class="about-link" href="mailto:earthb0y@outlook.com">earthb0y@outlook.com</a></p>
+<p class="me-text">最后祝你拥有愉快的一天!</p>
 </article>
 </main>
 
@@ -22,11 +29,20 @@ watchEffect(()=>{
 
 
 <style >
+.startBox{
+@apply mt-5 mb-5 text-sm
+}
+.getStart{
+@apply font-bold  border-b border-gray-300 hover:border-black p-0.5 duration-300 ease-in-out
+}
+.about-link{
+@apply border-b text-sm border-black p-0.5 
+}
 .me-box{
-@apply mx-auto w-full md:w-10/12 xl:w-9/12
+@apply mx-auto w-full md:w-10/12 xl:w-8/12
 }
 .me-container{
-@apply md:pt-14 pt-24 md:overflow-y-scroll mx-auto md:ml-96 w-4/5 lg:w-3/5 md:w-1/2 h-screen 
+@apply md:pt-14 pt-24 md:overflow-y-scroll mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 h-screen 
 }
 .me-text{
 @apply font-mono text-sm leading-8 

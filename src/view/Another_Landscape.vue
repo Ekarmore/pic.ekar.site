@@ -2,15 +2,12 @@
 import { defineEmits, watch } from 'vue'
 import {useImgLoad} from '../utils/Loading'
 import {useXScroll} from '../utils/scrollControl'
-
-
 const { imgLoad,imgLoad2,a, a1, a2, a3} = useImgLoad()
 
 //让页面横向滚动
 const {colBox,wheel} = useXScroll()
-;
-const emit = defineEmits(['isShowNav'])
 
+const emit = defineEmits(['isShowNav'])
 watch([a, a1, a2, a3], () => {
   if (a.value && a1.value) {
     emit("isShowNav",true)
