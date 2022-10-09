@@ -2,10 +2,8 @@
 import Nav from "./components/Nav.vue";
 import {ref} from 'vue'
 import {useTitle} from './utils/title'
-
-const title =  useTitle
-
-title()
+ 
+useTitle()
 
 const ShowNav = ref(false)
 const isShowNav = (isTrue) =>{
