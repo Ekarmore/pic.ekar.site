@@ -26,18 +26,18 @@ const touchMove = (event)=>{
       <hr class="nav-hr" />
       <div class="nav-pc-textbox">
         <span class="nav-text">
-          <router-link active-class="active" to="Unnoticed">Unnoticed</router-link>
+          <router-link active-class="active" to="Unnoticed">- Unnoticed</router-link>
         </span>
         <span class="nav-text">
-          <router-link active-class="active" to="Turpan">Turpan</router-link>
+          <router-link active-class="active" to="Turpan">- Turpan</router-link>
         </span>
         <span class="nav-text">
           <router-link active-class="active" to="AnotherLandscape"
-            >Another Landscape</router-link
+            >- Another Landscape</router-link
           >
         </span>
         <span class="nav-text">
-          <router-link active-class="active" to="about">About</router-link>
+          <router-link active-class="active" to="about">- About</router-link>
         </span>
       </div>
     <footer class="nav-footer">
@@ -98,10 +98,10 @@ const touchMove = (event)=>{
   @apply  font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 text-sm font-mono;
+  @apply ml-5 text-sm font-bold font-mono;
 }
 .nav-mobile-menu {
-  @apply mr-5 text-sm font-mono;
+  @apply mr-5 text-sm font-bold font-mono ;
 }
 .nav-mobile-footer{
 @apply text-center text-xs absolute bottom-5 font-mono
@@ -113,7 +113,7 @@ const touchMove = (event)=>{
 
 .fade-enter-from,
 .fade-leave-to {
-  @apply opacity-0 blur-xl duration-300 ease-in-out ;
+  @apply opacity-0 blur-xl duration-500 ease-in-out ;
 }
 
 </style>

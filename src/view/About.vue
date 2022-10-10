@@ -16,8 +16,8 @@ watchEffect(()=>{
 <p class="me-text">我创建了这个网站并在这里放了一些自己拍的照片供于访问与分享,你可以在这里看到我在做的一些摄影项目,希望当中会有能够与你产生共鸣的照片。</p>
 <p class="me-text">多说无益,或许你更应该从照片里了解我。</p>
 
-<p class="startBox">所以,<router-link class="getStart" to="/">点击我开始观看作品></router-link></p>
-<p class="me-text">最后,祝你拥有愉快的一天!</p>
+<p class="startBox">所以,<router-link class="getStart" to="/">点击我开始观看作品 ></router-link></p>
+<p class="me-text">祝你拥有愉快的一天!</p>
 <hr class="me-hr" />
 <p class="me-text">除此之外,你也可以通过以下方式找到我:</p>
 <section class="about-link-box">
@@ -33,7 +33,7 @@ watchEffect(()=>{
 
 <style >
 .Ekar{
-@apply text-sm font-bold italic
+@apply text-sm font-bold font-mono italic
 }
 .startBox{
 @apply mt-5 mb-5 text-sm
@@ -51,19 +51,19 @@ watchEffect(()=>{
 @apply md:pt-14 pt-24 md:overflow-y-scroll mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 h-screen 
 }
 .me-text{
-@apply font-mono text-sm leading-9 
+@apply font-mono opacity-80 text-sm leading-9 
 }
 .me-text-end{
 @apply font-mono text-sm leading-8
 }
 .me-hr{
-@apply border-black mt-10 mb-10 w-48 mx-auto 
+@apply border-black mt-10 mb-10 w-24 mx-auto 
 }
 .me-text-start{
 @apply font-mono text-xl mb-2 font-bold leading-10
 }
 .about-link-box{
-@apply flex flex-col   justify-between
+@apply flex flex-col mb-10  justify-between
 }
 </style>
     

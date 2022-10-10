@@ -8,7 +8,6 @@ useTitle()
 const ShowNav = ref(false)
 const isShowNav = (isTrue) =>{
 ShowNav.value = isTrue
-console.log('接收到');
 }
 
 </script>
