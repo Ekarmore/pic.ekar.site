@@ -98,22 +98,22 @@ const touchMove = (event)=>{
   @apply  font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 text-sm font-bold font-mono;
+  @apply ml-5 text-sm  font-mono;
 }
 .nav-mobile-menu {
-  @apply mr-5 text-sm font-bold font-mono ;
+  @apply mr-5 text-sm font-mono ;
 }
 .nav-mobile-footer{
 @apply text-center text-xs absolute bottom-5 font-mono
 }
 .fade-enter-active,
 .fade-leave-active {
-  @apply opacity-100 blur-0 duration-500  ease-in-out;
+  @apply opacity-100 blur-0 duration-300  ease-in-out;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  @apply opacity-0 blur-xl duration-500 ease-in-out ;
+  @apply opacity-0 blur-xl duration-300 ease-in-out ;
 }
 
 </style>
