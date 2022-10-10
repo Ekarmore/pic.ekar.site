@@ -14,6 +14,7 @@ useModal(a,a1,a2,a3)
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
           <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
           <img @load="imgLoad3" class="pic" src="../assets/T_19.webp" alt="" /> 
+          <img class="pic" src="../assets/T_24.webp" alt="" />
           <img class="pic" src="../assets/T_4.webp" alt="" />
           <img @load="imgLoad4" class="pic" src="../assets/T_3.webp" alt="" />   
           <img class="pic" src="../assets/T_5.webp" alt="" />
@@ -21,11 +22,11 @@ useModal(a,a1,a2,a3)
           <img class="pic" src="../assets/T_28.webp" alt="" />
           <img class="pic" src="../assets/T_23.webp" alt="" />
           <img class="pic" src="../assets/T_10.webp" alt="" />
+          <img class="pic" src="../assets/T_8.webp" alt="" />
           <img class="pic" src="../assets/T_15.webp" alt="" />
           <img class="pic" src="../assets/T_4xx.webp" alt="" />
           <img class="pic" src="../assets/T_00000.webp" alt="" />
-          <img class="pic" src="../assets/T_6.webp" alt="" />
-          <img class="pic-end" src="../assets/T_8.webp" alt="" />
+          <img class="pic-end" src="../assets/T_6.webp" alt="" />
         </div>
       </section>
     </section>
