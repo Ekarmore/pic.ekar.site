@@ -42,7 +42,7 @@ watchEffect(()=>{
 @apply p-0.5 font-bold italic 
 }
 .about-link{
-@apply  text-sm font-bold italic mt-2
+@apply  text-sm font-bold italic mt-2 duration-300 ease-in-out
 }
 .me-box{
 @apply mx-auto w-full md:w-10/12 xl:w-8/12
