@@ -1,69 +1,86 @@
 <script setup>
-import {defineEmits,watchEffect } from 'vue'
+import { defineEmits, watchEffect } from 'vue'
 
 const emit = defineEmits(['isShowNav'])
 
-watchEffect(()=>{
-  emit("isShowNav",true)
+watchEffect(() => {
+  emit("isShowNav", true)
 })
 </script>
 <template>
+  <main class="me-container">
+    <article class="me-box">
+      <p class="me-text-start">Hello,yo!</p>
 
-<main class="me-container">
-<article class="me-box">
-<p class="me-text-start">Hello,yo!</p>
-<p class=" me-text">我是<a class="Ekar" href="">YEKMAT</a>,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。</p>
-<p class="me-text">我创建了这个网站并在这里放了一些自己拍的照片供于访问与分享,你可以在这里看到我在做的一些摄影项目,希望当中会有能够与你产生共鸣的照片。</p>
-<p class="me-text">多说无益,或许你更应该从照片里了解我。</p>
+      <p class="about-me">我是<a class="Ekar" href="">YEKMAT</a>,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。<br /></p>
+      <p class="about-me"> 我创建了这个网站并在这里放了一些自己拍的照片供于访问与分享,你可以在这里看到我在做的一些摄影项目,希望当中会有能够与你产生共鸣的照片。<br />
+        多说无益,或许你更应该从照片里了解我。</p>
 
-<p class="startBox">所以,<router-link class="getStart" to="/">点击我开始观看作品 ></router-link></p>
-<p class="me-text">祝你拥有愉快的一天!</p>
-<hr class="me-hr" />
-<p class="me-text">除此之外,你也可以通过以下方式找到我:</p>
-<section class="about-link-box">
-<a class="about-link" href="">· instagram</a>
-<a class="about-link" href="mailto:earthb0y@outlook.com">· earthb0y@outlook.com</a>
-<a class="about-link" href="https://space.bilibili.com/390593000">· bilibili</a>
-</section>
-</article>
-</main>
+      <p class="startBox">所以,<router-link class="getStart" to="/">点击我开始观看作品 ></router-link>
+      </p>
+
+      <p class="about-me">祝你拥有愉快的一天!</p>
+
+      <hr class="me-hr" />
+      <section class="about-link-box">
+        除此之外,你也可以通过以下方式找到我:
+        <a class="about-link" href="">· instagram</a>
+        <a class="about-link" href="mailto:earthb0y@outlook.com">· earthb0y@outlook.com</a>
+        <a class="about-link" href="https://space.bilibili.com/390593000">· bilibili</a>
+      </section>
+    </article>
+  </main>
 
 </template>
 
 
 <style >
-.Ekar{
-@apply text-sm font-bold font-mono italic
+.Ekar {
+  @apply text-sm font-bold font-mono italic
 }
-.startBox{
-@apply mt-5 mb-5 text-sm
+
+.about-me {
+  @apply mb-5 leading-8 text-sm 
 }
-.getStart{
-@apply p-0.5 font-bold italic 
+
+.startBox {
+  @apply mt-5 mb-5 text-sm
 }
-.about-link{
-@apply  text-sm font-bold italic mt-2 duration-300 ease-in-out
+
+.getStart {
+  @apply p-0.5 font-bold italic
 }
-.me-box{
-@apply mx-auto w-full md:w-10/12 xl:w-8/12
+
+.about-link {
+  @apply text-sm font-bold italic mt-2 hover:blur-sm blur-0 
 }
-.me-container{
-@apply md:pt-14 pt-24 md:overflow-y-scroll mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 h-screen 
+
+.me-box {
+  @apply mx-auto w-full md:w-10/12 xl:w-8/12
 }
-.me-text{
-@apply font-mono opacity-80 text-sm leading-9 
+
+.me-container {
+  @apply md:pt-14 pt-24 md:overflow-y-scroll mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 h-screen
 }
-.me-text-end{
-@apply font-mono text-sm leading-8
+
+.about-text {
+  @apply font-mono bg-red-200 text-sm leading-9
 }
-.me-hr{
-@apply border-black mt-10 mb-10 w-24 mx-auto 
+
+.me-text-end {
+  @apply font-mono text-sm leading-8
 }
-.me-text-start{
-@apply font-mono text-xl mb-2 font-bold leading-10
+
+.me-hr {
+  @apply border-black mt-10 mb-10 w-24 mx-auto
 }
-.about-link-box{
-@apply flex flex-col mb-10  justify-between
+
+.me-text-start {
+  @apply font-mono text-xl mb-2 font-bold leading-10
+}
+
+.about-link-box {
+  @apply flex flex-col text-sm mb-10 justify-between
 }
 </style>
     
