@@ -52,7 +52,7 @@ watchEffect(() => {
 }
 
 .about-link {
-  @apply text-sm font-bold italic mt-2 hover:blur-sm blur-0 
+  @apply text-sm font-bold italic mt-2;
 }
 
 .me-box {
