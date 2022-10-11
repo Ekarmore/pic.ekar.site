@@ -23,11 +23,11 @@ useModal(a,a1,a2,a3)
             <section class="picture_container">
                 <div ref="colBox" class="col-box" @wheel="wheel">
                     <img @load="imgLoad" class="pic" src="../assets/AL_2.webp" alt="" />
-                    <img class="pic" src="../assets/AL_9.webp" alt="" />
-                    <img class="pic" src="../assets/AL_11.webp" alt="" />
-                    <img @load="imgLoad2" class="pic" src="../assets/AL_1.webp" alt="" />
-                    <img @load="imgLoad3" class="pic" src="../assets/AL_3.webp" alt="" />
-                    <img @load="imgLoad4" class="pic" src="../assets/AL_4.webp" alt="" />
+                    <img @load="imgLoad2" class="pic" src="../assets/AL_9.webp" alt="" />
+                    <img @load="imgLoad3" class="pic" src="../assets/AL_11.webp" alt="" />
+                    <img @load="imgLoad4" class="pic" src="../assets/AL_1.webp" alt="" />
+                    <img  class="pic" src="../assets/AL_3.webp" alt="" />
+                    <img  class="pic" src="../assets/AL_4.webp" alt="" />
                     <img class="pic-end" src="../assets/AL_5.webp" alt="" />
                 </div>
             </section>
