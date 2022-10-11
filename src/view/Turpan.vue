@@ -22,7 +22,6 @@ useModal(a,a1,a2,a3)
           <img class="pic" src="../assets/T_0000.webp" alt="" />
           <img class="pic" src="../assets/T_23.webp" alt="" />
           <img class="pic" src="../assets/T_5.webp" alt="" />
-          <img class="pic" src="../assets/T_01.webp" alt="" />
           <img class="pic" src="../assets/T_28.webp" alt="" />
           <img class="pic" src="../assets/T_282.webp" alt="" />
           <img class="pic" src="../assets/T_15.webp" alt="" />
