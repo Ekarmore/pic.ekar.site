@@ -14,9 +14,9 @@ useModal(a,a1,a2,a3)
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
           <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
           <img @load="imgLoad3" class="pic" src="../assets/T_19.webp" alt="" /> 
-          <img class="pic" src="../assets/T_24.webp" alt="" />
+          <img @load="imgLoad4" class="pic" src="../assets/T_24.webp" alt="" />
           <img class="pic" src="../assets/T_4.webp" alt="" />
-          <img @load="imgLoad4" class="pic" src="../assets/T_3.webp" alt="" />   
+          <img class="pic" src="../assets/T_3.webp" alt="" />   
           <img class="pic" src="../assets/T_272.webp" alt="" />
           <img class="pic" src="../assets/T_292.webp" alt="" />
           <img class="pic" src="../assets/T_0000.webp" alt="" />
