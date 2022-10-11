@@ -17,15 +17,20 @@ useModal(a,a1,a2,a3)
           <img class="pic" src="../assets/T_24.webp" alt="" />
           <img class="pic" src="../assets/T_4.webp" alt="" />
           <img @load="imgLoad4" class="pic" src="../assets/T_3.webp" alt="" />   
-          <img class="pic" src="../assets/T_5.webp" alt="" />
+          <img class="pic" src="../assets/T_272.webp" alt="" />
+          <img class="pic" src="../assets/T_292.webp" alt="" />
           <img class="pic" src="../assets/T_0000.webp" alt="" />
-          <img class="pic" src="../assets/T_28.webp" alt="" />
           <img class="pic" src="../assets/T_23.webp" alt="" />
-          <img class="pic" src="../assets/T_10.webp" alt="" />
-          <img class="pic" src="../assets/T_8.webp" alt="" />
+          <img class="pic" src="../assets/T_5.webp" alt="" />
+          <img class="pic" src="../assets/T_01.webp" alt="" />
+          <img class="pic" src="../assets/T_28.webp" alt="" />
+          <img class="pic" src="../assets/T_282.webp" alt="" />
           <img class="pic" src="../assets/T_15.webp" alt="" />
           <img class="pic" src="../assets/T_4xx.webp" alt="" />
+          <img class="pic" src="../assets/T_10.webp" alt="" />
+          <img class="pic" src="../assets/T_8.webp" alt="" />
           <img class="pic" src="../assets/T_00000.webp" alt="" />
+          <img class="pic" src="../assets/T_25.webp" alt="" />
           <img class="pic-end" src="../assets/T_6.webp" alt="" />
         </div>
       </section>

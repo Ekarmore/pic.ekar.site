@@ -4,9 +4,10 @@ import { defineEmits, watchEffect } from 'vue'
 const emit = defineEmits(['isShowNav'])
 
 watchEffect(() => {
-  emit("isShowNav", true)
+  emit("isShowNav",true)
 })
 </script>
+
 <template>
   <main class="me-container">
     <article class="me-box">
@@ -30,9 +31,7 @@ watchEffect(() => {
       </section>
     </article>
   </main>
-
 </template>
-
 
 <style >
 .Ekar {
@@ -40,7 +39,7 @@ watchEffect(() => {
 }
 
 .about-me {
-  @apply mb-2 md:mb-5 leading-8 text-sm 
+  @apply mb-2 md:mb-5 leading-8 text-gray-600 text-sm 
 }
 
 .startBox {

@@ -83,13 +83,13 @@ const touchMove = (event)=>{
 <style>
 
 .nav-mobile {
-  @apply bg-white absolute w-full  md:hidden;
+  @apply bg-white absolute w-full  lg:hidden;
 }
 .nav-mobile-bar {
   @apply bg-white flex justify-between absolute items-center h-16 w-full;
 }
 .nav-mobile-modal {
-  @apply absolute bg-white w-full  h-screen;
+  @apply absolute bg-white w-full h-screen;
 }
 .modal-text-container {
   @apply flex flex-col items-center mt-28;
@@ -113,7 +113,7 @@ const touchMove = (event)=>{
 
 .fade-enter-from,
 .fade-leave-to {
-  @apply opacity-0 blur-xl -translate-y-7 rounded-3xl duration-300 ease-in-out ;
+  @apply opacity-0 blur-xl -translate-y-7 rounded-3xl duration-500 ease-in-out ;
 }
 
 </style>

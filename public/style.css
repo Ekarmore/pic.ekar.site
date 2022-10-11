@@ -193,12 +193,16 @@ width:320px;
   @apply flex items-center flex-nowrap h-screen  ;
 }
 
-.col-box {
+/* .col-box {
   @apply whitespace-nowrap overflow-x-scroll inline h-full pt-16  md:p-5 md:h-full;
+} */
+
+.col-box {
+  @apply  overflow-x-scroll flex flex-nowrap h-full pt-16  md:p-5 md:h-full;
 }
 
 .pic {
-  @apply inline h-full w-auto pr-5 max-w-max;
+  @apply  h-full w-auto pr-5 max-w-max;
 }
 .pic-end {
   @apply inline h-full w-auto max-w-max;
@@ -215,7 +219,7 @@ width:320px;
 } */
 .nav-pc {
   width: 320px;
-  @apply  hidden md:float-left md:h-screen md:flex md:flex-col;
+  @apply  hidden lg:float-left lg:h-screen lg:flex lg:flex-col;
 }
 
  .nav-pc-textbox{
