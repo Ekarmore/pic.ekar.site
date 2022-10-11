@@ -40,7 +40,7 @@ useModal(a,a1,a2,a3)
 
 <style>
 .text-scroll{
-@apply text-center text-sm p-10 font-mono font-normal 
+@apply text-center text-xs p-10 font-mono font-normal 
 }
 .un-box{
   @apply flex flex-col justify-center min-w-fit md:mr-5 2xl:pl-12 2xl:pr-12; 
