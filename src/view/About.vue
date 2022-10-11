@@ -35,7 +35,7 @@ watchEffect(() => {
 
 <style >
 .Ekar {
-  @apply text-sm font-bold font-mono italic
+  @apply text-sm font-bold font-mono text-black italic
 }
 
 .about-me {

@@ -20,20 +20,21 @@ const touchMove = (event)=>{
 </script>
 
 <template>
+<main>
 <!-- nav-pc -->
   <section class="nav-pc">
       <h1 class="nav-pc-title"><router-link to="/">Ekar</router-link></h1>
       <hr class="nav-hr" />
       <div class="nav-pc-textbox">
         <span class="nav-text">
-          <router-link active-class="active" to="Unnoticed">- Unnoticed</router-link>
+          <router-link active-class="active" to="Unnoticed">- Unnoticed (Ongoing)</router-link>
         </span>
         <span class="nav-text">
           <router-link active-class="active" to="Turpan">- Turpan</router-link>
         </span>
         <span class="nav-text">
           <router-link active-class="active" to="AnotherLandscape"
-            >- Another Landscape</router-link
+            >- Another Landscape (Ongoing)</router-link
           >
         </span>
         <span class="nav-text">
@@ -78,12 +79,13 @@ const touchMove = (event)=>{
         }}</span>
     </div>
   </section>
+</main>
 </template>
 
 <style>
 
 .nav-mobile {
-  @apply bg-white absolute w-full  lg:hidden;
+  @apply bg-white absolute w-full  md:hidden;
 }
 .nav-mobile-bar {
   @apply bg-white flex justify-between absolute items-center h-16 w-full;
@@ -108,12 +110,12 @@ const touchMove = (event)=>{
 }
 .fade-enter-active,
 .fade-leave-active {
-  @apply opacity-100 translate-y-0 blur-0 duration-300  rounded-none ease-in-out;
+  @apply opacity-100 translate-y-0 blur-0 duration-500  rounded-none ease-in-out;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  @apply opacity-0 blur-xl -translate-y-5 rounded-3xl duration-300 ease-in-out ;
+  @apply opacity-0 blur-xl -translate-y-7 rounded-3xl duration-500 ease-in-out ;
 }
 
 </style>

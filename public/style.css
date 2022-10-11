@@ -219,7 +219,7 @@ width:320px;
 } */
 .nav-pc {
   width: 320px;
-  @apply  hidden lg:float-left lg:h-screen lg:flex lg:flex-col;
+  @apply  hidden md:float-left md:h-screen md:flex md:flex-col;
 }
 
  .nav-pc-textbox{

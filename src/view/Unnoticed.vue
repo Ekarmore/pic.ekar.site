@@ -40,18 +40,18 @@ useModal(a,a1,a2,a3)
 
 <style>
 .text-scroll{
-@apply text-center text-sm p-10 font-mono font-bold
+@apply text-center text-sm p-10 font-mono font-normal 
 }
 .un-box{
-  @apply flex flex-col justify-center  min-w-fit md:mr-5; 
+  @apply flex flex-col justify-center min-w-fit md:mr-5; 
 }
 .un-text{
-@apply text-xs leading-8 md:leading-7 md:text-sm pl-10 pr-10 md:pl-16 md:pr-16 lg:pl-32 lg:pr-32 xl:pl-48 xl:pr-48
+@apply text-xs leading-8 md:leading-8 md:text-sm pl-10 pr-10 md:pl-16 md:pr-16 lg:pl-32 lg:pr-32 xl:pl-48 xl:pr-48
 }
 /* .un-text{
 @apply text-sm leading-8 pt-5 pl-10 pr-10 md:pl-16 md:pr-16 lg:pl-32 lg:pr-32 xl:pl-48 xl:pr-48
 } */
 .un-title{
-@apply text-base font-mono font-bold mb-5
+@apply text-base font-mono  mb-5
 }
 </style>
