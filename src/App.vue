@@ -34,13 +34,4 @@ ShowNav.value = isTrue
   @apply md:blur-lg md:opacity-0 md:translate-y-5 md:duration-700 ease-in-out;
 }
 
-.navGlobal-enter-active,
-.navGlobal-leave-active {
-  @apply md:blur-0 md:opacity-100 md:translate-y-0 md:duration-700 ease-in-out;
-}
-
-.navGlobal-enter-from,
-.navGlobal-leave-from {
-  @apply md:blur-lg md:opacity-0 md:translate-y-5 md:duration-700 ease-in-out;
-}
 </style>
