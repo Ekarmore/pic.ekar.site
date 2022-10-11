@@ -52,7 +52,7 @@ const touchMove = (event)=>{
             <div @click="closeModal" class="modal-text-container">
               <span class="modal-text">
                 <router-link active-class="active" to="Unnoticed"
-                  >Unnoticed</router-link
+                  >Unnoticed (Ongoing)</router-link
                 >
               </span>
               <span class="modal-text">
@@ -60,7 +60,7 @@ const touchMove = (event)=>{
               </span>
               <span class="modal-text">
                 <router-link active-class="active" to="AnotherLandscape"
-                  >Another Landscape</router-link
+                  >Another Landscape (Ongoing)</router-link
                 >
               </span>
               <span class="modal-text">

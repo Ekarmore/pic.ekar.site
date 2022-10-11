@@ -43,7 +43,7 @@ useModal(a,a1,a2,a3)
 @apply text-center text-sm p-10 font-mono font-normal 
 }
 .un-box{
-  @apply flex flex-col justify-center min-w-fit md:mr-5 2xl:pl-48 2xl:pr-48; 
+  @apply flex flex-col justify-center min-w-fit md:mr-5 2xl:pl-12 2xl:pr-12; 
 }
 .un-text{
 @apply text-xs leading-8 md:leading-8 md:text-sm pl-10 pr-10 md:pl-16 md:pr-16 lg:pl-32 lg:pr-32 xl:pl-48 xl:pr-48 2xl:pr-96 2xl:pl-96

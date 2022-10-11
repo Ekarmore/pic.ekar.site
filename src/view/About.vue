@@ -35,7 +35,7 @@ watchEffect(() => {
 
 <style >
 .Ekar {
-  @apply text-sm font-bold font-mono text-black italic
+  @apply text-sm font-bold  text-black italic
 }
 
 .about-me {
@@ -59,7 +59,7 @@ watchEffect(() => {
 }
 
 .me-container {
-  @apply md:pt-14 pt-24 md:overflow-y-scroll mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 
+  @apply md:pt-14 pt-20 md:overflow-y-scroll mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 
 }
 
 .about-text {
@@ -75,7 +75,7 @@ watchEffect(() => {
 }
 
 .me-text-start {
-  @apply font-mono text-xl mb-2 font-bold leading-10
+  @apply font-mono text-xl mb-2 font-bold 
 }
 
 .about-link-box {
