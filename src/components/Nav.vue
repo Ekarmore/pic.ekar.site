@@ -108,12 +108,12 @@ const touchMove = (event)=>{
 }
 .fade-enter-active,
 .fade-leave-active {
-  @apply opacity-100 blur-0 duration-300  ease-in-out;
+  @apply opacity-100 translate-y-0 blur-0 duration-500  rounded-none ease-in-out;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  @apply opacity-0 blur-xl duration-300 ease-in-out ;
+  @apply opacity-0 blur-xl -translate-y-7 rounded-3xl duration-300 ease-in-out ;
 }
 
 </style>
