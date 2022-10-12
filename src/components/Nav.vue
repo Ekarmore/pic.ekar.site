@@ -77,13 +77,29 @@ const touchMove = (event)=>{
         <span @click="handleModal" class="nav-mobile-menu">{{
           changeMenu ? "Close" : "Menu"
         }}</span>
+        <!-- <span class="nav-icon">
+          <span class="icon-line1"></span>
+          <span class="icon-line2"></span>
+          <span class="icon-line3"></span>
+        </span> -->
     </div>
   </section>
 </main>
 </template>
 
 <style>
-
+.nav-icon{
+@apply relative w-12 h-10 bg-red-200 mr-5
+}
+.icon-line1{
+@apply h-1 bg-black w-full block absolute left-0 top-3 checked:hidden
+}
+.icon-line2{
+@apply h-1 bg-black w-full block absolute left-0 top-6
+}
+.icon-line3{
+@apply h-1 bg-black w-full block absolute left-0 top-9
+}
 .nav-mobile {
   @apply bg-white absolute w-full  md:hidden;
 }

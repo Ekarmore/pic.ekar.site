@@ -52,6 +52,6 @@ useModal(a,a1,a2,a3)
 @apply text-sm leading-8 pt-5 pl-10 pr-10 md:pl-16 md:pr-16 lg:pl-32 lg:pr-32 xl:pl-48 xl:pr-48
 } */
 .un-title{
-@apply text-base font-mono  mb-5
+@apply text-base font-mono  mb-5 
 }
 </style>

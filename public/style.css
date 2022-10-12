@@ -227,7 +227,7 @@ width:320px;
  }
 
  .nav-text {
- @apply p-1 text-sm font-mono  text-gray-400 hover:text-black transition-all duration-500 ease-out
+ @apply p-1 text-sm font-mono hover:translate-x-1 text-gray-400 hover:text-black transition-all duration-500 ease-out
      }
  .nav-pc-title {
  @apply pl-10 pt-10 blur-0 hover:blur-lg duration-300 ease-in-out text-xl mb-5 mt-5 font-mono 
