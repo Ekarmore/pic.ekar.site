@@ -2,7 +2,17 @@
 import { reactive, ref } from "vue";
 const showModal = ref(false);
 const changeMenu = ref(false);
+const [openL1,openL2,openL3] = [ref('openL1'),ref('openL2'),ref('openL3')]
+const [closeL1,closeL2,closeL3] = [ref('closeL1'),ref('closeL2'),ref('closeL3')]
+const [line1,line2,line3] = [ref('line1'),ref('line2'),ref('line3')]
 
+
+function warnNav() {
+  disabled.value = true
+  setTimeout(() => {
+  disabled.value = false
+  }, 1500);
+}
 
 const handleModal = () => {
   showModal.value = !showModal.value;
@@ -74,31 +84,55 @@ const touchMove = (event)=>{
     </transition>
     <div class="nav-mobile-bar">
       <span @click="closeModal" class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
-        <span @click="handleModal" class="nav-mobile-menu">{{
+
+        <!-- <span @click="handleModal" class="nav-mobile-menu"><transition name="mobilenavanimate"><p>{{
           changeMenu ? "Close" : "Menu"
-        }}</span>
-        <!-- <span class="nav-icon">
-          <span class="icon-line1"></span>
-          <span class="icon-line2"></span>
-          <span class="icon-line3"></span>
-        </span> -->
+        }}</p></transition></span> -->
+        <span @click="handleModal" class="nav-icon">
+          <span :class='[changeMenu? openL1:closeL1,line1]' ></span>
+          <span :class='[changeMenu? openL2:closeL2,line2]' ></span>
+          <span :class='[changeMenu? openL3:closeL3,line3]'></span>
+        </span>
     </div>
   </section>
 </main>
 </template>
 
 <style>
+.openL1{
+@apply transform rotate-45 top-4 ease-in-out duration-700 !important;
+}
+.openL2{
+@apply translate-x-2 opacity-0 ease-in-out duration-300
+}
+.openL3{
+@apply  transform -rotate-45 top-4 ease-in-out duration-700 !important;
+}
+
+.closeL1{
+@apply transform rotate-0 top-1 ease-in-out duration-700 !important;
+}
+.closeL2{
+@apply  translate-x-0 opacity-100 ease-in-out duration-300 !important
+}
+.closeL3{
+@apply  transform rotate-0 top-7 ease-in-out duration-700 !important;
+}
+
+.navAni{
+@apply ease-in-out duration-300
+}
 .nav-icon{
-@apply relative w-12 h-10 bg-red-200 mr-5
+@apply relative w-7 h-9 mr-5
 }
-.icon-line1{
-@apply h-1 bg-black w-full block absolute left-0 top-3 checked:hidden
+.line1{
+@apply h-1  bg-black w-full block absolute left-0 top-1 checked:hidden
 }
-.icon-line2{
-@apply h-1 bg-black w-full block absolute left-0 top-6
+.line2{
+@apply h-1  bg-black w-full block absolute left-0 top-4
 }
-.icon-line3{
-@apply h-1 bg-black w-full block absolute left-0 top-9
+.line3{
+@apply h-1  bg-black w-full block absolute left-0 top-7
 }
 .nav-mobile {
   @apply bg-white absolute w-full  md:hidden;
@@ -116,7 +150,7 @@ const touchMove = (event)=>{
   @apply  font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 text-sm  font-mono;
+  @apply ml-5 font-bold font-mono;
 }
 .nav-mobile-menu {
   @apply mr-5 text-sm font-mono ;
@@ -133,5 +167,6 @@ const touchMove = (event)=>{
 .fade-leave-to {
   @apply opacity-0 blur-xl -translate-y-7 rounded-3xl duration-500 ease-in-out ;
 }
+
 
 </style>
