@@ -106,32 +106,29 @@ const touchMove = (event)=>{
 @apply translate-x-2 opacity-0 ease-in-out duration-300
 }
 .openL3{
-@apply  transform -rotate-45 top-4 ease-in-out duration-700 !important;
+@apply  transform  -rotate-45 top-4 ease-in-out duration-700 !important;
 }
 .closeL1{
 @apply transform rotate-0 top-1 ease-in-out duration-700 !important;
 }
 .closeL2{
-@apply  translate-x-0 opacity-100 ease-in-out duration-300 !important
+@apply  translate-x-0 opacity-100 ease-in-out duration-300 
 }
 .closeL3{
 @apply  transform rotate-0 top-7 ease-in-out duration-700 !important;
 }
 
 .nav-icon{
-@apply relative w-7 h-9 mr-5;
+@apply relative w-7 h-9 mr-5 pt-0;
 }
 .line1{
-height:2px;
-@apply  border-black bg-black w-full block absolute left-0 top-1 
+@apply h-0.5  bg-black w-full  absolute left-0 top-0 
 }
 .line2{
-height:2px;
-@apply  border-black bg-black w-full block absolute left-0 top-4
+@apply h-0.5  bg-black w-full  absolute left-0 top-4
 }
 .line3{
-height:2px;
-@apply  border-black bg-black w-full block absolute left-0 top-8
+@apply h-0.5  bg-black w-full  absolute left-0 top-8
 }
 .nav-mobile {
 @apply bg-white absolute w-full  md:hidden;
