@@ -20,7 +20,7 @@ watchEffect(() => {
       <hr class="me-hr" />
       <section class="about-link-box">
        <p class="about-me">除此之外,你也可以通过以下方式找到我:</p>
-        <a class="about-link" href="">· instagram</a>
+        <a class="about-link" href="https://www.instagram.com/ekarmore/">· instagram</a>
         <a class="about-link" href="mailto:earthb0y@outlook.com">· earthb0y@outlook.com</a>
         <a class="about-link" href="https://space.bilibili.com/390593000">· bilibili</a>
       </section>

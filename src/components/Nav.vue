@@ -10,8 +10,8 @@ const handleModal = () => {
 };
 //唤起或关闭Modal
 const closeModal = () => {
-  showModal.value = !showModal.value;
-  changeMenu.value = !changeMenu.value;
+  showModal.value = false
+  changeMenu.value = false;
 };
 //Modal框不可以拖动
 const touchMove = (event)=>{
@@ -73,7 +73,7 @@ const touchMove = (event)=>{
       </div>
     </transition>
     <div class="nav-mobile-bar">
-      <span class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
+      <span @click="closeModal" class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
         <span @click="handleModal" class="nav-mobile-menu">{{
           changeMenu ? "Close" : "Menu"
         }}</span>
