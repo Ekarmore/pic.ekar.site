@@ -108,7 +108,6 @@ const touchMove = (event)=>{
 .openL3{
 @apply  transform -rotate-45 top-4 ease-in-out duration-700 !important;
 }
-
 .closeL1{
 @apply transform rotate-0 top-1 ease-in-out duration-700 !important;
 }
@@ -119,26 +118,26 @@ const touchMove = (event)=>{
 @apply  transform rotate-0 top-7 ease-in-out duration-700 !important;
 }
 
-.navAni{
-@apply ease-in-out duration-300
-}
 .nav-icon{
-@apply relative w-7 h-9 mr-5
+@apply relative w-7 h-9 mr-5;
 }
 .line1{
-@apply h-1  bg-black w-full block absolute left-0 top-1 checked:hidden
+height:2px;
+@apply  border-black bg-black w-full block absolute left-0 top-1 
 }
 .line2{
-@apply h-1  bg-black w-full block absolute left-0 top-4
+height:2px;
+@apply  border-black bg-black w-full block absolute left-0 top-4
 }
 .line3{
-@apply h-1  bg-black w-full block absolute left-0 top-7
+height:2px;
+@apply  border-black bg-black w-full block absolute left-0 top-8
 }
 .nav-mobile {
-  @apply bg-white absolute w-full  md:hidden;
+@apply bg-white absolute w-full  md:hidden;
 }
 .nav-mobile-bar {
-  @apply bg-white flex justify-between absolute items-center h-16 w-full;
+@apply bg-white flex justify-between absolute items-center h-16 w-full;
 }
 .nav-mobile-modal {
   @apply absolute bg-white w-full h-screen;
@@ -150,7 +149,7 @@ const touchMove = (event)=>{
   @apply  font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 font-bold font-mono;
+  @apply ml-5 text-lg font-mono;
 }
 .nav-mobile-menu {
   @apply mr-5 text-sm font-mono ;
@@ -162,7 +161,6 @@ const touchMove = (event)=>{
 .fade-leave-active {
   @apply opacity-100 translate-y-0 blur-0 duration-500  rounded-none ease-in-out;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   @apply opacity-0 blur-xl -translate-y-7 rounded-3xl duration-500 ease-in-out ;
