@@ -97,27 +97,27 @@ const touchMove = (event)=>{
 <style>
 /* icon container */
 .nav-icon{
-@apply relative w-7 h-6 mr-5;
+@apply relative h-6 w-7 mr-5 mt-1;
 }
 /* icon initial */
 .line1{
-@apply h-0.5 bg-black w-full  absolute left-0 top-0.5 
+@apply h-0.5 bg-black w-full  absolute  
 }
 .line2{
-@apply h-0.5 bg-black w-full  absolute left-0 top-3
+@apply h-0.5 bg-black w-full  absolute top-2 
 }
 .line3{
-@apply h-0.5 bg-black w-full  absolute left-0 top-6
+@apply h-0.5 bg-black w-full  absolute
 }
 /* when modal close,nav-icon */
 .openL1{
-@apply transform rotate-45 top-3 ease-in-out duration-500 !important;
+@apply transform rotate-45 top-2 ease-in-out duration-500 !important;
 }
 .openL2{
 @apply translate-x-2 opacity-0 ease-in-out duration-300
 }
 .openL3{
-@apply  transform  -rotate-45 top-3 ease-in-out duration-500 !important;
+@apply  transform  -rotate-45 top-2 ease-in-out duration-500 !important;
 }
 /* when modal open,nav-icon */
 .closeL1{
@@ -127,7 +127,7 @@ const touchMove = (event)=>{
 @apply  translate-x-0 opacity-100 ease-in-out duration-300 delay-200
 }
 .closeL3{
-@apply  transform rotate-0 top-6 ease-in-out duration-500 !important;
+@apply  transform rotate-0 top-4 ease-in-out duration-500 !important;
 }
 .nav-mobile {
 @apply bg-white absolute w-full  md:hidden;
