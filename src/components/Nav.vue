@@ -97,7 +97,7 @@ const touchMove = (event)=>{
 <style>
 /* icon container */
 .nav-icon{
-@apply relative h-6 w-7 mr-5 mt-1;
+@apply relative h-6 w-7 mr-5 mt-1.5;
 }
 /* icon initial */
 .line1{
@@ -145,7 +145,7 @@ const touchMove = (event)=>{
   @apply  font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 font-mono;
+  @apply ml-5 font-mono bg-red-200;
 }
 .nav-mobile-menu {
   @apply mr-5 ;
