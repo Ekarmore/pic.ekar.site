@@ -84,10 +84,6 @@ const touchMove = (event)=>{
     </transition>
     <div class="nav-mobile-bar">
       <span @click="closeModal" class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
-
-        <!-- <span @click="handleModal" class="nav-mobile-menu"><transition name="mobilenavanimate"><p>{{
-          changeMenu ? "Close" : "Menu"
-        }}</p></transition></span> -->
         <span @click="handleModal" class="nav-icon">
           <span :class='[changeMenu? openL1:closeL1,line1]' ></span>
           <span :class='[changeMenu? openL2:closeL2,line2]' ></span>
@@ -99,6 +95,21 @@ const touchMove = (event)=>{
 </template>
 
 <style>
+/* icon container */
+.nav-icon{
+@apply relative w-7 h-6 mr-5;
+}
+/* icon initial */
+.line1{
+@apply h-0.5 bg-black w-full  absolute left-0 top-0.5 
+}
+.line2{
+@apply h-0.5 bg-black w-full  absolute left-0 top-3
+}
+.line3{
+@apply h-0.5 bg-black w-full  absolute left-0 top-6
+}
+/* when modal close,nav-icon */
 .openL1{
 @apply transform rotate-45 top-3 ease-in-out duration-500 !important;
 }
@@ -108,27 +119,15 @@ const touchMove = (event)=>{
 .openL3{
 @apply  transform  -rotate-45 top-3 ease-in-out duration-500 !important;
 }
+/* when modal open,nav-icon */
 .closeL1{
-@apply transform rotate-0 top-1 ease-in-out duration-500 !important;
+@apply transform rotate-0 top-0 ease-in-out duration-500 !important;
 }
 .closeL2{
 @apply  translate-x-0 opacity-100 ease-in-out duration-300 delay-200
 }
 .closeL3{
-@apply  transform rotate-0 top-5 ease-in-out duration-500 !important;
-}
-
-.nav-icon{
-@apply relative w-7 h-6 mr-5 p-0 ;
-}
-.line1{
-@apply h-0.5  bg-black w-full  absolute left-0 top-0 
-}
-.line2{
-@apply h-0.5  bg-black w-full  absolute left-0 top-3
-}
-.line3{
-@apply h-0.5  bg-black w-full  absolute left-0 top-6
+@apply  transform rotate-0 top-6 ease-in-out duration-500 !important;
 }
 .nav-mobile {
 @apply bg-white absolute w-full  md:hidden;
