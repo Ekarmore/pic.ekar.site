@@ -100,35 +100,35 @@ const touchMove = (event)=>{
 
 <style>
 .openL1{
-@apply transform rotate-45 top-4 ease-in-out duration-700 !important;
+@apply transform rotate-45 top-3 ease-in-out duration-500 !important;
 }
 .openL2{
 @apply translate-x-2 opacity-0 ease-in-out duration-300
 }
 .openL3{
-@apply  transform  -rotate-45 top-4 ease-in-out duration-700 !important;
+@apply  transform  -rotate-45 top-3 ease-in-out duration-500 !important;
 }
 .closeL1{
-@apply transform rotate-0 top-1 ease-in-out duration-700 !important;
+@apply transform rotate-0 top-1 ease-in-out duration-500 !important;
 }
 .closeL2{
-@apply  translate-x-0 opacity-100 ease-in-out duration-300 
+@apply  translate-x-0 opacity-100 ease-in-out duration-300 delay-200
 }
 .closeL3{
-@apply  transform rotate-0 top-7 ease-in-out duration-700 !important;
+@apply  transform rotate-0 top-5 ease-in-out duration-500 !important;
 }
 
 .nav-icon{
-@apply relative w-7 h-9 mr-5 pt-0;
+@apply relative w-7 h-6 mr-5 p-0 ;
 }
 .line1{
 @apply h-0.5  bg-black w-full  absolute left-0 top-0 
 }
 .line2{
-@apply h-0.5  bg-black w-full  absolute left-0 top-4
+@apply h-0.5  bg-black w-full  absolute left-0 top-3
 }
 .line3{
-@apply h-0.5  bg-black w-full  absolute left-0 top-8
+@apply h-0.5  bg-black w-full  absolute left-0 top-6
 }
 .nav-mobile {
 @apply bg-white absolute w-full  md:hidden;
@@ -146,10 +146,10 @@ const touchMove = (event)=>{
   @apply  font-thin text-gray-500 font-mono m-1;
 }
 .nav-mobile-title {
-  @apply ml-5 text-lg font-mono;
+  @apply ml-5 font-mono;
 }
 .nav-mobile-menu {
-  @apply mr-5 text-sm font-mono ;
+  @apply mr-5 ;
 }
 .nav-mobile-footer{
 @apply text-center text-xs absolute bottom-5 font-mono
