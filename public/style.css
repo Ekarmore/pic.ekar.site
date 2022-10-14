@@ -190,7 +190,8 @@ width:320px;
 } */
 
 .picture_container {
-  @apply flex items-center flex-nowrap h-screen  ;
+
+  @apply flex items-center h-screen md:h-screen flex-nowrap;
 }
 
 /* .col-box {
@@ -242,8 +243,6 @@ width:320px;
  .active {
   @apply text-black 
       }
-
-
 
  #pic-about-text{
 @apply text-lg ml-10 text-center md:text-5xl border border-black italic mr-5
