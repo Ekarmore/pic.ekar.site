@@ -6,14 +6,6 @@ const [openL1,openL2,openL3] = [ref('openL1'),ref('openL2'),ref('openL3')]
 const [closeL1,closeL2,closeL3] = [ref('closeL1'),ref('closeL2'),ref('closeL3')]
 const [line1,line2,line3] = [ref('line1'),ref('line2'),ref('line3')]
 
-
-function warnNav() {
-  disabled.value = true
-  setTimeout(() => {
-  disabled.value = false
-  }, 1500);
-}
-
 const handleModal = () => {
   showModal.value = !showModal.value;
   changeMenu.value = !changeMenu.value;
@@ -130,10 +122,10 @@ const touchMove = (event)=>{
 @apply  transform rotate-0 top-4 ease-in-out duration-500 !important;
 }
 .nav-mobile {
-@apply bg-white absolute w-full  md:hidden;
+@apply w-full md:hidden;
 }
 .nav-mobile-bar {
-@apply bg-white flex justify-between absolute items-center h-16 w-full;
+@apply bg-white flex justify-between fixed items-center h-16 w-full;
 }
 .nav-mobile-modal {
   @apply absolute bg-white w-full h-screen;

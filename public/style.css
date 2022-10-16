@@ -190,7 +190,6 @@ width:320px;
 } */
 
 .picture_container {
-
   @apply flex items-center h-screen md:h-screen flex-nowrap;
 }
 
@@ -199,9 +198,8 @@ width:320px;
 } */
 
 .col-box {
-  @apply  overflow-x-scroll flex flex-nowrap h-full pt-16  md:p-5 md:h-full;
+@apply  overflow-x-scroll flex flex-nowrap h-full pt-16  md:p-5 md:h-full;
 }
-
 .pic {
   @apply  h-full w-auto pr-5 max-w-max;
 }
