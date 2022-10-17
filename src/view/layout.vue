@@ -47,7 +47,7 @@ if(i.value<imgs.length-1){
 change.value= false
 setTimeout(() => {
     imgSrc.value = imgs[i.value].src
-}, 200);
+}, 100);
 }
 
 const prev = () =>{
@@ -60,7 +60,7 @@ else{
 change.value = false
 setTimeout(() => {
     imgSrc.value = imgs[i.value].src
-}, 200);
+}, 100);
 }
 const picLoad = ()=>{
     setTimeout(() => {
@@ -102,7 +102,7 @@ console.log(change.value);
 @apply text-sm font-mono
 }
 .closePic {
-  @apply opacity-0 blur-xl duration-100 ease-in-out 
+  @apply opacity-0 blur-2xl duration-100 ease-in-out 
 }
 
 .openPic {
