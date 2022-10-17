@@ -8,7 +8,7 @@ import { useLazy} from '../utils/lazyLoad'
 const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
 const { colBox, wheel } = useXScroll()
 const lazyLoad1 = ref(false)
-
+const picNew = ref('picNew')
 const target1 = ref(null)
 
 const pic = ref('pic')
@@ -17,19 +17,17 @@ const closePic = ref('closePic')
 
 useModal(a, a1, a2, a3)
 
-// const {lazyLoad} = useLazy(target1)
-
-// watch(lazyLoad,()=>{
-//   lazyLoad1.value = lazyLoad.value
-//   console.log(lazyLoad1.value);
-// })
+const {lazyLoad} = useLazy(target1)
+watch(lazyLoad,()=>{
+  lazyLoad1.value = lazyLoad.value
+  console.log(lazyLoad1.value);
+})
 const imgs = reactive([
-  {name:'T_1',src:'/assets/T_1.webp'},
-  {name:'T_2',src:'/assets/T_2.webp'},
-  {name:'T_3',src:'/assets/T_19.webp'}
+  {name:'T_1',src:'src/assets/T_1.webp'},
+  {name:'T_2',src:'src/assets/T_2.webp'},
+  {name:'T_3',src:'src/assets/T_19.webp'}
 ])
 const imgSrc = ref('src/assets/T_1.webp')
-
 const i = ref(0)
 
 const next = ()=>{
@@ -39,7 +37,7 @@ if(i.value<imgs.length-1){
 }else{
   i.value = 0
 }
-
+lazyLoad1.value = !lazyLoad1.value
 imgSrc.value = imgs[i.value].src
 }
 const prev = () =>{
@@ -52,13 +50,11 @@ else{
 }
 imgSrc.value = imgs[i.value].src
 }
-watch(i,()=>{
-  console.log(i.value);
-})
+
 </script>
 <template>
   <div>
-    <!-- <section v-show="a&&a1&&a2&&a3">
+    <section v-show="a&&a1&&a2&&a3">
       <section class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
@@ -70,7 +66,7 @@ watch(i,()=>{
           <img class="pic" src="../assets/T_272.webp" alt="" />
           <img class="pic" src="../assets/T_292.webp" alt="" />
           <img class="pic" src="../assets/T_0000.webp" alt="" />
-          <img ref="target1" :class='[lazyLoad1? openPic:closePic,pic]' src="../assets/T_23.webp" alt="" />
+          <!-- <img ref="target1" :class='[lazyLoad1? openPic:closePic,pic]' src="../assets/T_23.webp" alt="" /> -->
           <img class="pic" src="../assets/T_5.webp" alt="" />
           <img class="pic" src="../assets/T_28.webp" alt="" />
           <img class="pic" src="../assets/T_282.webp" alt="" />
@@ -83,15 +79,14 @@ watch(i,()=>{
           <img class="pic-end" src="../assets/T_6.webp" alt="" />
         </div>
       </section>
-    </section> -->
-    <section class="picture_container_new" >
+    </section>
+    <!-- new pic -->
+    <!-- <section class="picture_container_new" >
       <div ref="colBox" class="col-box-new">
-        <transition name="imgAnimate">
-        <img class="pic-new"  :src="imgSrc" alt="">
-        </transition>
+        <img @load="imgLoad" :class="[lazyLoad1?openPic:closePic,picNew]" :src="imgSrc" alt="">
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
-    </section>
+    </section> -->
 
     <!-- <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
       <div class="loading">
@@ -120,15 +115,15 @@ watch(i,()=>{
 @apply text-sm font-mono
 }
 .closePic {
-  @apply opacity-0 translate-y-3 duration-500 ease-in-out
+  @apply opacity-0 duration-500 ease-in-out 
 }
 
 .openPic {
-  @apply opacity-100 translate-y-0 duration-500 ease-in-out
+  @apply opacity-100 duration-500 ease-in-out 
 }
 
-.pic-new {
-  @apply  h-full min-w-fit md:w-auto;
+.picNew {
+  @apply   h-full min-w-fit md:w-auto;
 }
 
 .col-box-new {
