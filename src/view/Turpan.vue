@@ -24,11 +24,11 @@ useModal(a, a1, a2, a3)
 //   console.log(lazyLoad1.value);
 // })
 const imgs = reactive([
-  {name:'T_1',src:'src/assets/T_1.webp'},
-  {name:'T_2',src:'src/assets/T_2.webp'},
-  {name:'T_3',src:'src/assets/T_19.webp'}
+  {name:'T_1',src:'../assets/T_1.webp'},
+  {name:'T_2',src:'../assets/T_2.webp'},
+  {name:'T_3',src:'../assets/T_19.webp'}
 ])
-const imgSrc = ref('src/assets/T_1.webp')
+const imgSrc = ref('../assets/T_1.webp')
 
 const i = ref(0)
 
@@ -86,7 +86,9 @@ watch(i,()=>{
     </section> -->
     <section class="picture_container_new" >
       <div ref="colBox" class="col-box-new">
+        <transition name="imgAnimate">
         <img class="pic-new"  :src="imgSrc" alt="">
+        </transition>
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
     </section>
@@ -100,6 +102,14 @@ watch(i,()=>{
 </template>
 
 <style>
+.imgAnimate-enter-active,
+.imgAnimate-leave-active {
+  @apply md:blur-0 md:opacity-100 md:translate-y-0 md:duration-700 ease-in-out;
+}
+.imgAnimate-enter-from,
+.imgAnimate-leave-from {
+  @apply md:blur-lg md:opacity-0 md:translate-y-5 md:duration-700 ease-in-out;
+}
 .prev{
 @apply transform duration-500 ease-in-out inline-block cursor-pointer hover:-translate-x-0.5
 }
