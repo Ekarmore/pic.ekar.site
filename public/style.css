@@ -219,8 +219,7 @@ width:320px;
 @apply text-xl mr-2
 } */
 .nav-pc {
-  width: 320px;
-  @apply  hidden bg-white md:float-left md:h-screen md:flex md:flex-col;
+  @apply  w-80 hidden md:float-left md:h-screen md:flex md:flex-col;
 }
 
  .nav-pc-textbox{

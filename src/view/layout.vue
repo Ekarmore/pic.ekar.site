@@ -7,8 +7,9 @@ import {useImgLoadNew} from '../utils/LoadingNew'
 import { ref, watchEffect, watch, onMounted, reactive } from 'vue'
 import { useImgLoad } from '../utils/Loading'
 import { useModal } from '../utils/modalControl'
-// import { useIntersectionObserver } from '@vueuse/core'
-
+import { useIntersectionObserver } from '@vueuse/core'
+const picture = ref(null)
+const change = ref (true)
 
 // loading
 const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
@@ -17,19 +18,19 @@ useModal(a, a1, a2, a3)
 
 // pic animate
 
-const pic = ref('pic')
+const picNew = ref('picNew')
 const openPic = ref('openPic')
 const closePic = ref('closePic')
 
 //control modal
 
 const imgs = reactive([
-  {name:'T_1',src:pic1},
+  {name:'T_1.webp',src:pic1},
   {name:'T_2',src:pic2},
   {name:'T_3',src:pic3},
   {name:'T_4',src:pic4},
 ])
-
+console.log(imgs[3].src);
 const imgSrc = ref('')
 
 imgSrc.value = pic1
@@ -43,26 +44,41 @@ if(i.value<imgs.length-1){
 }else{
   i.value = 0
 }
-imgSrc.value = imgs[i.value].src
+change.value= false
+setTimeout(() => {
+    imgSrc.value = imgs[i.value].src
+}, 200);
 }
-const prev = () =>{
 
+const prev = () =>{
 if(i.value>=1){
   i.value -= 1
 }
 else{
- i.value = 0
+ i.value = imgs.length-1
 }
-imgSrc.value = imgs[i.value].src
+change.value = false
+setTimeout(() => {
+    imgSrc.value = imgs[i.value].src
+}, 200);
 }
-
+const picLoad = ()=>{
+    setTimeout(() => {
+        change.value= true
+        console.log('load');
+    }, 100);
+}
+watch(i,()=>{
+console.log('i',i.value);
+})
+console.log(change.value);
 </script>
 <template>
   <div>
     <!-- new pic -->
     <section class="picture_container_new" >
       <div ref="colBox" class="col-box-new">
-        <img @load="imgLoad" :key="1111" class="picNew" :src='imgSrc' alt="">
+        <img @load="picLoad" ref="picture" :class="[change?openPic:closePic,picNew]" :src='imgSrc' alt="">
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
     </section>
@@ -86,23 +102,23 @@ imgSrc.value = imgs[i.value].src
 @apply text-sm font-mono
 }
 .closePic {
-  @apply opacity-0 duration-500 ease-in-out 
+  @apply opacity-0 blur-xl duration-100 ease-in-out 
 }
 
 .openPic {
-  @apply opacity-100 duration-500 ease-in-out 
+  @apply opacity-100 blur-0 duration-500 ease-in-out 
 }
 
 
 .picNew {
-  @apply h-full w-auto max-w-fit;
+  @apply h-full w-auto max-w-fit  ;
 }
 
 .col-box-new {
-  @apply pt-16 md:p-5 md:h-5/6 ;
+  @apply  pt-16 md:p-5 md:h-3/4  ;
   }
 
 .picture_container_new {
-  @apply h-screen flex flex-col justify-center items-center;
+  @apply h-screen w-auto flex flex-col  justify-center items-center;
 }
 </style>
