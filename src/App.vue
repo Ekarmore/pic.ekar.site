@@ -5,7 +5,7 @@ import {useTitle} from './utils/title'
  
 useTitle()
 
-const ShowNav = ref(false)
+const ShowNav = ref(true)
 const isShowNav = (isTrue) =>{
 ShowNav.value = isTrue
 }

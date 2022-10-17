@@ -122,10 +122,10 @@ const touchMove = (event)=>{
 @apply  transform rotate-0 top-4 ease-in-out duration-500 !important;
 }
 .nav-mobile {
-@apply w-full md:hidden;
+@apply absolute w-full md:hidden;
 }
 .nav-mobile-bar {
-@apply bg-white flex justify-between fixed items-center h-16 w-full;
+@apply bg-white flex justify-between  items-center h-16 w-full;
 }
 .nav-mobile-modal {
   @apply absolute bg-white w-full h-screen;

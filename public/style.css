@@ -190,7 +190,7 @@ width:320px;
 } */
 
 .picture_container {
-  @apply flex items-center h-screen md:h-screen flex-nowrap;
+  @apply flex items-center h-screen md:h-screen ;
 }
 
 /* .col-box {
@@ -200,9 +200,11 @@ width:320px;
 .col-box {
 @apply  overflow-x-scroll flex flex-nowrap h-full pt-16  md:p-5 md:h-full;
 }
+
 .pic {
   @apply  h-full w-auto pr-5 max-w-max;
 }
+
 .pic-end {
   @apply inline h-full w-auto max-w-max;
 }
@@ -218,7 +220,7 @@ width:320px;
 } */
 .nav-pc {
   width: 320px;
-  @apply  hidden md:float-left md:h-screen md:flex md:flex-col;
+  @apply  hidden bg-white md:float-left md:h-screen md:flex md:flex-col;
 }
 
  .nav-pc-textbox{
