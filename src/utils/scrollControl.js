@@ -11,10 +11,10 @@ export function useXScroll() {
     let disX = ref(event.deltaY);
     let scrollX = setInterval(() => {
       colBox.value.scrollLeft += disX.value;
-    }, 20);
+    }, 10);
     setTimeout(() => {
       window.clearInterval(scrollX);
-    }, 30);
+    }, 20);
   }
   return { colBox, wheel };
 }
