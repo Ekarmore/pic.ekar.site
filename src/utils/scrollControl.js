@@ -14,7 +14,7 @@ export function useXScroll() {
     }, 10);
     setTimeout(() => {
       window.clearInterval(scrollX);
-    }, 20);
+    }, 50);
   }
   return { colBox, wheel };
 }
