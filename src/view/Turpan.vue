@@ -1,34 +1,50 @@
 <script setup>
 import pic1 from '../assets/T_1.webp'
 import pic2 from '../assets/T_2.webp'
+import pic3 from '../assets/T_19.webp'
+import pic4 from '../assets/T_24.webp'
+import {useImgLoadNew} from '../utils/LoadingNew'
 import { ref, watchEffect, watch, onMounted, reactive } from 'vue'
 import { useImgLoad } from '../utils/Loading'
 import { useXScroll } from '../utils/scrollControl'
 import { useModal } from '../utils/modalControl'
-import { useIntersectionObserver } from '@vueuse/core'
+// import { useIntersectionObserver } from '@vueuse/core'
 import { useLazy} from '../utils/lazyLoad'
-const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
-const { colBox, wheel } = useXScroll()
-const lazyLoad1 = ref(false)
-const picNew = ref('picNew')
-const target1 = ref(null)
-console.log(pic1);
+const {imgLoad,a} = useImgLoadNew()
+watch(a,()=>{
+  console.log(a.value);
+})
+// loading
+// const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
+// col wheel
+// const { colBox, wheel } = useXScroll()
+// lazy load
+// const {lazyLoad} = useLazy(target1)
+// watch(lazyLoad,()=>{
+//   lazyLoad1.value = lazyLoad.value
+//   console.log(lazyLoad1.value);
+// })
+// const lazyLoad1 = ref(false)
+// const picNew = ref('picNew')
+// const target1 = ref(null)
+// pic animate
 const pic = ref('pic')
 const openPic = ref('openPic')
 const closePic = ref('closePic')
+// control modal
+// useModal(a, a1, a2, a3)
 
-useModal(a, a1, a2, a3)
-
-const {lazyLoad} = useLazy(target1)
-watch(lazyLoad,()=>{
-  lazyLoad1.value = lazyLoad.value
-  console.log(lazyLoad1.value);
-})
 const imgs = reactive([
-  {name:'T_3',src:pic1},
-  {name:'T_3',src:pic2},
+  {name:'T_1',src:pic1},
+  {name:'T_2',src:pic2},
+  {name:'T_3',src:pic3},
+  {name:'T_4',src:pic4},
 ])
-const imgSrc = ref('src/assets/T_1.webp')
+
+const imgSrc = ref('')
+
+imgSrc.value = pic1
+
 const i = ref(0)
 
 const next = ()=>{
@@ -83,7 +99,7 @@ imgSrc.value = imgs[i.value].src
     <!-- new pic -->
     <section class="picture_container_new" >
       <div ref="colBox" class="col-box-new">
-        <img @load="imgLoad" class="picNew" :src='imgSrc' alt="">
+        <img @load="imgLoad" :key="1111" class="picNew" :src='imgSrc' alt="">
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
     </section>
@@ -97,19 +113,11 @@ imgSrc.value = imgs[i.value].src
 </template>
 
 <style>
-.imgAnimate-enter-active,
-.imgAnimate-leave-active {
-  @apply md:blur-0 md:opacity-100 md:translate-y-0 md:duration-700 ease-in-out;
-}
-.imgAnimate-enter-from,
-.imgAnimate-leave-from {
-  @apply md:blur-lg md:opacity-0 md:translate-y-5 md:duration-700 ease-in-out;
-}
 .prev{
-@apply transform duration-500 ease-in-out inline-block cursor-pointer hover:-translate-x-0.5
+@apply  duration-200 pr-0.5 pl-0.5 ease-in-out inline-block cursor-pointer hover:-translate-x-0.5
 }
 .next{
-@apply transform duration-500 ease-in-out inline-block cursor-pointer hover:translate-x-0.5
+@apply  duration-200 pr-0.5 pl-0.5 ease-in-out inline-block cursor-pointer hover:translate-x-0.5
 }
 .img-control{
 @apply text-sm font-mono
@@ -123,7 +131,7 @@ imgSrc.value = imgs[i.value].src
 }
 
 .picNew {
-  @apply   h-full min-w-fit md:w-auto;
+  @apply h-full w-auto max-w-fit;
 }
 
 .col-box-new {
