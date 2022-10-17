@@ -1,4 +1,6 @@
 <script setup>
+import pic1 from '../assets/T_1.webp'
+import pic2 from '../assets/T_2.webp'
 import { ref, watchEffect, watch, onMounted, reactive } from 'vue'
 import { useImgLoad } from '../utils/Loading'
 import { useXScroll } from '../utils/scrollControl'
@@ -10,7 +12,7 @@ const { colBox, wheel } = useXScroll()
 const lazyLoad1 = ref(false)
 const picNew = ref('picNew')
 const target1 = ref(null)
-
+console.log(pic1);
 const pic = ref('pic')
 const openPic = ref('openPic')
 const closePic = ref('closePic')
@@ -23,9 +25,8 @@ watch(lazyLoad,()=>{
   console.log(lazyLoad1.value);
 })
 const imgs = reactive([
-  {name:'T_1',src:'src/assets/T_1.webp'},
-  {name:'T_2',src:'src/assets/T_2.webp'},
-  {name:'T_3',src:'src/assets/T_19.webp'}
+  {name:'T_3',src:pic1},
+  {name:'T_3',src:pic2},
 ])
 const imgSrc = ref('src/assets/T_1.webp')
 const i = ref(0)
@@ -37,7 +38,6 @@ if(i.value<imgs.length-1){
 }else{
   i.value = 0
 }
-lazyLoad1.value = !lazyLoad1.value
 imgSrc.value = imgs[i.value].src
 }
 const prev = () =>{
@@ -54,7 +54,7 @@ imgSrc.value = imgs[i.value].src
 </script>
 <template>
   <div>
-    <section v-show="a&&a1&&a2&&a3">
+    <!-- <section v-show="a&&a1&&a2&&a3">
       <section class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
@@ -66,7 +66,7 @@ imgSrc.value = imgs[i.value].src
           <img class="pic" src="../assets/T_272.webp" alt="" />
           <img class="pic" src="../assets/T_292.webp" alt="" />
           <img class="pic" src="../assets/T_0000.webp" alt="" />
-          <!-- <img ref="target1" :class='[lazyLoad1? openPic:closePic,pic]' src="../assets/T_23.webp" alt="" /> -->
+          <img ref="target1" :class='[lazyLoad1? openPic:closePic,pic]' src="../assets/T_23.webp" alt="" />
           <img class="pic" src="../assets/T_5.webp" alt="" />
           <img class="pic" src="../assets/T_28.webp" alt="" />
           <img class="pic" src="../assets/T_282.webp" alt="" />
@@ -79,14 +79,14 @@ imgSrc.value = imgs[i.value].src
           <img class="pic-end" src="../assets/T_6.webp" alt="" />
         </div>
       </section>
-    </section>
+    </section> -->
     <!-- new pic -->
-    <!-- <section class="picture_container_new" >
+    <section class="picture_container_new" >
       <div ref="colBox" class="col-box-new">
-        <img @load="imgLoad" :class="[lazyLoad1?openPic:closePic,picNew]" :src="imgSrc" alt="">
+        <img @load="imgLoad" class="picNew" :src='imgSrc' alt="">
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
-    </section> -->
+    </section>
 
     <!-- <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
       <div class="loading">
