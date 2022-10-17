@@ -24,11 +24,11 @@ useModal(a, a1, a2, a3)
 //   console.log(lazyLoad1.value);
 // })
 const imgs = reactive([
-  {name:'T_1',src:'../assets/T_1.webp'},
-  {name:'T_2',src:'../assets/T_2.webp'},
-  {name:'T_3',src:'../assets/T_19.webp'}
+  {name:'T_1',src:'/assets/T_1.webp'},
+  {name:'T_2',src:'/assets/T_2.webp'},
+  {name:'T_3',src:'/assets/T_19.webp'}
 ])
-const imgSrc = ref('../assets/T_1.webp')
+const imgSrc = ref('src/assets/T_1.webp')
 
 const i = ref(0)
 
