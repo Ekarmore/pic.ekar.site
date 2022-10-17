@@ -3,6 +3,7 @@ import Unnoticed from "./view/Unnoticed.vue";
 import AnotherLandscape from "./view/Another_Landscape.vue";
 import Turpan from "./view/Turpan.vue";
 import About from "./view/About.vue";
+import layout from './view/layout.vue'
 const router = createRouter({
   history: createWebHashHistory(),
   scrollBehavior(to, from, savedPosition) {
@@ -15,6 +16,7 @@ const router = createRouter({
     { path: "/AnotherLandscape", component: AnotherLandscape,meta:{title:'AnotherLandscape | Ekar'} },
     { path: "/Turpan", component: Turpan,meta:{title:'Turpan | Ekar'} },
     { path: "/about", component: About,meta:{title:'About | Ekar'} },
+    { path: "/layout", component: layout,meta:{title:'layout | Ekar'} },
   ],
 });
 export default router;
