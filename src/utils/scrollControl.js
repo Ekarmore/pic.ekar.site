@@ -10,11 +10,11 @@ export function useXScroll() {
     //滚动
     let disX = ref(event.deltaY);
     let scrollX = setInterval(() => {
-      colBox.value.scrollLeft += disX.value / 2;
-    }, 10);
+      colBox.value.scrollLeft += disX.value;
+    }, 20);
     setTimeout(() => {
       window.clearInterval(scrollX);
-    }, 50);
+    }, 30);
   }
   return { colBox, wheel };
 }
