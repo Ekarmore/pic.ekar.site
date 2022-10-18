@@ -5,6 +5,7 @@ const changeMenu = ref(false);
 const [openL1,openL2,openL3] = [ref('openL1'),ref('openL2'),ref('openL3')]
 const [closeL1,closeL2,closeL3] = [ref('closeL1'),ref('closeL2'),ref('closeL3')]
 const [line1,line2,line3] = [ref('line1'),ref('line2'),ref('line3')]
+const newVh = ref(window.innerHeight+'px')
 
 const handleModal = () => {
   showModal.value = !showModal.value;
@@ -58,7 +59,7 @@ const touchMove = (event)=>{
         </span>
     </div>
     <transition name="fade">
-      <div ref="mobileModal" @touchmove="touchMove" v-show="showModal" class="nav-mobile-modal">
+      <div ref="mobileModal" :style='{height:newVh}' @touchmove="touchMove" v-show="showModal" class="nav-mobile-modal">
             <div @click="closeModal" class="modal-text-container">
               <span class="modal-text">
                 <router-link active-class="active" to="Unnoticed"
@@ -128,7 +129,7 @@ const touchMove = (event)=>{
 @apply bg-white absolute flex justify-between z-50 items-center h-16 w-full;
 }
 .nav-mobile-modal {
-  @apply absolute top-0 bg-white w-full z-10 h-screen;
+  @apply absolute top-0 bg-white w-full z-10 ;
 }
 .modal-text-container {
   @apply flex flex-col items-center mt-24;

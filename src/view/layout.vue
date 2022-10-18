@@ -9,15 +9,16 @@ import pic4 from '../assets/T_24.webp'
 import { useImgLoad } from '../utils/Loading'
 import { useModal } from '../utils/modalControl'
 
+const newVh = ref(window.innerHeight+'px')
 const picture = ref(null)
 const change = ref (true)
 const showLoading = ref(true)
 
 // pic animate
 
-const picNew = ref('picNew')
-const openPic = ref('openPic')
-const closePic = ref('closePic')
+// const picNew = ref('picNew')
+// const openPic = ref('openPic')
+// const closePic = ref('closePic')
 
 const imgs = reactive([
   {name:'T_1.webp',src:pic1},
@@ -31,19 +32,22 @@ const imgSrc = ref(pic1)
 const i = ref(0)
 
 const next = ()=>{
+showLoading.value = true
+picShow.value = false
 if(i.value<imgs.length-1){
   i.value += 1
 }else{
   i.value = 0
 }
-showLoading.value = true
 change.value= false
 setTimeout(() => {
-  imgSrc.value = imgs[i.value].src
+imgSrc.value = imgs[i.value].src
 }, 100);
 }
-
 const prev = () =>{
+showLoading.value = true 
+picShow.value = false
+
 if(i.value>=1){
   i.value -= 1
 }
@@ -52,28 +56,37 @@ else{
 }
 change.value = false
 setTimeout(() => {
-    showLoading.value =true
-    imgSrc.value = imgs[i.value].src
+imgSrc.value = imgs[i.value].src
 }, 100);
 }
+
+const picShow = ref(false)
 
 const picLoad = ()=>{
  change.value= true
  showLoading.value = false
+ picShow.value =true
 }
 
 </script>
 <template>
   <div>
     <!-- new pic -->
-    <section class="picture_container_new" >
+    <section :style='{height:newVh}'  class="picture_container_new" >
+      <transition name="loadingAnimate">
       <div class="LoadingIcon" v-show="showLoading">
           <div class="loading">
         <div></div>
       </div>
         </div>
-      <div ref="colBox" class="col-box-new">
+        </transition>
+      <!-- <div ref="colBox" class="col-box-new">
         <img @click="next" @load="picLoad" ref="picture" :class="[change?openPic:closePic,picNew]" :src='imgSrc' alt="next">
+      </div>-->
+      <div ref="colBox" class="col-box-new">
+        <transition name="picAnimate">
+        <img @click="next" @load="picLoad" v-show="picShow" ref="picture" class="picNew" :src='imgSrc'>
+        </transition>
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
     </section>
@@ -108,9 +121,20 @@ const picLoad = ()=>{
   }
 
 .picture_container_new {
-  @apply h-screen flex flex-col justify-center items-center relative;
+  @apply  flex flex-col justify-center items-center relative;
 }
 .LoadingIcon{
-@apply flex flex-col justify-center items-center absolute w-full h-full
+@apply flex  flex-col justify-center items-center absolute w-full h-full
 }
+
+.picAnimate-enter-active,
+.picAnimate-leave-active {
+  @apply blur-0 opacity-100  duration-700 ease-in-out;
+}
+
+.picAnimate-enter-from,
+.picAnimate-leave-from {
+  @apply blur-lg opacity-0 duration-700 ease-in-out;
+}
+
 </style>
