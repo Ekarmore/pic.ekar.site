@@ -13,9 +13,7 @@ ShowNav.value = isTrue
 </script>
 <template>
   <div v-show="ShowNav" class="nav">
-    <transition name="nav-global">
     <Nav />
-  </transition>
   </div>
   <router-view @isShowNav="isShowNav" v-slot="{ Component }">
     <transition name="globalAnimate">
@@ -33,5 +31,4 @@ ShowNav.value = isTrue
 .globalAnimate-leave-from {
   @apply md:blur-lg md:opacity-0 md:translate-y-5 md:duration-700 ease-in-out;
 }
-
 </style>

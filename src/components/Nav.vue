@@ -49,6 +49,14 @@ const touchMove = (event)=>{
   </section>
 <!-- nav-mobile -->
   <section class="nav-mobile">
+    <div class="nav-mobile-bar">
+      <span @click="closeModal" class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
+        <span @click="handleModal" class="nav-icon">
+          <span :class='[changeMenu? openL1:closeL1,line1]' ></span>
+          <span :class='[changeMenu? openL2:closeL2,line2]' ></span>
+          <span :class='[changeMenu? openL3:closeL3,line3]'></span>
+        </span>
+    </div>
     <transition name="fade">
       <div ref="mobileModal" @touchmove="touchMove" v-show="showModal" class="nav-mobile-modal">
             <div @click="closeModal" class="modal-text-container">
@@ -74,14 +82,6 @@ const touchMove = (event)=>{
             </div>   
       </div>
     </transition>
-    <div class="nav-mobile-bar">
-      <span @click="closeModal" class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
-        <span @click="handleModal" class="nav-icon">
-          <span :class='[changeMenu? openL1:closeL1,line1]' ></span>
-          <span :class='[changeMenu? openL2:closeL2,line2]' ></span>
-          <span :class='[changeMenu? openL3:closeL3,line3]'></span>
-        </span>
-    </div>
   </section>
 </main>
 </template>
@@ -122,7 +122,7 @@ const touchMove = (event)=>{
 @apply  transform rotate-0 top-4 ease-in-out duration-500 !important;
 }
 .nav-mobile {
-@apply absolute w-full md:hidden;
+@apply absolute w-full lg:hidden z-50;
 }
 .nav-mobile-bar {
 @apply bg-white flex justify-between  items-center h-16 w-full;
@@ -140,7 +140,7 @@ const touchMove = (event)=>{
   @apply ml-5 font-mono;
 }
 .nav-mobile-footer{
-@apply text-center text-xs absolute bottom-5 font-mono
+@apply text-center text-xs absolute bottom-20 font-mono
 }
 .fade-enter-active,
 .fade-leave-active {

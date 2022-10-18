@@ -173,21 +173,6 @@ body {
   @apply text-xl pb-5;
 }
 
-/* 
-.main-box {
-@apply  flex items-center  flex-nowrap  h-screen ;
-}
-.xbox2 {
-@apply  flex overflow-x-scroll flex-nowrap ;
-}
-.pic{
-height:600px;
-@apply  m-1  flex-shrink-0 min-w-max
-}
-.menu {
-width:320px;
-@apply float-left h-screen ;
-} */
 
 .picture_container {
   @apply flex items-center h-screen md:h-screen ;
@@ -208,18 +193,9 @@ width:320px;
 .pic-end {
   @apply inline h-full w-auto max-w-max;
 }
-/* Navbar */
-/* .nav-mobile{
-@apply bg-white absolute w-full h-16 flex justify-between items-center lg:hidden
-}
-.nav-mobile-title{
-@apply text-xl ml-2 font-mono
-}
-.nav-mobile-menu{
-@apply text-xl mr-2
-} */
+
 .nav-pc {
-  @apply  w-80 hidden md:float-left md:h-screen md:flex md:flex-col;
+  @apply  w-80 hidden lg:float-left lg:h-screen lg:flex lg:flex-col;
 }
 
  .nav-pc-textbox{

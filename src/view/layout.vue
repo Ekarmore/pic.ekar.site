@@ -1,19 +1,16 @@
 <script setup>
+import { ref, watchEffect, watch, onMounted, reactive } from 'vue'
+// import picture 
 import pic1 from '../assets/T_1.webp'
 import pic2 from '../assets/T_2.webp'
 import pic3 from '../assets/T_19.webp'
 import pic4 from '../assets/T_24.webp'
-import {useImgLoadNew} from '../utils/LoadingNew'
-import { ref, watchEffect, watch, onMounted, reactive } from 'vue'
+// import utils
 import { useImgLoad } from '../utils/Loading'
 import { useModal } from '../utils/modalControl'
-import { useIntersectionObserver } from '@vueuse/core'
+
 const picture = ref(null)
 const change = ref (true)
-
-// loading
-const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
-useModal(a, a1, a2, a3)
 
 
 // pic animate
@@ -22,23 +19,18 @@ const picNew = ref('picNew')
 const openPic = ref('openPic')
 const closePic = ref('closePic')
 
-//control modal
-
 const imgs = reactive([
   {name:'T_1.webp',src:pic1},
   {name:'T_2',src:pic2},
   {name:'T_3',src:pic3},
   {name:'T_4',src:pic4},
 ])
-console.log(imgs[3].src);
-const imgSrc = ref('')
 
-imgSrc.value = pic1
+const imgSrc = ref(pic1)
 
 const i = ref(0)
 
 const next = ()=>{
-
 if(i.value<imgs.length-1){
   i.value += 1
 }else{
@@ -62,23 +54,18 @@ setTimeout(() => {
     imgSrc.value = imgs[i.value].src
 }, 100);
 }
+
 const picLoad = ()=>{
-    setTimeout(() => {
-        change.value= true
-        console.log('load');
-    }, 100);
+ change.value= true
 }
-watch(i,()=>{
-console.log('i',i.value);
-})
-console.log(change.value);
+
 </script>
 <template>
   <div>
     <!-- new pic -->
     <section class="picture_container_new" >
       <div ref="colBox" class="col-box-new">
-        <img @load="picLoad" ref="picture" :class="[change?openPic:closePic,picNew]" :src='imgSrc' alt="">
+        <img @click="next" @load="picLoad" ref="picture" :class="[change?openPic:closePic,picNew]" :src='imgSrc' alt="next">
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
     </section>
@@ -93,16 +80,16 @@ console.log(change.value);
 
 <style>
 .prev{
-@apply  duration-200 pr-0.5 pl-0.5 ease-in-out inline-block cursor-pointer hover:-translate-x-0.5
+@apply  text-xs duration-100 pr-0.5 pl-0.5 ease-in-out inline-block cursor-pointer lg:hover:bg-black lg:hover:text-white
 }
 .next{
-@apply  duration-200 pr-0.5 pl-0.5 ease-in-out inline-block cursor-pointer hover:translate-x-0.5
+@apply  text-xs duration-100 pr-0.5 pl-0.5 ease-in-out inline-block cursor-pointer lg:hover:bg-black lg:hover:text-white
 }
 .img-control{
-@apply text-sm font-mono
+@apply text-sm font-mono absolute bottom-14
 }
 .closePic {
-  @apply opacity-0 blur-2xl duration-100 ease-in-out 
+  @apply opacity-0 blur-lg duration-100 ease-in-out 
 }
 
 .openPic {
@@ -111,14 +98,14 @@ console.log(change.value);
 
 
 .picNew {
-  @apply h-full w-auto max-w-fit  ;
+  @apply  max-h-96 cursor-pointer;
 }
 
 .col-box-new {
-  @apply  pt-16 md:p-5 md:h-3/4  ;
+  @apply  p-5 h-auto flex flex-col justify-center;
   }
 
 .picture_container_new {
-  @apply h-screen w-auto flex flex-col  justify-center items-center;
+  @apply h-screen flex flex-col justify-center items-center;
 }
 </style>
