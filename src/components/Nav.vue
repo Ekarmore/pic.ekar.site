@@ -150,6 +150,4 @@ const touchMove = (event)=>{
 .fade-leave-to {
   @apply opacity-0 blur-xl -translate-y-7 rounded-3xl duration-500 ease-in-out ;
 }
-
-
 </style>
