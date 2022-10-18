@@ -89,13 +89,12 @@ const picLoad = ()=>{
 @apply text-sm font-mono absolute bottom-14
 }
 .closePic {
-  @apply opacity-0 blur-lg duration-100 ease-in-out 
+  @apply opacity-0  blur-lg  duration-100 ease-in-out 
 }
 
 .openPic {
-  @apply opacity-100 blur-0 duration-500 ease-in-out 
+  @apply opacity-100 blur-0  duration-500 ease-in-out 
 }
-
 
 .picNew {
   @apply  max-h-96 cursor-pointer;
