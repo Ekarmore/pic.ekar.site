@@ -78,7 +78,7 @@ const touchMove = (event)=>{
                 <router-link active-class="active" to="about">About</router-link>
               </span>
               <footer class="nav-mobile-footer">
-          Design and create by <a class="footer-link" href="">Ekar</a> in 2022
+          Design and create by <a href="">Ekar</a> in 2022
         </footer>
             </div>   
       </div>
@@ -141,7 +141,7 @@ const touchMove = (event)=>{
   @apply ml-5 font-mono;
 }
 .nav-mobile-footer{
-@apply text-center text-xs absolute bottom-5 font-mono
+@apply text-center text-xs text-gray-500 absolute bottom-5 font-mono
 }
 .fade-enter-active,
 .fade-leave-active {

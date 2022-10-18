@@ -34,7 +34,7 @@ watchEffect(() => {
 }
 
 .about-me {
-  @apply mb-2 md:mb-5 leading-8 text-gray-800 text-sm 
+  @apply mb-2 md:mb-5 leading-8 text-gray-800 text-xs 
 }
 
 .startBox {

@@ -17,13 +17,13 @@ const {lazyLoad} = useLazy(picture)
 watch(lazyLoad,()=>{
   console.log(lazyLoad.value);
 })
-
+const newVh = ref(window.innerHeight+'px')
 </script>
 
 <template>
   <div>
     <section v-show="a&&a1&&a2&&a3">
-      <section class="picture_container">
+      <section class="picture_container" :style="{height:newVh}">
         <div ref="colBox" class="col-box" @wheel="wheel">
           <img @load="imgLoad" class="pic" src="../assets/T_1.webp" alt="" />
           <img @load="imgLoad2" class="pic" src="../assets/T_2.webp" alt="" />
