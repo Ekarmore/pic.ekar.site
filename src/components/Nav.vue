@@ -122,16 +122,16 @@ const touchMove = (event)=>{
 @apply  transform rotate-0 top-4 ease-in-out duration-500 !important;
 }
 .nav-mobile {
-@apply absolute w-full lg:hidden z-50;
+@apply  w-full lg:hidden z-50;
 }
 .nav-mobile-bar {
-@apply bg-white flex justify-between  items-center h-16 w-full;
+@apply bg-white absolute flex justify-between z-50 items-center h-16 w-full;
 }
 .nav-mobile-modal {
-  @apply absolute bg-white w-full h-screen;
+  @apply absolute top-0 bg-white w-full z-10 h-screen;
 }
 .modal-text-container {
-  @apply flex flex-col items-center mt-28;
+  @apply flex flex-col items-center mt-24;
 }
 .modal-text {
   @apply  font-thin text-gray-500 font-mono m-1;
@@ -140,7 +140,7 @@ const touchMove = (event)=>{
   @apply ml-5 font-mono;
 }
 .nav-mobile-footer{
-@apply text-center text-xs absolute bottom-20 font-mono
+@apply text-center text-xs absolute bottom-5 font-mono
 }
 .fade-enter-active,
 .fade-leave-active {

@@ -11,7 +11,7 @@ import { useModal } from '../utils/modalControl'
 
 const picture = ref(null)
 const change = ref (true)
-
+const showLoading = ref(true)
 
 // pic animate
 
@@ -36,9 +36,10 @@ if(i.value<imgs.length-1){
 }else{
   i.value = 0
 }
+showLoading.value = true
 change.value= false
 setTimeout(() => {
-    imgSrc.value = imgs[i.value].src
+  imgSrc.value = imgs[i.value].src
 }, 100);
 }
 
@@ -51,12 +52,14 @@ else{
 }
 change.value = false
 setTimeout(() => {
+    showLoading.value =true
     imgSrc.value = imgs[i.value].src
 }, 100);
 }
 
 const picLoad = ()=>{
  change.value= true
+ showLoading.value = false
 }
 
 </script>
@@ -64,17 +67,17 @@ const picLoad = ()=>{
   <div>
     <!-- new pic -->
     <section class="picture_container_new" >
+      <div class="LoadingIcon" v-show="showLoading">
+          <div class="loading">
+        <div></div>
+      </div>
+        </div>
       <div ref="colBox" class="col-box-new">
         <img @click="next" @load="picLoad" ref="picture" :class="[change?openPic:closePic,picNew]" :src='imgSrc' alt="next">
       </div>
       <div class="img-control"><div class="prev" @click="prev">prev</div> / <div class="next" @click="next">next</div></div>
     </section>
 
-    <!-- <section class="hp-loading" v-show="!(a&&a1&&a2&&a3)">
-      <div class="loading">
-        <div></div>
-      </div>
-    </section> -->
   </div>
 </template>
 
@@ -105,6 +108,9 @@ const picLoad = ()=>{
   }
 
 .picture_container_new {
-  @apply h-screen flex flex-col justify-center items-center;
+  @apply h-screen flex flex-col justify-center items-center relative;
+}
+.LoadingIcon{
+@apply flex flex-col justify-center items-center absolute w-full h-full
 }
 </style>
