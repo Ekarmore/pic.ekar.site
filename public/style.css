@@ -199,7 +199,7 @@ body {
 }
 
  .nav-pc-textbox{
-  @apply flex flex-col mt-5 pl-10 
+  @apply flex  flex-col mt-5 pl-10 
  }
 
  .nav-text {

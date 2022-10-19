@@ -104,20 +104,20 @@ const picLoad = ()=>{
 .img-control{
 @apply text-sm font-mono absolute bottom-14
 }
-.closePic {
+/* .closePic {
   @apply opacity-0  blur-lg  duration-100 ease-in-out 
 }
 
 .openPic {
   @apply opacity-100 blur-0  duration-500 ease-in-out 
-}
+} */
 
 .picNew {
-  @apply  max-h-96 cursor-pointer;
+  @apply  max-h-96 p-5 md:p-0 cursor-pointer;
 }
 
 .col-box-new {
-  @apply  p-5 h-auto flex flex-col justify-center;
+  @apply  h-auto flex flex-col justify-center;
   }
 
 .picture_container_new {
