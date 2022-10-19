@@ -4,7 +4,7 @@ import {useImgLoad} from '../utils/Loading'
 import {useXScroll} from '../utils/scrollControl'
 import {useModal} from '../utils/modalControl'
 const { imgLoad,imgLoad2,imgLoad3,imgLoad4,a, a1, a2, a3} = useImgLoad()
-
+const newVh = fef(window.innerHeight+'px')
 //让页面横向滚动
 const {colBox,wheel} = useXScroll()
 
@@ -20,7 +20,7 @@ useModal(a,a1,a2,a3)
 <template>
     <main>
         <section v-show="a&&a1">
-            <section class="picture_container">
+            <section :style="{height:newVh}" class="picture_container">
                 <div ref="colBox" class="col-box" @wheel="wheel">
                     <img @load="imgLoad" class="pic" src="../assets/AL_2.webp" alt="" />
                     <img @load="imgLoad2" class="pic" src="../assets/AL_9.webp" alt="" />
