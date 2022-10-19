@@ -7,7 +7,6 @@ const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad();
 const { colBox, wheel } = useXScroll();
 useModal(a,a1,a2,a3)
 const newVh = ref(window.innerHeight+'px')
-console.log(newVh.value)
 </script>
 <template>
   <main>

@@ -1,10 +1,10 @@
 <script setup>
-import { defineEmits, watch } from 'vue'
+import { defineEmits, watch,ref } from 'vue'
 import {useImgLoad} from '../utils/Loading'
 import {useXScroll} from '../utils/scrollControl'
 import {useModal} from '../utils/modalControl'
 const { imgLoad,imgLoad2,imgLoad3,imgLoad4,a, a1, a2, a3} = useImgLoad()
-const newVh = fef(window.innerHeight+'px')
+const newVh = ref(window.innerHeight+'px')
 //让页面横向滚动
 const {colBox,wheel} = useXScroll()
 
