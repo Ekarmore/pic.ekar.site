@@ -2,23 +2,21 @@
 import { useMouse } from '@vueuse/core'
 import {onMounted, ref, watchEffect } from 'vue'
 const mouse = ref(null)
-const { x, y} = useMouse()
+const {x, y} = useMouse()
 
 onMounted(()=>{
 watchEffect(()=>{
-    mouse.value.style.top = `${y.value-10}px`
-    mouse.value.style.left = `${x.value-10}px`
-})
+    mouse.value.style.top = `${y.value-8}px`
+    mouse.value.style.left = `${x.value-8}px`
 })
 
+})
 
 </script>
 
 <template>
-
-<div class="mouse" ref="mouse">
+<div class="mouse" @click="changeMouse" ref="mouse">
 </div>
-
 </template>
 
 <style>
