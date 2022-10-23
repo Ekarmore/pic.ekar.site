@@ -4,7 +4,7 @@ import {onMounted, ref} from 'vue'
 import {useTitle} from './utils/title'
 import mouse from './components/mouse.vue'
 useTitle()
-const ShowNav = ref(true)
+const ShowNav = ref(false)
 const isShowNav = (isTrue) =>{
 ShowNav.value = isTrue
 }
