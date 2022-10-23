@@ -113,7 +113,7 @@ const picLoad = ()=>{
 } */
 
 .picNew {
-  @apply  max-h-96 p-5 md:p-0 cursor-pointer;
+  @apply  max-h-96 p-5 md:p-0 ;
 }
 
 .col-box-new {

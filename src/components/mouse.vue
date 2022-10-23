@@ -9,7 +9,6 @@ watchEffect(()=>{
     mouse.value.style.top = `${y.value-8}px`
     mouse.value.style.left = `${x.value-8}px`
 })
-
 })
 
 </script>
