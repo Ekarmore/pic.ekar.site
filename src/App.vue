@@ -26,12 +26,12 @@ ShowNav.value = isTrue
 <style>
 .globalAnimate-enter-active,
 .globalAnimate-leave-active {
-  @apply md:blur-0 md:opacity-100 md:translate-y-0 md:duration-700 ease-in-out;
+  @apply blur-0 opacity-100 translate-y-0 duration-700 ease-in-out;
 }
 
 .globalAnimate-enter-from,
 .globalAnimate-leave-from {
-  @apply md:blur-lg md:opacity-0 md:translate-y-5 md:duration-700 ease-in-out;
+  @apply blur-lg opacity-0 translate-y-5 duration-700 ease-in-out;
 }
 
 .mouse-control{
