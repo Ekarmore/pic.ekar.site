@@ -15,6 +15,9 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+*{
+@apply md:cursor-none
+}
 .catalog {
   @apply flex flex-wrap mx-auto justify-center
     w-11/12 mt-5
