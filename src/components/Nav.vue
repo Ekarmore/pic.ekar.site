@@ -40,6 +40,11 @@ const touchMove = (event)=>{
             >- Another Landscape (Ongoing)</router-link
           >
         </span>
+        <span class="nav-text-special">
+        <div class='special-line'>-</div><router-link active-class="active" to="NeverKnowhowmuchiloveyou"
+            > Never Know how much i love you (Ongoing)</router-link
+          >
+        </span>
         <span class="nav-text">
           <router-link active-class="active" to="about">- About</router-link>
         </span>
@@ -73,6 +78,9 @@ const touchMove = (event)=>{
                 <router-link active-class="active" to="AnotherLandscape"
                   >Another Landscape (Ongoing)</router-link
                 >
+              </span>
+              <span class="modal-text">
+                <router-link active-class="active" to="NeverKnowHowMuchILoveYou">Never Know how much i love you (Ongoing)</router-link>
               </span>
               <span class="modal-text">
                 <router-link active-class="active" to="about">About</router-link>
@@ -135,7 +143,7 @@ const touchMove = (event)=>{
   @apply flex flex-col items-center mt-24;
 }
 .modal-text {
-  @apply  font-thin text-gray-500 font-mono m-1;
+  @apply  font-thin text-gray-500 text-center font-mono m-2;
 }
 .nav-mobile-title {
   @apply ml-5 font-mono;

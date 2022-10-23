@@ -198,22 +198,28 @@ body {
 }
 
 .nav-pc {
-  @apply  w-80 hidden lg:float-left lg:h-screen lg:flex lg:flex-col;
+  @apply   w-80 hidden lg:float-left lg:h-screen lg:flex lg:flex-col;
 }
 
  .nav-pc-textbox{
-  @apply flex  flex-col mt-5 pl-10 
+  @apply flex  flex-col mt-5 pr-6 pl-6
  }
 
  .nav-text {
- @apply p-1 text-sm font-mono hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out
+ @apply  text-sm  font-mono m-2 hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out
      }
+  .nav-text-special {
+ @apply flex  text-sm  font-mono m-2 hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out
+          }
+  .special-line{
+  @apply pr-2.5
+  }
  .nav-pc-title {
  @apply pl-10 pt-10 blur-0 hover:blur-lg duration-300 ease-in-out text-xl mb-5 mt-5 font-mono 
      }
  
  .nav-hr{
- @apply mb-5 w-4/5 mx-auto border-black 
+ @apply mb-5 w-10/12 mx-auto border-black 
        }
  .nav-footer{
  @apply text-xs font-mono xl:opacity-70 absolute bottom-8 left-8 
