@@ -186,7 +186,7 @@ body {
 } */
 
 .col-box {
-@apply  overflow-x-scroll flex flex-nowrap h-full pt-16  md:pt-9 md:pb-9 md:pl-5 nd:pr-5 md:h-full;
+@apply  overflow-x-scroll flex flex-nowrap h-full pt-16  md:pt-9 md:pb-9 md:pl-5 md:pr-5 md:h-full;
 }
 
 .pic {
