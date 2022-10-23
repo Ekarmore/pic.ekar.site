@@ -54,7 +54,7 @@ watchEffect(() => {
 }
 
 .me-container {
-  @apply md:pt-14 pt-20 mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 
+  @apply md:pt-14 pt-24 mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 
 }
 
 .me-text-end {
