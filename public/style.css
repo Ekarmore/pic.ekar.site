@@ -96,7 +96,7 @@ body {
   @apply mt-10;
 }
 .hp-loading {
-  @apply w-full h-screen flex flex-col items-center justify-center absolute align-middle font-mono;
+  @apply w-full h-screen flex flex-col items-center justify-center z-20 absolute align-middle font-mono;
 }
 
 /* -loading animate- */
