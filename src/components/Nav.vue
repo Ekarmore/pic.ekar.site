@@ -29,15 +29,18 @@ const touchMove = (event)=>{
       <h1 class="nav-pc-title"><router-link to="/">Ekar</router-link></h1>
       <hr class="nav-hr" />
       <div class="nav-pc-textbox">
-        <span class="nav-text">
-          <router-link active-class="active" to="Unnoticed">- Unnoticed (Ongoing)</router-link>
+        <span class="nav-text-special">
+          <div class='special-line'>-</div>
+          <router-link active-class="active" to="Unnoticed">Unnoticed (Ongoing)</router-link>
         </span>
-        <span class="nav-text">
-          <router-link active-class="active" to="Turpan">- Turpan</router-link>
+        <span class="nav-text-special">
+          <div class='special-line'>-</div>
+          <router-link active-class="active" to="Turpan">Turpan</router-link>
         </span>
-        <span class="nav-text">
+        <span class="nav-text-special">
+          <div class='special-line'>-</div>
           <router-link active-class="active" to="AnotherLandscape"
-            >- Another Landscape (Ongoing)</router-link
+            >Another Landscape (Ongoing)</router-link
           >
         </span>
         <span class="nav-text-special">
@@ -45,8 +48,9 @@ const touchMove = (event)=>{
             > Never Know how much i love you (Ongoing)</router-link
           >
         </span>
-        <span class="nav-text">
-          <router-link active-class="active" to="about">- About</router-link>
+        <span class="nav-text-special">
+          <div class='special-line'>-</div>
+          <router-link active-class="active" to="about">About</router-link>
         </span>
       </div>
     <footer class="nav-footer">
