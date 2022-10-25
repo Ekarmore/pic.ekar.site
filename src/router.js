@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Unnoticed from "./view/Unnoticed.vue";
 import AnotherLandscape from "./view/Another_Landscape.vue";
 import Turpan from "./view/Turpan.vue";
-import NeverKnowHowMuchILoveYou from './view/NeverMuchKnow.vue'
+// import NeverKnowHowMuchILoveYou from './view/NeverMuchKnow.vue'
 import About from "./view/About.vue";
 import layout from './view/layout.vue'
 
@@ -17,7 +17,7 @@ const router = createRouter({
     { path: "/Unnoticed", component: Unnoticed,meta:{title:'Unnoticed | Ekar'}},
     { path: "/AnotherLandscape", component: AnotherLandscape,meta:{title:'AnotherLandscape | Ekar'} },
     { path: "/Turpan", component: Turpan,meta:{title:'Turpan | Ekar'} },
-    { path: "/NeverKnowHowMuchILoveYou", component: NeverKnowHowMuchILoveYou,meta:{title:'Never Know how much i love you  | Ekar'} },
+    // { path: "/NeverKnowHowMuchILoveYou", component: NeverKnowHowMuchILoveYou,meta:{title:'Never Know how much i love you  | Ekar'} },
     { path: "/about", component: About,meta:{title:'About | Ekar'} },
     { path: "/layout", component: layout,meta:{title:'layout | Ekar'} },
   ],

@@ -198,7 +198,7 @@ body {
 }
 
 .nav-pc {
-  @apply   w-80 hidden lg:float-left lg:h-screen lg:flex lg:flex-col;
+  @apply   w-80 hidden md:float-left md:h-screen md:flex md:flex-col;
 }
 
  .nav-pc-textbox{
