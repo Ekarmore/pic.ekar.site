@@ -13,11 +13,10 @@ const newVh = ref(window.innerHeight+'px')
     <section v-show="a && a1 && a2 && a3">
       <section :style="{height:newVh}" class="picture_container">
         <div ref="colBox" class="col-box" @wheel="wheel">
-          <img @load="imgLoad" class="pic" src="../assets/Her_1.webp" alt="" />
-          <img @load="imgLoad4" class="pic" src="../assets/Her_4.webp" alt="" />
-          <img @load="imgLoad3" class="pic" src="../assets/Her_3.webp" alt="" />
-          <img @load="imgLoad3" class="pic" src="https://s1.vika.cn/space/2022/10/27/0de1dd86ba654b54906dc9c0920e8ce3?attname=DSC_6230%2013.jpg" alt="" />
-          <img @load="imgLoad2" class="pic-end" src="../assets/Her_2.webp" alt="" />
+          <img @load="imgLoad" class="pic" src="https://s1.vika.cn/space/2022/10/27/ab5b28db7d2a45dc913af1fe7ffd351e?attname=Her_1.webp" alt="" />
+          <img @load="imgLoad4" class="pic" src="https://s1.vika.cn/space/2022/10/27/a50bdd51a5b548eda9b17cbcec5ae4f5?attname=Her_4.webp" alt="" />
+          <img @load="imgLoad3" class="pic" src="https://s1.vika.cn/space/2022/10/27/80b67c0c38884282a8011ce52a30a50b?attname=Her_3.webp" alt="" />
+          <img @load="imgLoad2" class="pic-end" src="https://s1.vika.cn/space/2022/10/27/7bd5dc6fbe8745fabc246e3d3a092e57?attname=Her_2.webp" alt="" />
         </div>
       </section>
     </section>
