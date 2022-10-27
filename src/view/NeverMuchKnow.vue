@@ -16,7 +16,6 @@ const newVh = ref(window.innerHeight+'px')
           <img @load="imgLoad" class="pic" src="../assets/Her_1.webp" alt="" />
           <img @load="imgLoad4" class="pic" src="../assets/Her_4.webp" alt="" />
           <img @load="imgLoad3" class="pic" src="../assets/Her_3.webp" alt="" />
-          <img @load="imgLoad" class="pic" src="https://i.postimg.cc/VN7gqG2v/DSC-6230.jpg" alt="" />
           <img @load="imgLoad2" class="pic-end" src="../assets/Her_2.webp" alt="" />
         </div>
       </section>
