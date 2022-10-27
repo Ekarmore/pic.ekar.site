@@ -4,17 +4,12 @@ import {useImgLoad} from '../utils/Loading'
 import {useXScroll} from '../utils/scrollControl'
 import {useModal} from '../utils/modalControl'
 const { imgLoad,imgLoad2,imgLoad3,imgLoad4,a, a1, a2, a3} = useImgLoad()
+//移动端100vh
 const newVh = ref(window.innerHeight+'px')
 //让页面横向滚动
 const {colBox,wheel} = useXScroll()
-
+//首次加载
 useModal(a,a1,a2,a3)
-// const emit = defineEmits(['isShowNav'])
-// watch([a, a1, a2, a3], () => {
-//   if (a.value && a1.value && a2.value && a3.value) {
-//     emit("isShowNav",true)
-//   }
-// })
 
 </script>
 <template>
