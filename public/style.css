@@ -186,6 +186,7 @@ body {
 } */
 
 .col-box {
+/* scroll-behavior: smooth; */
 @apply  overflow-x-scroll flex flex-nowrap h-full  pt-16  md:pt-9 md:pb-9 md:pl-5 md:pr-5 md:h-full;
 }
 

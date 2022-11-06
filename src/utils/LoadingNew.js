@@ -1,11 +1,11 @@
-import { ref } from "vue";
+import { ref } from 'vue'
 
 export function useImgLoadNew() {
- const a = ref(false);
+  const a = ref(false)
 
   function imgLoad() {
-    a.value = true;
+    a.value = true
   }
 
-  return { imgLoad,a};
+  return { imgLoad, a }
 }

@@ -4,22 +4,34 @@ import { defineEmits, watchEffect } from 'vue'
 const emit = defineEmits(['isShowNav'])
 
 watchEffect(() => {
-  emit("isShowNav",true)
+  emit('isShowNav', true)
 })
 </script>
 
 <template>
   <main class="me-container">
     <article class="me-box">
-      <p class="me-text-start">Hello,yo!</p>
-
-      <p class="about-me">我是<a class="Ekar" href="">YEKMAT</a>,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。<br /></p>
-      <p class="about-me"> 我创建了这个网站并在这里放了一些自己拍摄的照片用于归纳与分享,你可以在这里看到我在做的一些摄影项目,希望当中会有能够与你产生共鸣的照片。<br />
+      <p class="me-text-start">
+        Hello,yo!
       </p>
-      <p class="about-me">多说无益,在这里或许你更应该从照片里了解我。<p class="about-me">所以,<router-link class="getStart" to="/">点击我开始观看作品 ></router-link></p> </p>
-      <hr class="me-hr" />
+      <p class="about-me">
+        我是<a class="Ekar" href="">YEKMAT</a>,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。<br>
+      </p>
+      <p class="about-me">
+        我创建了这个网站并在这里放了一些自己拍摄的照片用于归纳与分享,你可以在这里看到我在做的一些摄影项目,希望当中会有能够与你产生共鸣的照片。<br>
+      </p>
+      <p class="about-me">
+        多说无益,在这里或许你更应该从照片里了解我。
+      </p><p class="about-me">
+        所以,<router-link class="getStart" to="/">
+          点击我开始观看作品 >
+        </router-link>
+      </p>
+      <hr class="me-hr">
       <section class="about-link-box">
-       <p class="about-me">除此之外,你也可以通过以下方式找到我:</p>
+        <p class="about-me">
+          除此之外,你也可以通过以下方式找到我:
+        </p>
         <a class="about-link" href="https://www.instagram.com/ekarmore/">· instagram</a>
         <a class="about-link" href="mailto:earthb0y@outlook.com">· earthb0y@outlook.com</a>
         <a class="about-link" href="https://space.bilibili.com/390593000">· bilibili</a>
@@ -28,13 +40,13 @@ watchEffect(() => {
   </main>
 </template>
 
-<style >
+<style>
 .Ekar {
   @apply text-sm font-bold  text-black italic
 }
 
 .about-me {
-  @apply mb-2 md:mb-5 leading-8 text-gray-800 text-xs 
+  @apply mb-2 md:mb-5 leading-8 text-gray-800 text-xs
 }
 
 .startBox {
@@ -54,7 +66,7 @@ watchEffect(() => {
 }
 
 .me-container {
-  @apply md:pt-14 pt-24 mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2 
+  @apply md:pt-14 pt-24 mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2
 }
 
 .me-text-end {
@@ -66,11 +78,11 @@ watchEffect(() => {
 }
 
 .me-text-start {
-  @apply font-mono text-xl mb-5 font-bold 
+  @apply font-mono text-xl mb-5 font-bold
 }
 
 .about-link-box {
   @apply flex flex-col text-sm mb-10 justify-between
 }
 </style>
-    
+
