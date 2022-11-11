@@ -1,102 +1,98 @@
 <script setup>
-import { reactive, ref } from "vue";
-const showModal = ref(false);
-const changeMenu = ref(false);
-const [openL1,openL2,openL3] = [ref('openL1'),ref('openL2'),ref('openL3')]
-const [closeL1,closeL2,closeL3] = [ref('closeL1'),ref('closeL2'),ref('closeL3')]
-const [line1,line2,line3] = [ref('line1'),ref('line2'),ref('line3')]
-const newVh = ref(window.innerHeight+'px')
+import { reactive, ref } from 'vue'
+const showModal = ref(false)
+const changeMenu = ref(false)
+const [openL1, openL2, openL3] = [ref('openL1'), ref('openL2'), ref('openL3')]
+const [closeL1, closeL2, closeL3] = [ref('closeL1'), ref('closeL2'), ref('closeL3')]
+const [line1, line2, line3] = [ref('line1'), ref('line2'), ref('line3')]
+const newVh = ref(`${window.innerHeight}px`)
 
 const handleModal = () => {
-  showModal.value = !showModal.value;
-  changeMenu.value = !changeMenu.value;
-};
-//唤起或关闭Modal
+  showModal.value = !showModal.value
+  changeMenu.value = !changeMenu.value
+}
+// 唤起或关闭Modal
 const closeModal = () => {
   showModal.value = false
-  changeMenu.value = false;
-};
-//Modal框不可以拖动
-const touchMove = (event)=>{
+  changeMenu.value = false
+}
+// Modal框不可以拖动
+const touchMove = (event) => {
   event.preventDefault()
 }
 </script>
 
 <template>
-<main>
-<!-- nav-pc -->
-  <section class="nav-pc">
-      <h1 class="nav-pc-title"><router-link to="/">Ekar</router-link></h1>
-      <hr class="nav-hr" />
+  <main>
+    <!-- nav-pc -->
+    <section class="nav-pc">
+      <h1 class="nav-pc-title">
+        <router-link to="/">
+          Ekar
+        </router-link>
+      </h1>
+      <hr class="nav-hr">
       <div class="nav-pc-textbox">
         <span class="nav-text-special">
-          <div class='special-line'>-</div>
+          <div class="special-line">-</div>
           <router-link active-class="active" to="Unnoticed">Unnoticed (Ongoing)</router-link>
         </span>
         <span class="nav-text-special">
-          <div class='special-line'>-</div>
+          <div class="special-line">-</div>
           <router-link active-class="active" to="Turpan">Turpan</router-link>
         </span>
         <span class="nav-text-special">
-          <div class='special-line'>-</div>
-          <router-link active-class="active" to="AnotherLandscape"
-            >Another Landscape (Ongoing)</router-link
-          >
+          <div class="special-line">-</div>
+          <router-link active-class="active" to="AnotherLandscape">Another Landscape (Ongoing)</router-link>
         </span>
         <span class="nav-text-special">
-        <div class='special-line'>-</div><router-link active-class="active" to="NeverKnowhowmuchiloveyou"
-            > Never Know how much i love you (Ongoing)</router-link
-          >
+          <div class="special-line">-</div><router-link active-class="active" to="NeverKnowhowmuchiloveyou"> Never Know how much i love you (Ongoing)</router-link>
         </span>
         <span class="nav-text-special">
-          <div class='special-line'>-</div>
+          <div class="special-line">-</div>
           <router-link active-class="active" to="about">About</router-link>
         </span>
       </div>
-    <footer class="nav-footer">
-      Design and create by <a class="footer-link" href="">Ekar</a> in 2022
-    </footer>
-  </section>
-<!-- nav-mobile -->
-  <section class="nav-mobile">
-    <div class="nav-mobile-bar">
-      <span @click="closeModal" class="nav-mobile-title"><router-link to="/">Ekar</router-link></span>
-        <span @click="handleModal" class="nav-icon">
-          <span :class='[changeMenu? openL1:closeL1,line1]' ></span>
-          <span :class='[changeMenu? openL2:closeL2,line2]' ></span>
-          <span :class='[changeMenu? openL3:closeL3,line3]'></span>
+      <footer class="nav-footer">
+        Design and create by <a class="footer-link" href="">Ekar</a> in 2022
+      </footer>
+    </section>
+    <!-- nav-mobile -->
+    <section class="nav-mobile">
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-title" @click="closeModal"><router-link to="/">Ekar</router-link></span>
+        <span class="nav-icon" @click="handleModal">
+          <span :class="[changeMenu ? openL1 : closeL1, line1]" />
+          <span :class="[changeMenu ? openL2 : closeL2, line2]" />
+          <span :class="[changeMenu ? openL3 : closeL3, line3]" />
         </span>
-    </div>
-    <transition name="fade">
-      <div ref="mobileModal" :style='{height:newVh}' @touchmove="touchMove" v-show="showModal" class="nav-mobile-modal">
-            <div @click="closeModal" class="modal-text-container">
-              <span class="modal-text">
-                <router-link active-class="active" to="Unnoticed"
-                  >Unnoticed (Ongoing)</router-link
-                >
-              </span>
-              <span class="modal-text">
-                <router-link active-class="active" to="Turpan">Turpan</router-link>
-              </span>
-              <span class="modal-text">
-                <router-link active-class="active" to="AnotherLandscape"
-                  >Another Landscape (Ongoing)</router-link
-                >
-              </span>
-              <span class="modal-text">
-                <router-link active-class="active" to="NeverKnowHowMuchILoveYou">Never Know how much i love you (Ongoing)</router-link>
-              </span>
-              <span class="modal-text">
-                <router-link active-class="active" to="about">About</router-link>
-              </span>
-              <footer class="nav-mobile-footer">
-          Design and create by <a href="">Ekar</a> in 2022
-        </footer>
-            </div>   
       </div>
-    </transition>
-  </section>
-</main>
+      <transition name="fade">
+        <div v-show="showModal" ref="mobileModal" :style="{ height: newVh }" class="nav-mobile-modal" @touchmove="touchMove">
+          <div class="modal-text-container" @click="closeModal">
+            <span class="modal-text">
+              <router-link active-class="active" to="Unnoticed">Unnoticed (Ongoing)</router-link>
+            </span>
+            <span class="modal-text">
+              <router-link active-class="active" to="Turpan">Turpan</router-link>
+            </span>
+            <span class="modal-text">
+              <router-link active-class="active" to="AnotherLandscape">Another Landscape (Ongoing)</router-link>
+            </span>
+            <span class="modal-text">
+              <router-link active-class="active" to="NeverKnowHowMuchILoveYou">Never Know how much i love you (Ongoing)</router-link>
+            </span>
+            <span class="modal-text">
+              <router-link active-class="active" to="about">About</router-link>
+            </span>
+            <footer class="nav-mobile-footer">
+              Design and create by <a href="">Ekar</a> in 2022
+            </footer>
+          </div>
+        </div>
+      </transition>
+    </section>
+  </main>
 </template>
 
 <style>
@@ -106,10 +102,10 @@ const touchMove = (event)=>{
 }
 /* icon initial */
 .line1{
-@apply h-0.5 bg-black w-full  absolute  
+@apply h-0.5 bg-black w-full  absolute
 }
 .line2{
-@apply h-0.5 bg-black w-full  absolute top-2 
+@apply h-0.5 bg-black w-full  absolute top-2
 }
 .line3{
 @apply h-0.5 bg-black w-full  absolute

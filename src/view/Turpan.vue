@@ -35,7 +35,7 @@ const newVh = ref(`${window.innerHeight}px`)
 <template>
   <div>
     <section v-show="a && a1 && a2 && a3">
-      <section class="picture_container" :style="{ height: newVh }">
+      <section class="test" :style="{ height: newVh }">
         <div ref="colBox" class="col-box" @wheel="wheel">
           <img class="pic" src="https://s1.vika.cn/space/2022/10/27/ad3faf323fd4485cb6fd1e2e42792e29?attname=T_1.webp" alt="" @load="imgLoad">
           <img class="pic" src="https://s1.vika.cn/space/2022/10/27/125351ac55ae42e386805e902a3031f8?attname=T_2.webp" alt="" @load="imgLoad2">

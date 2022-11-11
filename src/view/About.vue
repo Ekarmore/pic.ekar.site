@@ -40,7 +40,7 @@ watchEffect(() => {
   </main>
 </template>
 
-<style>
+<style lang="postcss">
 .Ekar {
   @apply text-sm font-bold  text-black italic
 }

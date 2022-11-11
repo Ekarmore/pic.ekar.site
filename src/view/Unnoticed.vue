@@ -39,7 +39,7 @@ const newVh = ref(`${window.innerHeight}px`)
   </main>
 </template>
 
-<style>
+<style lang="postcss">
 .text-scroll{
 @apply text-center text-xs p-10 font-mono font-normal
 }
