@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import Navmobile from './components/Navmobile.vue'
 import Navpc from './components/Navpc.vue'
 import { useTitle } from './utils/title'
-import mouse from './components/mouse.vue'
+import mouse from './components/corsur.vue'
 useTitle()
 const ShowNav = ref(false)
 const isShowNav = (isTrue) => {
