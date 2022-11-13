@@ -199,16 +199,12 @@ body {
 }
 
 .nav-pc {
-  @apply   w-80 hidden md:float-left md:h-screen md:flex md:flex-col;
+  @apply  z-10 w-80 hidden md:float-left md:h-screen md:flex md:flex-col;
 }
 
  .nav-pc-textbox{
   @apply flex  flex-col mt-5 pr-6 pl-6
  }
-
- .nav-text {
- @apply  text-sm  font-mono m-2 hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out
-     }
   .nav-text-special {
  @apply flex  text-sm  font-mono m-2 hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out
           }
@@ -232,3 +228,6 @@ body {
  #pic-about-text{
 @apply text-lg ml-10 text-center md:text-5xl border border-black italic mr-5
  }
+ .mouse{
+  @apply rounded-full border-black absolute  w-4 h-4  z-50 pointer-events-none backdrop-opacity-100 backdrop-invert
+  }
