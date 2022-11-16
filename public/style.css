@@ -172,18 +172,10 @@ body {
   }
 }
 
-.loading-text {
-  @apply text-xl pb-5;
-}
-
 
 .picture_container {
   @apply flex items-center h-screen md:h-screen ;
 }
-
-/* .col-box {
-  @apply whitespace-nowrap overflow-x-scroll inline h-full pt-16  md:p-5 md:h-full;
-} */
 
 .col-box {
 /* scroll-behavior: smooth; */
