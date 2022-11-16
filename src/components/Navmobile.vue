@@ -46,9 +46,9 @@ const touchMove = (event) => {
             <span class="modal-text">
               <router-link active-class="active" to="AnotherLandscape">Another Landscape (Ongoing)</router-link>
             </span>
-            <span class="modal-text">
+            <!-- <span class="modal-text">
               <router-link active-class="active" to="NeverKnowHowMuchILoveYou">Never Know how much i love you (Ongoing)</router-link>
-            </span>
+            </span> -->
             <span class="modal-text">
               <router-link active-class="active" to="about">About</router-link>
             </span>

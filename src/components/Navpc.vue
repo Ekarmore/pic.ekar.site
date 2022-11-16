@@ -19,9 +19,9 @@
         <div class="special-line">-</div>
         <router-link active-class="active" to="AnotherLandscape">Another Landscape (Ongoing)</router-link>
       </span>
-      <span class="nav-text-special">
+      <!-- <span class="nav-text-special">
         <div class="special-line">-</div><router-link active-class="active" to="NeverKnowhowmuchiloveyou"> Never Know how much i love you (Ongoing)</router-link>
-      </span>
+      </span> -->
       <span class="nav-text-special">
         <div class="special-line">-</div>
         <router-link active-class="active" to="about">About</router-link>
