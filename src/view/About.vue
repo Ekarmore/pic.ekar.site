@@ -9,9 +9,9 @@ watchEffect(() => {
 </script>
 
 <template>
-  <main class="me-container">
-    <article class="me-box">
-      <p class="me-text-start">
+  <main class="md:pt-14 pt-24 mx-auto md:ml-80 lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2">
+    <article class="mx-auto w-full md:w-10/12 xl:w-8/12">
+      <p class="font-serif italic text-xl mb-5 font-bold">
         Hello,yo!
       </p>
       <p class="about-content">
@@ -28,8 +28,8 @@ watchEffect(() => {
           点击我开始观看作品 >
         </router-link>
       </p>
-      <hr class="me-hr">
-      <section class="about-link-box">
+      <hr class="border-black mt-10 mb-10 w-24 mx-auto">
+      <section class="flex flex-col text-sm mb-10 justify-between">
         <p class="about-content">
           除此之外,你也可以通过以下方式找到我:
         </p>
@@ -45,41 +45,8 @@ watchEffect(() => {
 .about-content {
   @apply mb-2 font-serif md:mb-5 leading-8 text-gray-800 text-xs
 }
-
-.startBox {
-  @apply mt-5 mb-5 text-sm
-}
-
-.getStart {
-  @apply p-0.5 font-serif
-}
-
 .about-link {
   @apply text-sm font-serif italic mt-2;
-}
-
-.me-box {
-  @apply mx-auto w-full md:w-10/12 xl:w-8/12
-}
-
-.me-container {
-  @apply md:pt-14 pt-24 mx-auto lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2
-}
-
-.me-text-end {
-  @apply font-mono text-sm leading-8
-}
-
-.me-hr {
-  @apply border-black mt-10 mb-10 w-24 mx-auto
-}
-
-.me-text-start {
-  @apply font-serif italic text-xl mb-5 font-bold
-}
-
-.about-link-box {
-  @apply flex flex-col text-sm mb-10 justify-between
 }
 </style>
 

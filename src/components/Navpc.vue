@@ -11,7 +11,7 @@ const navList = ref([
 
 <template>
   <section class="nav-pc" z-10 w-80 hidden md:float-left md:h-screen md:flex md:flex-col>
-    <h1 pl-10 text-xl pt-10 blur-0 hover:blur-lg duration-300 ease-in-out mb-5 mt-5>
+    <h1 pl-10 text-xl pt-10 mb-5 mt-5>
       <router-link class="linkFont" to="/">
         ekar
       </router-link>
@@ -24,7 +24,7 @@ const navList = ref([
       </span>
     </div>
     <footer text-xs font-serif op50 absolute bottom-8 left-8>
-      Design and create by <a href="">Ekar</a> in 2022
+      Design and create by <a href="">ekar</a> in 2022
     </footer>
   </section>
 </template>

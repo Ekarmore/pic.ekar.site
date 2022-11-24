@@ -18,82 +18,9 @@ body {
 *{
 @apply md:cursor-none
 }
-.catalog {
-  @apply flex flex-wrap mx-auto justify-center
-    w-11/12 mt-5
-    md:w-4/5 md:mt-5
-    lg:w-4/5 
-    xl:w-3/5 
-    2xl:w-auto 2xl:mt-10;
-}
-.catalog-2 {
-  @apply flex flex-wrap mx-auto justify-center 
-     w-11/12
-     md:w-4/5 
-     lg:w-4/5 
-     xl:w-3/5 
-     2xl:w-auto;
-}
-.header {
-  @apply mt-5 pl-2  mx-auto text-xl font-mono
-   w-11/12 
-   md:w-4/5  
-   lg:w-4/5  lg:mt-10
-   xl:w-3/5
-   2xl:w-2/5  2xl:mt-20;
-}
-.title-two {
-  @apply text-base opacity-80;
-}
-.img-card {
-  @apply w-full bg-white md:w-72 lg:w-72 xl:w-64 2xl:w-80;
-}
-.img-a {
-  @apply relative  m-1;
-}
-.link {
-  @apply absolute text-white w-full h-full text-center text-3xl font-thin font-mono flex justify-center items-center  md:opacity-0  md:hover:opacity-100 transition-all ease-in-out;
-}
-.footer {
-  @apply mt-10 mb-10 mx-auto text-base font-mono 
-    w-11/12 pl-2
-    md:w-4/5  
-    lg:w-4/5  
-    xl:w-3/5
-    2xl:w-2/5;
-}
-.footer-link {
-  @apply border-b border-black lg:border-gray-500 hover:border-black transition-all duration-500 ease-in-out;
-}
-
-.worktitle {
-  @apply bg-red-300;
-}
-
 /* Unnoticed */
 .Work-container {
   @apply md:w-4/5 lg:w-3/5 xl:w-4/5 mx-auto w-full h-full mt-10;
-}
-
-.title-container {
-  @apply w-11/12 xl:w-3/5 mx-auto leading-7;
-}
-
-.title-text {
-  @apply text-xl mb-10 font-mono opacity-80;
-}
-
-.title-text2 {
-  @apply text-xl font-bold font-mono mb-5  text-center  opacity-70;
-}
-.title-text3 {
-  @apply text-end text-sm font-mono mt-5 italic opacity-70;
-}
-.about-text {
-  @apply text-sm md:text-base leading-7 md:leading-8 opacity-80;
-}
-.footer-work {
-  @apply mt-10;
 }
 .hp-loading {
   @apply w-full h-screen flex flex-col items-center justify-center z-20 absolute align-middle font-mono;

@@ -5,7 +5,6 @@ export function useImgLoadNew() {
 
   function imgLoad() {
     a.value = true
-    console.log('imgload')
   }
 
   return { imgLoad, a }
