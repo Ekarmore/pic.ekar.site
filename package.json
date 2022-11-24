@@ -13,6 +13,7 @@
   "dependencies": {
     "@vueuse/core": "^9.3.0",
     "animate.css": "3.7.2",
+    "gsap": "^3.11.3",
     "vue": "^3.2.37",
     "vue-router": "4",
     "wowjs": "^1.1.3"

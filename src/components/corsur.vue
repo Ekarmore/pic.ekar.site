@@ -3,7 +3,6 @@ import { useMouse } from '@vueuse/core'
 import { onMounted, ref, watchEffect } from 'vue'
 const mouse = ref(null)
 const { x, y } = useMouse()
-
 onMounted(() => {
   watchEffect(() => {
     mouse.value.style.top = `${y.value - 8}px`
@@ -20,6 +19,6 @@ onMounted(() => {
 
 <style>
 .mouse{
-@apply  hidden md:flex transition-transform duration-200 ease-in-out rounded-full border-black absolute  w-4 h-4  pointer-events-none backdrop-opacity-100 backdrop-invert
+@apply hidden md:flex justify-center items-center transition-transform duration-200 ease-in-out rounded-full absolute  w-3 h-3  pointer-events-none backdrop-opacity-100 backdrop-invert
 }
 </style>

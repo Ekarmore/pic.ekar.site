@@ -132,6 +132,6 @@ body {
  .active {
   @apply text-black 
       }
- .mouse{
-  @apply rounded-full border-black absolute  w-4 h-4  z-50 pointer-events-none backdrop-opacity-100 backdrop-invert
-  }
+ /* .mouse{
+  @apply rounded-full  absolute  w-4 h-4  z-50 pointer-events-none backdrop-opacity-100 backdrop-invert
+  } */

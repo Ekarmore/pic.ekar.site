@@ -1,5 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
+const tl = gsap.timeline()
+onMounted(() => {
+  tl.from('.nav-pc', {
+    autoAlpha: 0,
+    translateX: -100,
+    duration: 0.7,
+    ease: 'power1',
+  })
+})
 const navList = ref([
   { item: 1, to: 'Unnoticed', name: 'Unnoticed (Ongoing)' },
   { item: 2, to: 'Turpan', name: 'Turpan' },

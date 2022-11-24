@@ -26,6 +26,9 @@ const isShowNav = (isTrue) => {
 #nav-pc-textbox:hover ~.mouse{
 @apply scale-150 transition-transform duration-200 ease-in-out
 }
+#nav-pc-text-box:hover ~.mouse>.cursor-wrapper{
+@apply bg-white !important
+}
 .globalAnimate-enter-active,
 .globalAnimate-leave-active {
   @apply blur-0 opacity-100 translate-y-0 duration-700 ease-in-out;
