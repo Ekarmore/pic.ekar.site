@@ -11,14 +11,14 @@ const navList = ref([
 
 <template>
   <section class="nav-pc" z-10 w-80 hidden md:float-left md:h-screen md:flex md:flex-col>
-    <h1 pl-10 pt-10 blur-0 hover:blur-lg duration-300 ease-in-out text-lg mb-5 mt-5 font-serif font-extrabold>
-      <router-link to="/">
-        Ekar
+    <h1 pl-10 text-xl pt-10 blur-0 hover:blur-lg duration-300 ease-in-out mb-5 mt-5>
+      <router-link class="linkFont" to="/">
+        ekar
       </router-link>
     </h1>
     <hr class="nav-hr">
     <div id="nav-pc-textbox" flex flex-col mt-5 pr-6 pl-6>
-      <span v-for="navItem in navList" :key="navItem.item" flex text-sm font-serif m-2 hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out>
+      <span v-for="navItem in navList" :key="navItem.item" flex text-xs font-serif m-2 hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out>
         <div class="special-line">-</div>
         <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
       </span>
@@ -29,3 +29,9 @@ const navList = ref([
   </section>
 </template>
 
+<style>
+.linkFont{
+font-family:serif;
+ font-weight: 900;
+}
+</style>

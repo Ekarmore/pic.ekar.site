@@ -15,7 +15,7 @@ export default defineConfig({
         presetWebFonts({
           fonts: {
             sans: 'DM Sans',
-            serif: ['Amiri'],
+            serif: ['Vollkorn', 'Noto Serif Traditional Chinese'],
             mono: 'DM Mono',
           },
         }),

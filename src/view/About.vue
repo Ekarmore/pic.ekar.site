@@ -14,22 +14,23 @@ watchEffect(() => {
       <p class="me-text-start">
         Hello,yo!
       </p>
-      <p class="about-me">
-        我是<a class="Ekar" href="">YEKMAT</a>,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。<br>
+      <p class="about-content">
+        我是<a p-1 font-serif text-sm font-black class="Ekar" href="">yekmat</a>,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。<br>
       </p>
-      <p class="about-me">
-        我创建了这个网站并在这里放了一些自己拍摄的照片用于归纳与分享,你可以在这里看到我在做的一些摄影项目,希望当中会有能够与你产生共鸣的照片。<br>
+      <p class="about-content">
+        我创建了这个网站并在这里放了一些自己拍摄的照片用于归纳与分享,你可以在这里看到我在做的一些摄影项目,希望你会喜欢。<br>
       </p>
-      <p class="about-me">
+      <p class="about-content">
         多说无益,在这里或许你更应该从照片里了解我。
-      </p><p class="about-me">
-        所以,<router-link class="getStart" to="/">
+      </p>
+      <p class="about-content">
+        所以,<router-link class="font-bold font-serif italic p-1" to="/">
           点击我开始观看作品 >
         </router-link>
       </p>
       <hr class="me-hr">
       <section class="about-link-box">
-        <p class="about-me">
+        <p class="about-content">
           除此之外,你也可以通过以下方式找到我:
         </p>
         <a class="about-link" href="https://www.instagram.com/ekarmore/">· instagram</a>
@@ -41,12 +42,8 @@ watchEffect(() => {
 </template>
 
 <style>
-.Ekar {
-  @apply text-sm font-bold  text-black italic
-}
-
-.about-me {
-  @apply mb-2 md:mb-5 leading-8 text-gray-800 text-xs
+.about-content {
+  @apply mb-2 font-serif md:mb-5 leading-8 text-gray-800 text-xs
 }
 
 .startBox {
@@ -54,11 +51,11 @@ watchEffect(() => {
 }
 
 .getStart {
-  @apply p-0.5 font-bold italic
+  @apply p-0.5 font-serif
 }
 
 .about-link {
-  @apply text-sm font-bold italic mt-2;
+  @apply text-sm font-serif italic mt-2;
 }
 
 .me-box {
@@ -78,7 +75,7 @@ watchEffect(() => {
 }
 
 .me-text-start {
-  @apply font-mono text-xl mb-5 font-bold
+  @apply font-serif italic text-xl mb-5 font-bold
 }
 
 .about-link-box {

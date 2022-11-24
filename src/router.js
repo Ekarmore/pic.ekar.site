@@ -12,12 +12,12 @@ const router = createRouter({
     return { top: 0 }
   },
   routes: [
-    { path: '/', component: Turpan, meta: { title: 'Turpan | EKar' } },
-    { path: '/Unnoticed', component: Unnoticed, meta: { title: 'Unnoticed | Ekar' } },
-    { path: '/AnotherLandscape', component: AnotherLandscape, meta: { title: 'AnotherLandscape | Ekar' } },
+    { path: '/', component: Turpan, meta: { title: 'Turpan | ekar' } },
+    { path: '/Unnoticed', component: Unnoticed, meta: { title: 'Unnoticed | ekar' } },
+    { path: '/AnotherLandscape', component: AnotherLandscape, meta: { title: 'AnotherLandscape | ekar' } },
     { path: '/Turpan', component: Turpan, meta: { title: 'Turpan | Ekar' } },
-    { path: '/NeverKnowHowMuchILoveYou', component: NeverKnowHowMuchILoveYou, meta: { title: 'Never Know how much i love you  | Ekar' } },
-    { path: '/about', component: About, meta: { title: 'About | Ekar' } },
+    { path: '/NeverKnowHowMuchILoveYou', component: NeverKnowHowMuchILoveYou, meta: { title: 'Never Know how much i love you  | ekar' } },
+    { path: '/about', component: About, meta: { title: 'About | ekar' } },
   ],
 })
 export default router

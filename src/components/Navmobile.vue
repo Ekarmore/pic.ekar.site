@@ -33,7 +33,7 @@ const touchMove = (event) => {
     <!-- nav-mobile -->
     <section class="nav-mobile">
       <div bg-white absolute flex justify-between z-50 items-center h-16 w-full>
-        <span ml-5 font-serif text-lg @click="closeModal"><router-link to="/">Ekar</router-link></span>
+        <span class="linkFont" ml-5 font-serif @click="closeModal"><router-link to="/">ekar</router-link></span>
         <span class="nav-icon" @click="handleModal">
           <span :class="[changeMenu ? openL1 : closeL1, line1]" />
           <span :class="[changeMenu ? openL2 : closeL2, line2]" />
@@ -47,7 +47,7 @@ const touchMove = (event) => {
               <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
             </span>
             <footer text-xs font-serif op50 absolute bottom-8>
-              Design and create by <a href="">Ekar</a> in 2022
+              Design and create by <a href="">ekar</a> in 2022
             </footer>
           </div>
         </div>
@@ -57,6 +57,10 @@ const touchMove = (event) => {
 </template>
 
 <style>
+.linkFont{
+font-family:serif;
+ font-weight: 900;
+}
 /* icon container */
 .nav-icon{
 @apply relative h-5 w-7 mr-5;
