@@ -190,10 +190,6 @@ body {
   @apply inline h-full w-auto max-w-max;
 }
 
-.nav-pc {
-  @apply  z-10 w-80 hidden md:float-left md:h-screen md:flex md:flex-col;
-}
-
  .nav-pc-textbox{
   @apply flex  flex-col mt-5 pr-6 pl-6
  }
@@ -202,24 +198,13 @@ body {
           }
   .special-line{
   @apply pr-2.5
-  }
- .nav-pc-title {
- @apply pl-10 pt-10 blur-0 hover:blur-lg duration-300 ease-in-out text-xl mb-5 mt-5 font-mono 
-     }
- 
+  } 
  .nav-hr{
  @apply mb-5 w-10/12 mx-auto border-black 
        }
- .nav-footer{
- @apply text-xs font-mono xl:opacity-70 absolute bottom-8 left-8 
- }
  .active {
   @apply text-black 
       }
-
- #pic-about-text{
-@apply text-lg ml-10 text-center md:text-5xl border border-black italic mr-5
- }
  .mouse{
   @apply rounded-full border-black absolute  w-4 h-4  z-50 pointer-events-none backdrop-opacity-100 backdrop-invert
   }

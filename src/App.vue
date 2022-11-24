@@ -23,7 +23,7 @@ const isShowNav = (isTrue) => {
 </template>
 
 <style>
-.nav-pc-textbox:hover ~.mouse{
+#nav-pc-textbox:hover ~.mouse{
 @apply scale-150 transition-transform duration-200 ease-in-out
 }
 .globalAnimate-enter-active,

@@ -1,34 +1,30 @@
+<script setup>
+import { ref } from 'vue'
+const navList = ref([
+  { item: 1, to: 'Unnoticed', name: 'Unnoticed (Ongoing)' },
+  { item: 2, to: 'Turpan', name: 'Turpan' },
+  { item: 3, to: 'AnotherLandscape', name: 'Another Landscape (Ongoing)' },
+  { item: 4, to: 'NeverKnowhowmuchiloveyou', name: ' Never Know how much i love you (Ongoing)' },
+  { item: 5, to: 'about', name: 'About' },
+])
+</script>
+
 <template>
-  <section class="nav-pc">
-    <h1 class="nav-pc-title">
+  <section class="nav-pc" z-10 w-80 hidden md:float-left md:h-screen md:flex md:flex-col>
+    <h1 pl-10 pt-10 blur-0 hover:blur-lg duration-300 ease-in-out text-lg mb-5 mt-5 font-serif font-extrabold>
       <router-link to="/">
         Ekar
       </router-link>
     </h1>
     <hr class="nav-hr">
-    <div id="nav-pc-textbox" class="nav-pc-textbox">
-      <span class="nav-text-special">
+    <div id="nav-pc-textbox" flex flex-col mt-5 pr-6 pl-6>
+      <span v-for="navItem in navList" :key="navItem.item" flex text-sm font-serif m-2 hover:translate-x-1 text-gray-400 hover:text-gray-500 transition-all duration-500 ease-out>
         <div class="special-line">-</div>
-        <router-link active-class="active" to="Unnoticed">Unnoticed (Ongoing)</router-link>
-      </span>
-      <span class="nav-text-special">
-        <div class="special-line">-</div>
-        <router-link active-class="active" to="Turpan">Turpan</router-link>
-      </span>
-      <span class="nav-text-special">
-        <div class="special-line">-</div>
-        <router-link active-class="active" to="AnotherLandscape">Another Landscape (Ongoing)</router-link>
-      </span>
-      <!-- <span class="nav-text-special">
-        <div class="special-line">-</div><router-link active-class="active" to="NeverKnowhowmuchiloveyou"> Never Know how much i love you (Ongoing)</router-link>
-      </span> -->
-      <span class="nav-text-special">
-        <div class="special-line">-</div>
-        <router-link active-class="active" to="about">About</router-link>
+        <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
       </span>
     </div>
-    <footer class="nav-footer">
-      Design and create by <a class="footer-link" href="">Ekar</a> in 2022
+    <footer text-xs font-serif op50 absolute bottom-8 left-8>
+      Design and create by <a href="">Ekar</a> in 2022
     </footer>
   </section>
 </template>

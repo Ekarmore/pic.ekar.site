@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, reactive, ref, watch, watchEffect } from 'vue'
+import { ref } from 'vue'
 import { useImgLoad } from '../utils/Loading'
 import { useXScroll } from '../utils/scrollControl'
 import { useModal } from '../utils/modalControl'
