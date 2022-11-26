@@ -23,11 +23,8 @@ const isShowNav = (isTrue) => {
 </template>
 
 <style>
-#nav-pc-textbox:hover ~.mouse{
+#nav-pc-textbox:hover ~.cursor{
 @apply scale-150 transition-transform duration-200 ease-in-out
-}
-#nav-pc-text-box:hover ~.mouse>.cursor-wrapper{
-@apply bg-white !important
 }
 .globalAnimate-enter-active,
 .globalAnimate-leave-active {
