@@ -20,8 +20,8 @@ const navList = ref([
 </script>
 
 <template>
-  <section class="nav-pc" z-10 w-80 hidden md:float-left md:h-screen md:flex md:flex-col>
-    <h1 pl-10 text-xl pt-10 mb-5 mt-5>
+  <section class="nav-pc" w-80 hidden md:float-left md:h-screen md:flex md:flex-col>
+    <h1 pl-10 text-lg pt-10 mb-5 mt-5>
       <router-link class="linkFont" to="/">
         ekar
       </router-link>
