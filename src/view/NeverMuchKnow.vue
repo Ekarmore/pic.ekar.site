@@ -1,30 +1,66 @@
 <script setup>
 import { ref } from 'vue'
-import { useImgLoad } from '../utils/Loading'
-import { useXScroll } from '../utils/scrollControl'
-import { useModal } from '../utils/modalControl'
-const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
-const { colBox, wheel } = useXScroll()
-useModal(a, a1, a2, a3)
+const imgShow = ref(true)
+const item = ref(0)
+const List = ref([
+  {
+    id: 1,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/ab5b28db7d2a45dc913af1fe7ffd351e?attname=Her_1.webp',
+  },
+  {
+    id: 2,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/a50bdd51a5b548eda9b17cbcec5ae4f5?attname=Her_4.webp',
+  },
+  {
+    id: 3,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/80b67c0c38884282a8011ce52a30a50b?attname=Her_3.webp',
+  },
+  {
+    id: 4,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/945a6c76f91b4c38861ce9925e77fd1c?attname=T_24.webp',
+  },
+  {
+    id: 5,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/7bd5dc6fbe8745fabc246e3d3a092e57?attname=Her_2.webp',
+  },
+])
 const newVh = ref(`${window.innerHeight}px`)
+
+const Next = () => {
+  imgShow.value = false
+  setTimeout(() => {
+    imgShow.value = true
+    if (item.value < List.value.length - 1)
+      item.value++
+    else
+      item.value = 0
+  }, 200)
+}
+
+const Prev = () => {
+  imgShow.value = false
+  setTimeout(() => {
+    imgShow.value = true
+    if (item.value >= 1)
+      item.value--
+    else
+      item.value = List.value.length - 1
+  }, 100)
+}
 </script>
 
 <template>
-  <main>
-    <section v-show="a && a1 && a2 && a3">
-      <section :style="{ height: newVh }" class="picture_container">
-        <div ref="colBox" class="col-box" @wheel="wheel">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/ab5b28db7d2a45dc913af1fe7ffd351e?attname=Her_1.webp" alt="" @load="imgLoad">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/a50bdd51a5b548eda9b17cbcec5ae4f5?attname=Her_4.webp" alt="" @load="imgLoad4">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/80b67c0c38884282a8011ce52a30a50b?attname=Her_3.webp" alt="" @load="imgLoad3">
-          <img class="pic-end" src="https://s1.vika.cn/space/2022/10/27/7bd5dc6fbe8745fabc246e3d3a092e57?attname=Her_2.webp" alt="" @load="imgLoad2">
-        </div>
-      </section>
-    </section>
-    <section v-show="!(a && a1 && a2 && a3)" class="hp-loading">
-      <div class="loading">
-        <div />
-      </div>
-    </section>
-  </main>
+  <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
+    <div class="items-center flex">
+      <transition name="imgAnimate">
+        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @click="Next">
+      </transition>
+    </div>
+    <div class="text-center absolute bottom-7 items-center text-xs">
+      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
+      <span text-xs pl-1 pr-1>/</span>
+      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
+      <span font-serif font-xs pl-2>({{ List[item].id }} of {{ List.length }})</span>
+    </div>
+  </section>
 </template>

@@ -1,42 +1,100 @@
 <script setup>
 import { ref } from 'vue'
-import { useImgLoad } from '../utils/Loading'
-import { useXScroll } from '../utils/scrollControl'
-import { useModal } from '../utils/modalControl'
-const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
-const { colBox, wheel } = useXScroll()
-useModal(a, a1, a2, a3)
+const imgShow = ref(true)
+const item = ref(0)
+const List = ref([
+  {
+    id: 1,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/683cc5c0c1c64c8cb004fe10bc5d1547?attname=Un_1.webp',
+  },
+  {
+    id: 2,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/20fa478eeeac431fb7cc19fdaef29837?attname=Un_7.webp',
+  },
+  {
+    id: 3,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/c2cd5a7ccd4049e98a69171badde3046?attname=Un_4.webp',
+  },
+  {
+    id: 4,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/a7ac57465fa845c9ab895181d20dff20?attname=Un_5.webp',
+  },
+  {
+    id: 5,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/1bfe86b890e14229bb5ffa0f05775471?attname=Un_17.webp',
+  },
+  {
+    id: 6,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/5fa59e5789334087800e2e5820b21765?attname=Un_10.webp',
+  },
+  {
+    id: 7,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/347ce83efd7342289e7d48857949ba42?attname=Un_8.webp',
+  },
+  {
+    id: 8,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/c2c5d531500b4ef9833d1577bd3ab382?attname=Un_12.webp',
+  },
+  {
+    id: 9,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/31595cb2d9364f3cba0b9d07f1a1e606?attname=Un_9.webp',
+  },
+  {
+    id: 10,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/30cad43ca2324c4eba29db244c3c3f19?attname=Un_18.webp',
+  },
+  {
+    id: 11,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/d29f2def1b054035a589784aff0b30fa?attname=Un_14.webp',
+  },
+  {
+    id: 12,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/4d0987f620184863b1935fc59ec00cd3?attname=Un_13.webp',
+  },
+  {
+    id: 13,
+    srcUrl: 'https://s1.vika.cn/space/2022/10/27/6c5edc261e9940a1abb149bf03e1b8c6?attname=Un_11.webp',
+  },
+])
 const newVh = ref(`${window.innerHeight}px`)
+
+const Next = () => {
+  imgShow.value = false
+  setTimeout(() => {
+    imgShow.value = true
+    if (item.value < List.value.length - 1)
+      item.value++
+    else
+      item.value = 0
+  }, 200)
+}
+
+const Prev = () => {
+  imgShow.value = false
+  setTimeout(() => {
+    imgShow.value = true
+    if (item.value >= 1)
+      item.value--
+    else
+      item.value = List.value.length - 1
+  }, 100)
+}
 </script>
 
 <template>
-  <main>
-    <section v-show="a && a1 && a2 && a3">
-      <section :style="{ height: newVh }" class="picture_container">
-        <div ref="colBox" class="col-box" @wheel="wheel">
-          <!-- <article class="un-box"><p class="un-text"><p class="un-title">Unnoticed</p>说说我最近常去的江边,起初大概是因为离我的居所很近加之所在的大学城岛也并不大，如果想要出门走走会很快就走到江边。但以前大多都会骑车路过，所以会没有留意到许多。很多次路过环岛的几处江边觉得可能会有自已想要走近看看的风景可也没有真正的停下来去看，之后因为空闲时间变多和去江边实在是容易，会常常在江边徒步。在江边行走几次之后我会感到有些奇怪，江水将岛分割了起来，这让江边成为了岛上不只是地理上的最边缘，被扔在草坪上生产日期是前几个月的食品包装袋或是被植缠满的生锈单车都在说明着这里鲜有被打理的时候。好在它并不就此死寂，当走在江边会看到许多景象，它们由充满生机的部分构成。<p class="text-scroll">向右滑动 ></p> </p></article> -->
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/683cc5c0c1c64c8cb004fe10bc5d1547?attname=Un_1.webp" alt="" @load="imgLoad">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/20fa478eeeac431fb7cc19fdaef29837?attname=Un_7.webp" alt="" @load="imgLoad2">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/c2cd5a7ccd4049e98a69171badde3046?attname=Un_4.webp" alt="" @load="imgLoad3">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/a7ac57465fa845c9ab895181d20dff20?attname=Un_5.webp" alt="" @load="imgLoad4">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/1bfe86b890e14229bb5ffa0f05775471?attname=Un_17.webp" alt="">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/5fa59e5789334087800e2e5820b21765?attname=Un_10.webp" alt="">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/347ce83efd7342289e7d48857949ba42?attname=Un_8.webp" alt="">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/c2c5d531500b4ef9833d1577bd3ab382?attname=Un_12.webp" alt="">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/31595cb2d9364f3cba0b9d07f1a1e606?attname=Un_9.webp" alt="">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/30cad43ca2324c4eba29db244c3c3f19?attname=Un_18.webp" alt="">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/d29f2def1b054035a589784aff0b30fa?attname=Un_14.webp" alt="">
-          <img class="pic" src="https://s1.vika.cn/space/2022/10/27/4d0987f620184863b1935fc59ec00cd3?attname=Un_13.webp" alt="">
-          <img class="pic-end" src="https://s1.vika.cn/space/2022/10/27/6c5edc261e9940a1abb149bf03e1b8c6?attname=Un_11.webp" alt="">
-        </div>
-      </section>
-    </section>
-    <section v-show="!(a && a1 && a2 && a3)" class="hp-loading">
-      <div class="loading">
-        <div />
-      </div>
-    </section>
-  </main>
+  <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
+    <div class="items-center flex">
+      <transition name="imgAnimate">
+        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @click="Next">
+      </transition>
+    </div>
+    <div class="text-center absolute bottom-7 items-center text-xs">
+      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
+      <span text-xs pl-1 pr-1>/</span>
+      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
+      <span font-serif font-xs pl-2>({{ List[item].id }} of {{ List.length }})</span>
+    </div>
+  </section>
 </template>
 
 <style lang="postcss">
