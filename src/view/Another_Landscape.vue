@@ -56,7 +56,7 @@ const Prev = () => {
 const imgLoad = () => {
   setTimeout(() => {
     imgShow.value = true
-  }, 100)
+  }, 50)
 }
 </script>
 

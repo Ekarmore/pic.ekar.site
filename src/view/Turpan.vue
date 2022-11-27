@@ -100,7 +100,7 @@ const Prev = () => {
 const imgLoad = () => {
   setTimeout(() => {
     imgShow.value = true
-  }, 100)
+  }, 50)
 }
 </script>
 
@@ -118,11 +118,6 @@ const imgLoad = () => {
       <span font-serif font-xs pl-2>({{ List[item].id }} of {{ List.length }})</span>
     </div>
   </section>
-  <!-- <section v-show="!(a && a1 && a2 && a3)" class="hp-loading">
-      <div class="loading">
-        <div />
-      </div>
-    </section> -->
 </template>
 
 <style>
