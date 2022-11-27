@@ -1,5 +1,15 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
+const tl = gsap.timeline()
+onMounted(() => {
+  tl.from('.nav-mobile', {
+    autoAlpha: 0,
+    translateY: -50,
+    duration: 0.7,
+    ease: 'power1',
+  })
+})
 const showModal = ref(false)
 const changeMenu = ref(false)
 const [openL1, openL2, openL3] = [ref('openL1'), ref('openL2'), ref('openL3')]
@@ -46,9 +56,9 @@ const touchMove = (event) => {
             <span v-for="navItem in navList" :key="navItem.item" flex text-sm font-serif m-2 text-gray-400>
               <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
             </span>
-            <footer text-xs font-serif op50 absolute bottom-8>
+            <!-- <footer text-xs font-serif op50 absolute bottom-8>
               Design and create by <a href="">ekar</a> in 2022
-            </footer>
+            </footer> -->
           </div>
         </div>
       </transition>
@@ -59,7 +69,7 @@ const touchMove = (event) => {
 <style>
 .linkFont{
 font-family:serif;
- font-weight: 900;
+font-weight: 600
 }
 /* icon container */
 .nav-icon{
