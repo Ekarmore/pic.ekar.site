@@ -30,7 +30,7 @@ watchEffect(() => {
       </p>
       <section class="flex flex-col text-sm mt-10 mb-10 justify-between">
         <p class="about-content">
-          i'm here also:
+          i'm also here:
         </p>
         <a class="about-link" href="https://www.instagram.com/ekarmore/">· instagram</a>
         <a class="about-link" href="mailto:earthb0y@outlook.com">· earthb0y@outlook.com</a>

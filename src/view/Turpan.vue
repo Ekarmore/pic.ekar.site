@@ -1,8 +1,5 @@
 <script setup>
-import { ref, watchEffect } from 'vue'
-import { useImgLoad } from '../utils/Loading'
-import { useXScroll } from '../utils/scrollControl'
-import { useModal } from '../utils/modalControl'
+import { ref } from 'vue'
 const imgShow = ref(true)
 const item = ref(0)
 const List = ref([
@@ -79,18 +76,11 @@ const List = ref([
     srcUrl: 'https://s1.vika.cn/space/2022/10/27/7af45e21f24844968c2d6d9ab5f774ca?attname=T_6.webp',
   },
 ])
-// loading
-const { imgLoad, imgLoad2, imgLoad3, imgLoad4, a, a1, a2, a3 } = useImgLoad()
-useModal(a, a1, a2, a3)
-// col wheel
-const { colBox } = useXScroll()
-
 const newVh = ref(`${window.innerHeight}px`)
 
 const Next = () => {
   imgShow.value = false
   setTimeout(() => {
-    imgShow.value = true
     if (item.value < List.value.length - 1)
       item.value++
     else
@@ -101,11 +91,15 @@ const Next = () => {
 const Prev = () => {
   imgShow.value = false
   setTimeout(() => {
-    imgShow.value = true
     if (item.value >= 1)
       item.value--
     else
       item.value = List.value.length - 1
+  }, 100)
+}
+const imgLoad = () => {
+  setTimeout(() => {
+    imgShow.value = true
   }, 100)
 }
 </script>
@@ -114,7 +108,7 @@ const Prev = () => {
   <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
     <div class="items-center flex">
       <transition name="imgAnimate">
-        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @click="Next">
+        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @load="imgLoad" @click="Next">
       </transition>
     </div>
     <div class="text-center absolute bottom-7 items-center text-xs">

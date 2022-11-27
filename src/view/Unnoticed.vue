@@ -61,7 +61,6 @@ const newVh = ref(`${window.innerHeight}px`)
 const Next = () => {
   imgShow.value = false
   setTimeout(() => {
-    imgShow.value = true
     if (item.value < List.value.length - 1)
       item.value++
     else
@@ -72,11 +71,15 @@ const Next = () => {
 const Prev = () => {
   imgShow.value = false
   setTimeout(() => {
-    imgShow.value = true
     if (item.value >= 1)
       item.value--
     else
       item.value = List.value.length - 1
+  }, 100)
+}
+const imgLoad = () => {
+  setTimeout(() => {
+    imgShow.value = true
   }, 100)
 }
 </script>
@@ -85,13 +88,13 @@ const Prev = () => {
   <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
     <div class="items-center flex">
       <transition name="imgAnimate">
-        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @click="Next">
+        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @load="imgLoad" @click="Next">
       </transition>
     </div>
     <div class="text-center absolute bottom-7 items-center text-xs">
-      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
+      <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
       <span text-xs pl-1 pr-1>/</span>
-      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
+      <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
       <span font-serif font-xs pl-2>({{ List[item].id }} of {{ List.length }})</span>
     </div>
   </section>
