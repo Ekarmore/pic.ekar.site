@@ -1,8 +1,10 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { useImgLoad } from '../utils/Loading'
 import { useXScroll } from '../utils/scrollControl'
 import { useModal } from '../utils/modalControl'
+const imgShow = ref(true)
+const item = ref(0)
 const List = ref([
   {
     id: 1,
@@ -85,48 +87,58 @@ const { colBox } = useXScroll()
 
 const newVh = ref(`${window.innerHeight}px`)
 
-const scrollNext = () => {
-  colBox.value.scrollBy({
-    left: colBox.value.offsetWidth,
-    // left: window.innerWidth / 2,
-    behavior: 'smooth',
-  })
+const Next = () => {
+  imgShow.value = false
+  setTimeout(() => {
+    imgShow.value = true
+    if (item.value < List.value.length - 1)
+      item.value++
+    else
+      item.value = 0
+  }, 200)
 }
 
-const scrollPrev = () => {
-  colBox.value.scrollBy({
-    left: -colBox.value.offsetWidth,
-    // left: -window.innerWidth / 2,
-    behavior: 'smooth',
-  })
+const Prev = () => {
+  imgShow.value = false
+  setTimeout(() => {
+    imgShow.value = true
+    if (item.value >= 1)
+      item.value--
+    else
+      item.value = List.value.length - 1
+  }, 100)
 }
 </script>
 
 <template>
-  <div>
-    <section>
-      <section flex items-center :style="{ height: newVh }">
-        <div ref="colBox" class="mx-auto relative snap-x h-full pt-24 items-center flex">
-          <div class="pr-2 h-full">
-            <img class="h-120" :src="List[1].srcUrl" alt="">
-          </div>
-          <!-- <div class=" bg-gradient-to-r fixed w-24 h-full  from-white" /> -->
-          <!-- <div class=" bg-gradient-to-r fixed right-0 w-24 h-full rotate-180 from-white" /> -->
-          <div class="w-full items-center text-sm fixed bottom-10 text-center">
-            <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="scrollPrev">prev</span>
-            <span text-xs pl-1 pr-1>/</span>
-            <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="scrollNext">next</span>
-          </div>
-        </div>
-      </section>
-    </section>
-    <!-- <section v-show="!(a && a1 && a2 && a3)" class="hp-loading">
+  <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
+    <div class="items-center flex">
+      <transition name="imgAnimate">
+        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @click="Next">
+      </transition>
+    </div>
+    <div class="text-center absolute bottom-7 items-center text-sm">
+      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
+      <span text-xs pl-1 pr-1>/</span>
+      <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
+      <span font-serif font-xs pl-2>({{ List[item].id }} of {{ List.length }})</span>
+    </div>
+  </section>
+  <!-- <section v-show="!(a && a1 && a2 && a3)" class="hp-loading">
       <div class="loading">
         <div />
       </div>
     </section> -->
-  </div>
 </template>
 
 <style>
+.imgAnimate-enter-active,
+.imgAnimate-leave-active {
+  @apply opacity-100  duration-700 ease-in-out;
+}
+
+.imgAnimate-enter-from,
+.imgAnimate-leave-from {
+  @apply opacity-0  duration-700 ease-in-out;
+}
 </style>

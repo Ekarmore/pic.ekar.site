@@ -9,29 +9,28 @@ watchEffect(() => {
 </script>
 
 <template>
-  <main class="md:pt-14 pt-24 mx-auto md:ml-80 lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2">
+  <main class="md:pt-24 pt-24 mx-auto md:ml-80 lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2">
     <article class="mx-auto w-full md:w-10/12 xl:w-8/12">
-      <p class="font-serif italic text-xl mb-5 font-bold">
-        Hello,yo!
+      <p class="aboutTitle">
+        YEKMAT
       </p>
       <p class="about-content">
-        我是<a p-1 font-serif text-sm font-black class="Ekar" href="">yekmat</a>,来自这颗蓝色星球某一处的氧气呼吸者,前端开发者,自由摄影师。<br>
+        photographer from somewhere on earth
       </p>
       <p class="about-content">
-        我创建了这个网站并在这里放了一些自己拍摄的照片用于归纳与分享,你可以在这里看到我在做的一些摄影项目,希望你会喜欢。<br>
+        Here are some photos I took, I hope you like it<br>
       </p>
       <p class="about-content">
-        多说无益,在这里或许你更应该从照片里了解我。
+        maybe you should know me better from the photos here.
       </p>
       <p class="about-content">
-        所以,<router-link class="font-bold font-serif italic p-1" to="/">
-          点击我开始观看作品 >
+        so,<router-link class="getStarted" to="/">
+          click here and get started
         </router-link>
       </p>
-      <hr class="border-black mt-10 mb-10 w-24 mx-auto">
-      <section class="flex flex-col text-sm mb-10 justify-between">
+      <section class="flex flex-col text-sm mt-10 mb-10 justify-between">
         <p class="about-content">
-          除此之外,你也可以通过以下方式找到我:
+          i'm here also:
         </p>
         <a class="about-link" href="https://www.instagram.com/ekarmore/">· instagram</a>
         <a class="about-link" href="mailto:earthb0y@outlook.com">· earthb0y@outlook.com</a>
@@ -42,11 +41,21 @@ watchEffect(() => {
 </template>
 
 <style>
+.getStarted{
+font-weight: 900;
+@apply font-bold border-b border-black font-serif italic
+}
+.aboutTitle{
+font-weight: 900;
+@apply text-2xl font-serif italic mb-10
+}
 .about-content {
-  @apply mb-2 font-serif md:mb-5 leading-8 text-gray-800 text-xs
+  font-weight: 900;
+  @apply leading-8 font-serif  text-gray-800 text-xs
 }
 .about-link {
-  @apply text-sm font-serif italic mt-2;
+  font-weight: 900;
+  @apply text-sm font-serif mt-2;
 }
 </style>
 
