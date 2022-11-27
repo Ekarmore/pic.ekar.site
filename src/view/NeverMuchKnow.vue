@@ -17,10 +17,6 @@ const List = ref([
   },
   {
     id: 4,
-    srcUrl: 'https://s1.vika.cn/space/2022/10/27/945a6c76f91b4c38861ce9925e77fd1c?attname=T_24.webp',
-  },
-  {
-    id: 5,
     srcUrl: 'https://s1.vika.cn/space/2022/10/27/7bd5dc6fbe8745fabc246e3d3a092e57?attname=Her_2.webp',
   },
 ])
