@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { useImgLoad } from '../utils/Loading'
 import { useXScroll } from '../utils/scrollControl'
 import { useModal } from '../utils/modalControl'
@@ -87,14 +87,16 @@ const newVh = ref(`${window.innerHeight}px`)
 
 const scrollNext = () => {
   colBox.value.scrollBy({
-    left: colBox.value.offsetWidth / 1.5,
+    // left: colBox.value.offsetWidth / 2 + 50,
+    left: window.innerWidth / 2,
     behavior: 'smooth',
   })
 }
 
 const scrollPrev = () => {
   colBox.value.scrollBy({
-    left: -colBox.value.offsetWidth / 1.5,
+    // left: -colBox.value.offsetWidth / 2 + 50,
+    left: -window.innerWidth / 2,
     behavior: 'smooth',
   })
 }
@@ -104,16 +106,16 @@ const scrollPrev = () => {
   <div>
     <section>
       <section flex items-center :style="{ height: newVh }">
-        <div ref="colBox" class=" relative snap-x overflow-x-scroll items-center flex pt-16 flex-nowrap h-full;">
-          <div v-for="img in List" :key="img.id" justify-center snap-center>
-            <img class="max-w-max mr-5 ml-5 max-h-xl" :src="img.srcUrl" alt="">
+        <div ref="colBox" class=" relative snap-x overflow-x-scroll items-center flex pt-16 md:pt-0 flex-nowrap h-full;">
+          <div v-for="img in List" :key="img.id" class="flex justify-center snap-center">
+            <img class="max-w-max mr-5 ml-5 md:h-120 lg:h-140 xl:h-160" :src="img.srcUrl" alt="">
           </div>
           <!-- <div class=" bg-gradient-to-r fixed w-24 h-full  from-white" /> -->
           <!-- <div class=" bg-gradient-to-r fixed right-0 w-24 h-full rotate-180 from-white" /> -->
-          <div class="hidden md:flex fixed bottom-5 left-1/2 text-center">
-            <span p-2 font-serif @click="scrollPrev">prev</span>
-            /
-            <span p-2 font-serif @click="scrollNext">next</span>
+          <div class="hidden md:flex items-center text-sm fixed bottom-5 text-center">
+            <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="scrollPrev">prev</span>
+            <span text-xs pl-1 pr-1>/</span>
+            <span hover:bg-black hover:text-white pl-2 pr-2 font-serif @click="scrollNext">next</span>
           </div>
         </div>
       </section>
