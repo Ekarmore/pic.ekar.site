@@ -55,9 +55,9 @@ const touchMove = (event) => {
           <span v-for="navItem in navList" :key="navItem.item" flex text-sm font-serif m-2 text-gray-400>
             <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
           </span>
-          <footer text-xs font-serif op50 absolute bottom-8>
+          <!-- <footer text-xs font-serif op50 absolute bottom-8>
             Design and create by <a href="">ekar</a> in 2022
-          </footer>
+          </footer> -->
         </div>
       </div>
     </transition>

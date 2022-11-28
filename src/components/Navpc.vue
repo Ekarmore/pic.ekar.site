@@ -36,7 +36,7 @@ const navList = ref([
         <router-link active-class="active" to="about">About</router-link>
       </span>
     </div>
-    <footer text-xs font-serif op50 absolute bottom-8 left-8>
+    <footer text-xs font-serif op50 absolute bottom-8 left-12>
       Design and create by <a href="">ekar</a> in 2022
     </footer>
   </section>
