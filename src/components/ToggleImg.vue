@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+const imgShow = ref(true)
 const Next = () => {
   imgShow.value = false
   setTimeout(() => {

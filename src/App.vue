@@ -4,22 +4,19 @@ import Navmobile from './components/Navmobile.vue'
 import Navpc from './components/Navpc.vue'
 import { useTitle } from './utils/title'
 import mouse from './components/corsur.vue'
+
 useTitle()
-const ShowNav = ref(false)
-const isShowNav = (isTrue) => {
-  ShowNav.value = isTrue
-}
 </script>
 
 <template>
-  <Navmobile />
   <Navpc />
   <mouse class="mouse-control" />
-  <router-view v-slot="{ Component }" @isShowNav="isShowNav">
+  <router-view v-slot="{ Component }">
     <transition name="globalAnimate">
       <component :is="Component" />
     </transition>
   </router-view>
+  <Navmobile />
 </template>
 
 <style>

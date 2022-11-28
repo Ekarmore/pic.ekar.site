@@ -39,31 +39,29 @@ const touchMove = (event) => {
 </script>
 
 <template>
-  <main>
-    <!-- nav-mobile -->
-    <section class="nav-mobile">
-      <div bg-white absolute flex justify-between z-50 items-center h-16 w-full>
-        <span class="linkFont" ml-5 font-serif @click="closeModal"><router-link to="/">ekar</router-link></span>
-        <span class="nav-icon" @click="handleModal">
-          <span :class="[changeMenu ? openL1 : closeL1, line1]" />
-          <span :class="[changeMenu ? openL2 : closeL2, line2]" />
-          <span :class="[changeMenu ? openL3 : closeL3, line3]" />
-        </span>
-      </div>
-      <transition name="fade">
-        <div v-show="showModal" ref="mobileModal" :style="{ height: newVh }" class="nav-mobile-modal" @touchmove="touchMove">
-          <div class="modal-text-container" @click="closeModal">
-            <span v-for="navItem in navList" :key="navItem.item" flex text-sm font-serif m-2 text-gray-400>
-              <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
-            </span>
-            <footer text-xs font-serif op50 absolute bottom-8>
-              Design and create by <a href="">ekar</a> in 2022
-            </footer>
-          </div>
+  <!-- nav-mobile -->
+  <section class="nav-mobile">
+    <div bg-white absolute flex justify-between z-50 items-center h-16 w-full>
+      <span class="linkFont" ml-5 font-serif @click="closeModal"><router-link to="/">ekar</router-link></span>
+      <span class="nav-icon" @click="handleModal">
+        <span :class="[changeMenu ? openL1 : closeL1, line1]" />
+        <span :class="[changeMenu ? openL2 : closeL2, line2]" />
+        <span :class="[changeMenu ? openL3 : closeL3, line3]" />
+      </span>
+    </div>
+    <transition name="fade">
+      <div v-show="showModal" ref="mobileModal" :style="{ height: newVh }" class="nav-mobile-modal" @touchmove="touchMove">
+        <div class="modal-text-container" @click="closeModal">
+          <span v-for="navItem in navList" :key="navItem.item" flex text-sm font-serif m-2 text-gray-400>
+            <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
+          </span>
+          <footer text-xs font-serif op50 absolute bottom-8>
+            Design and create by <a href="">ekar</a> in 2022
+          </footer>
         </div>
-      </transition>
-    </section>
-  </main>
+      </div>
+    </transition>
+  </section>
 </template>
 
 <style>
@@ -106,13 +104,13 @@ font-weight: 600
 @apply  transform rotate-0 top-4 ease-in-out duration-500 !important;
 }
 .nav-mobile {
-@apply  w-full md:hidden z-50;
+@apply absolute top-0 w-full md:hidden z-50;
 }
 .nav-mobile-bar {
 @apply bg-white absolute flex justify-between z-50 items-center h-16 w-full;
 }
 .nav-mobile-modal {
-  @apply absolute top-0 w-full bg-white z-40 ;
+  @apply absolute top-0 w-full bg-white ;
 }
 .modal-text-container {
   @apply flex flex-col items-center mt-24;

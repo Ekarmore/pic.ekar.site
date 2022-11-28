@@ -106,13 +106,13 @@ const imgLoad = () => {
 </script>
 
 <template>
-  <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
+  <section class=" flex flex-wrap justify-center items-center" :style="{ height: newVh }">
     <div class="items-center flex">
       <transition name="imgAnimate">
         <img v-show="imgShow" id="imgs" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="List[item].srcUrl" alt="" @load="imgLoad" @click="Next">
       </transition>
     </div>
-    <div class="text-center absolute bottom-7 items-center -z-10 text-xs">
+    <div class="text-center absolute bottom-7 items-center text-xs">
       <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
       <span text-xs pl-1 pr-1>/</span>
       <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
