@@ -56,9 +56,9 @@ const touchMove = (event) => {
             <span v-for="navItem in navList" :key="navItem.item" flex text-sm font-serif m-2 text-gray-400>
               <router-link active-class="active" :to="navItem.to">{{ navItem.name }}</router-link>
             </span>
-            <!-- <footer text-xs font-serif op50 absolute bottom-8>
+            <footer text-xs font-serif op50 absolute bottom-8>
               Design and create by <a href="">ekar</a> in 2022
-            </footer> -->
+            </footer>
           </div>
         </div>
       </transition>
@@ -112,7 +112,7 @@ font-weight: 600
 @apply bg-white absolute flex justify-between z-50 items-center h-16 w-full;
 }
 .nav-mobile-modal {
-  @apply absolute top-0 bg-white w-full z-10 ;
+  @apply absolute top-0 w-full bg-white z-40 ;
 }
 .modal-text-container {
   @apply flex flex-col items-center mt-24;
