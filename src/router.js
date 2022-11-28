@@ -13,7 +13,7 @@ const router = createRouter({
     return { top: 0 }
   },
   routes: [
-    { path: '/', component: Turpan, meta: { title: 'Turpan | ekar' } },
+    { path: '/', component: NeverKnowHowMuchILoveYou, meta: { title: 'NeverKnowHowMuchILoveYou | ekar' } },
     { path: '/Unnoticed', component: Unnoticed, meta: { title: 'Unnoticed | ekar' } },
     { path: '/AnotherLandscape', component: AnotherLandscape, meta: { title: 'AnotherLandscape | ekar' } },
     { path: '/Turpan', component: Turpan, meta: { title: 'Turpan | Ekar' } },
