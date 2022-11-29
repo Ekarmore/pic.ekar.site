@@ -12,9 +12,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <!-- <Teleport to=".nav-pc"> -->
-  <div ref="cursor" class="cursor" @click="changeMouse" />
-  <!-- </Teleport> -->
+  <Teleport to=".nav-pc">
+    <div ref="cursor" class="cursor" @click="changeMouse" />
+  </Teleport>
 </template>
 
 <style>

@@ -1,5 +1,4 @@
 <script setup>
-import { onMounted, ref } from 'vue'
 import Navmobile from './components/Navmobile.vue'
 import Navpc from './components/Navpc.vue'
 import { useTitle } from './utils/title'
