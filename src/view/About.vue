@@ -18,7 +18,7 @@ watchEffect(() => {
         photographer from somewhere on earth
       </p>
       <p class="about-content">
-        Here are some photos I took, I hope you like it<br>
+        Here are some photos I took,hope you like it<br>
       </p>
       <p class="about-content">
         maybe you should know me better from the photos here.
