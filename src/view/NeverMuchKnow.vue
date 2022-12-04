@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import images from '../components/images.vue'
-const newVh = ref(`${window.innerHeight}px`)
+import { newVh } from '../utils/fixHeight'
 </script>
 
 <template>
