@@ -1,6 +1,7 @@
 <script setup>
 import Navmobile from './components/Navmobile.vue'
 import Navpc from './components/Navpc.vue'
+import ToggleImgVue from './components/ToggleImg.vue'
 import { useTitle } from './utils/title'
 import mouse from './components/corsur.vue'
 
