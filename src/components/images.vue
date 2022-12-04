@@ -3,8 +3,9 @@ import { computed } from '@vue/reactivity'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { anotherLandscapeList, neverKnowList, turpanList, unnoticedList } from '../utils/imgList'
+import toggleImg from '../components/ToggleImg.vue'
 import { newVh } from '../utils/fixHeight'
-const imgShow = ref(true)
+const imgShow = ref(false)
 const item = ref(0)
 const routerInfo = useRouter()
 const dynamicList = computed(() => {
@@ -19,26 +20,13 @@ const dynamicList = computed(() => {
   if (routerInfo.currentRoute.value.fullPath === '/NeverKnowhowmuchiloveyou')
     return neverKnowList.value
 })
-const Next = () => {
-  imgShow.value = false
-  setTimeout(() => {
-    if (item.value < dynamicList.value.length - 1)
-      item.value++
-    else
-      item.value = 0
-  }, 200)
-}
 
-const Prev = () => {
-  imgShow.value = false
-  setTimeout(() => {
-    if (item.value >= 1)
-      item.value--
-    else
-      item.value = dynamicList.value.length - 1
-  }, 100)
+const pageCurrent = (cur) => {
+  item.value = cur
 }
-
+const handleImgShow = (show) => {
+  imgShow.value = show
+}
 const imgLoad = () => {
   setTimeout(() => {
     imgShow.value = true
@@ -53,12 +41,13 @@ const imgLoad = () => {
         <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="dynamicList[item].srcUrl" alt="" @load="imgLoad" @click="Next">
       </transition>
     </div>
-    <div class="text-center absolute bottom-7 items-center text-xs">
-      <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
-      <span text-xs pl-1 pr-1>/</span>
-      <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
+    <toggleImg
+      :info="dynamicList"
+      @page-current="pageCurrent"
+      @handle-img="handleImgShow"
+    >
       <span font-serif font-xs pl-2>({{ dynamicList[item].id }} of {{ dynamicList.length }})</span>
-    </div>
+    </toggleImg>
   </section>
 </template>
 
