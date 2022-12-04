@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <main class="md:pt-24 pt-24 mx-auto md:ml-80 lg:ml-96 xl:ml-80 w-4/5 lg:w-3/5 md:w-1/2">
     <article class="mx-auto w-full md:w-10/12 xl:w-8/12">

@@ -1,14 +1,3 @@
-.route-enter-from {
-  @apply opacity-0;
-}
-.route-enter-active,
-.route-leave-active {
-  @apply transition-all duration-1000 ease-in-out;
-}
-
-.route-leave-to {
-  @apply opacity-0;
-}
 body {
   @apply select-none;
 }
@@ -17,13 +6,6 @@ body {
 }
 *{
 @apply md:cursor-none
-}
-/* Unnoticed */
-.Work-container {
-  @apply md:w-4/5 lg:w-3/5 xl:w-4/5 mx-auto w-full h-full mt-10;
-}
-.hp-loading {
-  @apply w-full h-screen flex flex-col items-center justify-center z-20 absolute align-middle font-mono;
 }
 
 /* -loading animate- */
@@ -97,24 +79,6 @@ body {
   100% {
     transform: perspective(100px) rotateX(0) rotateY(360deg);
   }
-}
-
-
-.picture_container {
-  @apply flex items-center h-screen md:h-screen ;
-}
-
-.col-box {
-/* scroll-behavior: smooth; */
-@apply  overflow-x-scroll flex flex-nowrap h-full  pt-16  md:pt-9 md:pb-9 md:pl-5 md:pr-5 md:h-full;
-}
-
-.pic {
-  @apply  h-full w-auto pr-5 max-w-max;
-}
-
-.pic-end {
-  @apply inline h-full w-auto max-w-max;
 }
 
  .nav-pc-textbox{
