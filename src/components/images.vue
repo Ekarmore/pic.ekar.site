@@ -3,6 +3,7 @@ import { computed } from '@vue/reactivity'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { anotherLandscapeList, neverKnowList, turpanList, unnoticedList } from '../utils/imgList'
+import { newVh } from '../utils/fixHeight'
 const imgShow = ref(true)
 const item = ref(0)
 const routerInfo = useRouter()
@@ -46,17 +47,19 @@ const imgLoad = () => {
 </script>
 
 <template>
-  <div class="items-center flex">
-    <transition name="imgAnimate">
-      <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="dynamicList[item].srcUrl" alt="" @load="imgLoad" @click="Next">
-    </transition>
-  </div>
-  <div class="text-center absolute bottom-7 items-center text-xs">
-    <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
-    <span text-xs pl-1 pr-1>/</span>
-    <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
-    <span font-serif font-xs pl-2>({{ dynamicList[item].id }} of {{ dynamicList.length }})</span>
-  </div>
+  <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
+    <div class="items-center flex">
+      <transition name="imgAnimate">
+        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="dynamicList[item].srcUrl" alt="" @load="imgLoad" @click="Next">
+      </transition>
+    </div>
+    <div class="text-center absolute bottom-7 items-center text-xs">
+      <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Prev">Prev</span>
+      <span text-xs pl-1 pr-1>/</span>
+      <span md:hover:bg-black md:hover:text-white pl-2 pr-2 font-serif @click="Next">Next</span>
+      <span font-serif font-xs pl-2>({{ dynamicList[item].id }} of {{ dynamicList.length }})</span>
+    </div>
+  </section>
 </template>
 
 <style>

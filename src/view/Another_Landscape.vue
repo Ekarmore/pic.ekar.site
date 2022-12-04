@@ -4,8 +4,6 @@ import { newVh } from '../utils/fixHeight'
 </script>
 
 <template>
-  <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
-    <images />
-  </section>
+  <images />
 </template>
 
