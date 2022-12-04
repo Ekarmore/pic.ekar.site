@@ -32,13 +32,22 @@ const imgLoad = () => {
     imgShow.value = true
   }, 50)
 }
+const nextImg = () => {
+  imgShow.value = false
+  setTimeout(() => {
+    if (item.value < dynamicList.value.length - 1)
+      item.value++
+    else
+      item.value = 0
+  }, 200)
+}
 </script>
 
 <template>
   <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
     <div class="items-center flex">
       <transition name="imgAnimate">
-        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="dynamicList[item].srcUrl" alt="" @load="imgLoad" @click="Next">
+        <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="dynamicList[item].srcUrl" alt="" @click="nextImg" @load="imgLoad">
       </transition>
     </div>
     <toggleImg
