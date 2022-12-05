@@ -9,7 +9,7 @@ useTitle()
 </script>
 
 <template>
-  <toast />
+  <!-- <toast /> -->
   <Navpc />
   <cursor class="mouse-control" />
   <router-view v-slot="{ Component }">
