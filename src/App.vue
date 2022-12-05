@@ -1,16 +1,17 @@
 <script setup>
 import Navmobile from './components/Navmobile.vue'
 import Navpc from './components/Navpc.vue'
-import ToggleImgVue from './components/ToggleImg.vue'
+import toast from './components/toast.vue'
 import { useTitle } from './utils/title'
-import mouse from './components/corsur.vue'
+import cursor from './components/cursor.vue'
 
 useTitle()
 </script>
 
 <template>
+  <toast />
   <Navpc />
-  <mouse class="mouse-control" />
+  <cursor class="mouse-control" />
   <router-view v-slot="{ Component }">
     <transition name="globalAnimate">
       <component :is="Component" />

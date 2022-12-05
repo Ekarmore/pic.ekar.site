@@ -45,10 +45,15 @@ const nextImg = () => {
 
 <template>
   <section class="flex flex-wrap justify-center items-center" :style="{ height: newVh }">
-    <div class="items-center flex">
+    <div class="flex items-center">
       <transition name="imgAnimate">
         <img v-show="imgShow" class="max-h-md md:max-h-xl 2xl:max-h-2xl max-w-full p-2" :src="dynamicList[item].srcUrl" alt="" @click="nextImg" @load="imgLoad">
       </transition>
+      <!-- <transition name="imgAnimate">
+        <div v-show="!imgShow" class="absolute h-full w-full">
+          Loading...
+        </div>
+      </transition> -->
     </div>
     <toggleImg
       :info="dynamicList"
