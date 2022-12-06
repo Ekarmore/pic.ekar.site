@@ -10,7 +10,7 @@ const item = ref(0)
 const routerInfo = useRouter()
 const dynamicList = computed(() => {
   if (routerInfo.currentRoute.value.fullPath === '/')
-    return neverKnowList.value
+    return unnoticedList.value
   if (routerInfo.currentRoute.value.fullPath === '/Turpan')
     return turpanList.value
   if (routerInfo.currentRoute.value.fullPath === '/Unnoticed')
