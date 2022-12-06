@@ -14,14 +14,14 @@ const router = createRouter({
     return { top: 0 }
   },
   routes: [
-    { path: '/', component: NeverKnowHowMuchILoveYou, meta: { title: 'NeverKnowHowMuchILoveYou | ekar' } },
+    { path: '/', component: Unnoticed, meta: { title: 'Unnoticed | ekar' } },
     { path: '/Unnoticed', component: Unnoticed, meta: { title: 'Unnoticed | ekar' } },
     { path: '/', component: NeverKnowHowMuchILoveYou, meta: { title: 'NeverKnowHowMuchILoveYou | ekar' } },
     { path: '/AnotherLandscape', component: AnotherLandscape, meta: { title: 'AnotherLandscape | ekar' } },
     { path: '/Turpan', component: Turpan, meta: { title: 'Turpan | Ekar' } },
-    { path: '/NeverKnowHowMuchILoveYou', component: NeverKnowHowMuchILoveYou, meta: { title: 'Never Know how much i love you  | ekar' } },
+    // { path: '/NeverKnowHowMuchILoveYou', component: NeverKnowHowMuchILoveYou, meta: { title: 'Never Know how much i love you  | ekar' } },
     { path: '/about', component: About, meta: { title: 'About | ekar' } },
-    { path: '/grid', component: grid, meta: { title: 'About | ekar' } },
+    // { path: '/grid', component: grid, meta: { title: 'About | ekar' } },
     // { path: '/layout', component: Layout, meta: { title: 'About | ekar' } },
   ],
 })
